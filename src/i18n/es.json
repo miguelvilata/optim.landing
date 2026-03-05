@@ -1,0 +1,107 @@
+{
+  "meta": {
+    "title": "Optim – Seguros y Gastos | Gestiona tus polizas facilmente",
+    "description": "Optim te ayuda a gestionar todas tus polizas de seguro y gastos recurrentes en un solo lugar. Recibe alertas de vencimiento y optimiza tus coberturas.",
+    "ogTitle": "Optim – Gestiona tus Seguros y Gastos",
+    "ogDescription": "La app movil que centraliza tus polizas de seguro, gastos recurrentes y te alerta antes de los vencimientos. Disponible para Android."
+  },
+  "nav": {
+    "features": "Caracteristicas",
+    "howItWorks": "Como funciona",
+    "download": "Descargar",
+    "logoAlt": "Optim – Seguros y Gastos"
+  },
+  "hero": {
+    "badge": "Disponible en Android",
+    "title": "Controla todos tus seguros y gastos",
+    "titleHighlight": "en un solo lugar",
+    "subtitle": "Optim centraliza tus polizas de seguro, suscripciones y gastos recurrentes. Nunca te pierdas un vencimiento y optimiza lo que pagas.",
+    "cta": "Descargar gratis",
+    "ctaSecondary": "Ver caracteristicas",
+    "trustedBy": "Miles de usuarios ya optimizan sus gastos"
+  },
+  "features": {
+    "title": "Todo lo que necesitas",
+    "subtitle": "Herramientas pensadas para simplificar la gestion de tus seguros y gastos dia a dia.",
+    "items": [
+      {
+        "icon": "shield",
+        "title": "Gestion de Seguros",
+        "description": "Centraliza todas tus polizas en un unico panel. Hogar, coche, vida, salud y mas, siempre a la vista."
+      },
+      {
+        "icon": "bell",
+        "title": "Alertas de Vencimiento",
+        "description": "Recibe notificaciones inteligentes antes de que venzan tus polizas. Nunca mas te pillara por sorpresa una renovacion."
+      },
+      {
+        "icon": "chart",
+        "title": "Analisis de Gastos",
+        "description": "Visualiza cuanto gastas en seguros y suscripciones cada mes. Identifica oportunidades de ahorro de un vistazo."
+      },
+      {
+        "icon": "building",
+        "title": "Multiples Aseguradoras",
+        "description": "Compatible con cualquier aseguradora o proveedor. Agrega tus polizas independientemente de quien las emita."
+      },
+      {
+        "icon": "lock",
+        "title": "Seguro y Privado",
+        "description": "Tus datos estan protegidos con cifrado de extremo a extremo. Tu informacion es tuya y de nadie mas."
+      },
+      {
+        "icon": "refresh",
+        "title": "Gastos Recurrentes",
+        "description": "Registra servicios, suscripciones y cualquier gasto periodico. Ten siempre el control total de tu economia."
+      }
+    ]
+  },
+  "howItWorks": {
+    "title": "Empieza en minutos",
+    "subtitle": "Sin complicaciones. En tres pasos tendras el control total de tus seguros y gastos.",
+    "steps": [
+      {
+        "number": "01",
+        "title": "Descarga la app",
+        "description": "Disponible gratuitamente en Google Play. Instala Optim en segundos y crea tu cuenta."
+      },
+      {
+        "number": "02",
+        "title": "Agrega tus polizas",
+        "description": "Introduce tus seguros y gastos recurrentes. Solo necesitas los datos basicos de cada poliza."
+      },
+      {
+        "number": "03",
+        "title": "Recibe alertas y ahorra",
+        "description": "Optim te notifica antes de cada vencimiento y te muestra donde puedes optimizar tu gasto."
+      }
+    ]
+  },
+  "screenshots": {
+    "title": "Disenado para ser simple",
+    "subtitle": "Una interfaz limpia e intuitiva que te da el control sin abrumarte con informacion innecesaria."
+  },
+  "cta": {
+    "title": "Empieza a optimizar hoy",
+    "subtitle": "Unete a miles de usuarios que ya tienen el control de sus seguros y gastos. Gratis, sin complicaciones.",
+    "button": "Descargar en Google Play",
+    "note": "Gratis para Android"
+  },
+  "footer": {
+    "tagline": "Gestiona tus seguros y gastos con inteligencia.",
+    "privacy": "Politica de Privacidad",
+    "terms": "Terminos y Condiciones",
+    "language": "Idioma",
+    "copyright": "Optim. Todos los derechos reservados."
+  },
+  "legal": {
+    "privacy": {
+      "title": "Politica de Privacidad",
+      "content": "Contenido proximimamente."
+    },
+    "terms": {
+      "title": "Terminos y Condiciones",
+      "content": "Contenido proximimamente."
+    }
+  }
+}

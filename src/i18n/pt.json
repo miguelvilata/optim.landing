@@ -1,0 +1,107 @@
+{
+  "meta": {
+    "title": "Optim – Seguros e Despesas | Gerencie suas apolices facilmente",
+    "description": "O Optim ajuda voce a gerenciar todas as suas apolices de seguro e despesas recorrentes em um so lugar. Receba alertas de vencimento e otimize suas coberturas.",
+    "ogTitle": "Optim – Gerencie seus Seguros e Despesas",
+    "ogDescription": "O aplicativo movel que centraliza suas apolices de seguro, despesas recorrentes e te alerta antes dos vencimentos. Disponivel para Android."
+  },
+  "nav": {
+    "features": "Recursos",
+    "howItWorks": "Como funciona",
+    "download": "Baixar",
+    "logoAlt": "Optim – Seguros e Despesas"
+  },
+  "hero": {
+    "badge": "Disponivel no Android",
+    "title": "Controle todos os seus seguros",
+    "titleHighlight": "e despesas em um lugar",
+    "subtitle": "O Optim centraliza suas apolices de seguro, assinaturas e despesas recorrentes. Nunca perca um vencimento e otimize o que voce paga.",
+    "cta": "Baixar gratis",
+    "ctaSecondary": "Ver recursos",
+    "trustedBy": "Milhares de usuarios ja otimizando suas despesas"
+  },
+  "features": {
+    "title": "Tudo o que voce precisa",
+    "subtitle": "Ferramentas pensadas para simplificar a gestao dos seus seguros e despesas no dia a dia.",
+    "items": [
+      {
+        "icon": "shield",
+        "title": "Gestao de Seguros",
+        "description": "Centralize todas as suas apolices em um unico painel. Casa, carro, vida, saude e mais, sempre a vista."
+      },
+      {
+        "icon": "bell",
+        "title": "Alertas de Vencimento",
+        "description": "Receba notificacoes inteligentes antes que suas apolices vencam. Nunca mais seja pego de surpresa por uma renovacao."
+      },
+      {
+        "icon": "chart",
+        "title": "Analise de Despesas",
+        "description": "Visualize quanto voce gasta em seguros e assinaturas por mes. Identifique oportunidades de economia com um olhar."
+      },
+      {
+        "icon": "building",
+        "title": "Multiplas Seguradoras",
+        "description": "Compativel com qualquer seguradora ou provedor. Adicione suas apolices independentemente de quem as emitiu."
+      },
+      {
+        "icon": "lock",
+        "title": "Seguro e Privado",
+        "description": "Seus dados sao protegidos com criptografia de ponta a ponta. Suas informacoes sao suas e de mais ninguem."
+      },
+      {
+        "icon": "refresh",
+        "title": "Despesas Recorrentes",
+        "description": "Registre servicos, assinaturas e qualquer despesa periodica. Tenha sempre controle total das suas financas."
+      }
+    ]
+  },
+  "howItWorks": {
+    "title": "Comece em minutos",
+    "subtitle": "Sem complicacoes. Em tres passos voce tera controle total dos seus seguros e despesas.",
+    "steps": [
+      {
+        "number": "01",
+        "title": "Baixe o aplicativo",
+        "description": "Disponivel gratuitamente no Google Play. Instale o Optim em segundos e crie sua conta."
+      },
+      {
+        "number": "02",
+        "title": "Adicione suas apolices",
+        "description": "Insira seus seguros e despesas recorrentes. Voce so precisa dos dados basicos de cada apolice."
+      },
+      {
+        "number": "03",
+        "title": "Receba alertas e economize",
+        "description": "O Optim te notifica antes de cada vencimento e mostra onde voce pode otimizar seus gastos."
+      }
+    ]
+  },
+  "screenshots": {
+    "title": "Projetado para ser simples",
+    "subtitle": "Uma interface limpa e intuitiva que te da controle sem te sobrecarregar com informacoes desnecessarias."
+  },
+  "cta": {
+    "title": "Comece a otimizar hoje",
+    "subtitle": "Junte-se a milhares de usuarios que ja tem controle dos seus seguros e despesas. Gratis, sem complicacoes.",
+    "button": "Baixar no Google Play",
+    "note": "Gratis para Android"
+  },
+  "footer": {
+    "tagline": "Gerencie seus seguros e despesas com inteligencia.",
+    "privacy": "Politica de Privacidade",
+    "terms": "Termos e Condicoes",
+    "language": "Idioma",
+    "copyright": "Optim. Todos os direitos reservados."
+  },
+  "legal": {
+    "privacy": {
+      "title": "Politica de Privacidade",
+      "content": "Conteudo em breve."
+    },
+    "terms": {
+      "title": "Termos e Condicoes",
+      "content": "Conteudo em breve."
+    }
+  }
+}

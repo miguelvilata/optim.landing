@@ -1,0 +1,25 @@
+---
+import type { Lang } from '../i18n/index.ts';
+import Navbar from './Navbar.astro';
+import Hero from './Hero.astro';
+import Features from './Features.astro';
+import HowItWorks from './HowItWorks.astro';
+import Screenshots from './Screenshots.astro';
+import CTA from './CTA.astro';
+import Footer from './Footer.astro';
+
+interface Props {
+  lang: Lang;
+}
+const { lang } = Astro.props;
+---
+
+<Navbar lang={lang} />
+<main>
+  <Hero lang={lang} />
+  <Features lang={lang} />
+  <HowItWorks lang={lang} />
+  <Screenshots lang={lang} />
+  <CTA lang={lang} />
+</main>
+<Footer lang={lang} />

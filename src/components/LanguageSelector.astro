@@ -1,0 +1,53 @@
+---
+import type { Lang } from '../i18n/index.ts';
+import { languages } from '../i18n/index.ts';
+
+interface Props {
+  lang: Lang;
+}
+const { lang } = Astro.props;
+
+// Derive current path segment after /lang/
+const currentPath = Astro.url.pathname.replace(/^\/(es|en|pt)/, '') || '/';
+---
+
+<div class="relative group">
+  <button
+    class="flex items-center gap-1.5 text-sm text-white/80 hover:text-white transition-colors py-1"
+    aria-haspopup="true"
+    aria-expanded="false"
+  >
+    <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+        d="M3 5h12M9 3v2m1.048 9.5A18.022 18.022 0 016.412 9m6.088 9h7M11 21l5-10 5 10M12.751 5C11.783 10.77 8.07 15.61 3 18.129" />
+    </svg>
+    <span class="uppercase font-medium">{lang}</span>
+    <svg class="w-3 h-3 opacity-60" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+      <path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clip-rule="evenodd" />
+    </svg>
+  </button>
+
+  <!-- Dropdown -->
+  <div
+    class="absolute right-0 top-full mt-1 w-36 bg-white rounded-xl shadow-xl border border-gray-100 overflow-hidden
+           opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 transform translate-y-1 group-hover:translate-y-0"
+    role="menu"
+  >
+    {Object.entries(languages).map(([code, label]) => (
+      <a
+        href={`/${code}${currentPath}`}
+        class:list={[
+          'flex items-center gap-2 px-4 py-2.5 text-sm transition-colors',
+          code === lang
+            ? 'bg-brand-light text-brand-primary font-semibold'
+            : 'text-gray-700 hover:bg-gray-50',
+        ]}
+        role="menuitem"
+        aria-current={code === lang ? 'true' : undefined}
+      >
+        <span class="uppercase text-xs font-bold text-brand-muted w-5">{code}</span>
+        {label}
+      </a>
+    ))}
+  </div>
+</div>

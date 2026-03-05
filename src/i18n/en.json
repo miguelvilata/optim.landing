@@ -1,0 +1,107 @@
+{
+  "meta": {
+    "title": "Optim – Insurance & Expenses | Manage your policies easily",
+    "description": "Optim helps you manage all your insurance policies and recurring expenses in one place. Get renewal alerts and optimize your coverage.",
+    "ogTitle": "Optim – Manage your Insurance & Expenses",
+    "ogDescription": "The mobile app that centralizes your insurance policies, recurring expenses and alerts you before renewals. Available for Android."
+  },
+  "nav": {
+    "features": "Features",
+    "howItWorks": "How it works",
+    "download": "Download",
+    "logoAlt": "Optim – Insurance & Expenses"
+  },
+  "hero": {
+    "badge": "Available on Android",
+    "title": "Take control of all your insurance",
+    "titleHighlight": "and expenses",
+    "subtitle": "Optim centralizes your insurance policies, subscriptions and recurring expenses. Never miss a renewal and optimize what you pay.",
+    "cta": "Download for free",
+    "ctaSecondary": "See features",
+    "trustedBy": "Thousands of users already optimizing their expenses"
+  },
+  "features": {
+    "title": "Everything you need",
+    "subtitle": "Tools designed to simplify the management of your insurance and expenses every day.",
+    "items": [
+      {
+        "icon": "shield",
+        "title": "Insurance Management",
+        "description": "Centralize all your policies in a single dashboard. Home, car, life, health and more, always at a glance."
+      },
+      {
+        "icon": "bell",
+        "title": "Renewal Alerts",
+        "description": "Receive smart notifications before your policies expire. Never be caught off guard by a renewal again."
+      },
+      {
+        "icon": "chart",
+        "title": "Expense Analytics",
+        "description": "Visualize how much you spend on insurance and subscriptions each month. Identify savings opportunities at a glance."
+      },
+      {
+        "icon": "building",
+        "title": "Multiple Providers",
+        "description": "Compatible with any insurer or provider. Add your policies regardless of who issued them."
+      },
+      {
+        "icon": "lock",
+        "title": "Secure & Private",
+        "description": "Your data is protected with end-to-end encryption. Your information is yours and no one else's."
+      },
+      {
+        "icon": "refresh",
+        "title": "Recurring Expenses",
+        "description": "Record services, subscriptions and any periodic expense. Always have total control of your finances."
+      }
+    ]
+  },
+  "howItWorks": {
+    "title": "Get started in minutes",
+    "subtitle": "No complications. In three steps you will have total control of your insurance and expenses.",
+    "steps": [
+      {
+        "number": "01",
+        "title": "Download the app",
+        "description": "Available for free on Google Play. Install Optim in seconds and create your account."
+      },
+      {
+        "number": "02",
+        "title": "Add your policies",
+        "description": "Enter your insurance policies and recurring expenses. You only need the basic details for each policy."
+      },
+      {
+        "number": "03",
+        "title": "Get alerts and save",
+        "description": "Optim notifies you before each renewal and shows you where you can optimize your spending."
+      }
+    ]
+  },
+  "screenshots": {
+    "title": "Designed to be simple",
+    "subtitle": "A clean, intuitive interface that gives you control without overwhelming you with unnecessary information."
+  },
+  "cta": {
+    "title": "Start optimizing today",
+    "subtitle": "Join thousands of users who already have control of their insurance and expenses. Free, no complications.",
+    "button": "Download on Google Play",
+    "note": "Free for Android"
+  },
+  "footer": {
+    "tagline": "Manage your insurance and expenses with intelligence.",
+    "privacy": "Privacy Policy",
+    "terms": "Terms & Conditions",
+    "language": "Language",
+    "copyright": "Optim. All rights reserved."
+  },
+  "legal": {
+    "privacy": {
+      "title": "Privacy Policy",
+      "content": "Content coming soon."
+    },
+    "terms": {
+      "title": "Terms & Conditions",
+      "content": "Content coming soon."
+    }
+  }
+}

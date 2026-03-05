@@ -1,0 +1,41 @@
+---
+import type { Lang } from '../i18n/index.ts';
+import Navbar from './Navbar.astro';
+import Footer from './Footer.astro';
+
+interface Props {
+  lang: Lang;
+  title: string;
+  content: string;
+}
+const { lang, title, content } = Astro.props;
+---
+
+<Navbar lang={lang} />
+<main class="min-h-screen bg-white pt-24 pb-16">
+  <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+    <!-- Breadcrumb -->
+    <nav class="mb-8" aria-label="Breadcrumb">
+      <ol class="flex items-center gap-2 text-sm text-brand-muted">
+        <li>
+          <a href={`/${lang}/`} class="hover:text-brand-secondary transition-colors">Optim</a>
+        </li>
+        <li aria-hidden="true">
+          <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+          </svg>
+        </li>
+        <li class="text-brand-primary font-medium" aria-current="page">{title}</li>
+      </ol>
+    </nav>
+
+    <!-- Page content -->
+    <article class="prose prose-slate max-w-none">
+      <h1 class="text-3xl sm:text-4xl font-extrabold text-brand-primary mb-8">{title}</h1>
+      <div class="text-brand-muted leading-relaxed">
+        <p>{content}</p>
+      </div>
+    </article>
+  </div>
+</main>
+<Footer lang={lang} />

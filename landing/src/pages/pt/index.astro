@@ -1,0 +1,19 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import LandingPage from '../../components/LandingPage.astro';
+import { t } from '../../i18n/index.ts';
+
+const lang = 'pt';
+const tr = t(lang);
+---
+
+<BaseLayout
+  lang={lang}
+  title={tr.meta.title}
+  description={tr.meta.description}
+  ogTitle={tr.meta.ogTitle}
+  ogDescription={tr.meta.ogDescription}
+  canonicalPath="/pt/"
+>
+  <LandingPage lang={lang} />
+</BaseLayout>

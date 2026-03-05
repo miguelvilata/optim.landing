@@ -1,0 +1,74 @@
+---
+import type { Lang } from '../i18n/index.ts';
+import { t } from '../i18n/index.ts';
+import AppLogo from './AppLogo.astro';
+import LanguageSelector from './LanguageSelector.astro';
+
+interface Props {
+  lang: Lang;
+}
+const { lang } = Astro.props;
+const tr = t(lang);
+const f = tr.footer;
+const year = new Date().getFullYear();
+---
+
+<footer class="bg-brand-primary border-t border-white/10">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8 mb-10">
+      <!-- Brand -->
+      <div class="sm:col-span-2 lg:col-span-1">
+        <div class="flex items-center gap-3 mb-4">
+          <AppLogo size={36} />
+          <span class="text-white font-bold text-xl">Optim</span>
+        </div>
+        <p class="text-white/50 text-sm leading-relaxed max-w-xs">
+          {f.tagline}
+        </p>
+      </div>
+
+      <!-- Legal links -->
+      <div>
+        <h3 class="text-white/80 text-xs font-semibold uppercase tracking-wider mb-4">Legal</h3>
+        <nav aria-label="Footer legal links">
+          <ul class="space-y-3">
+            <li>
+              <a
+                href={`/${lang}/privacy/`}
+                class="text-white/50 hover:text-white text-sm transition-colors"
+              >
+                {f.privacy}
+              </a>
+            </li>
+            <li>
+              <a
+                href={`/${lang}/terms/`}
+                class="text-white/50 hover:text-white text-sm transition-colors"
+              >
+                {f.terms}
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+
+      <!-- Language selector -->
+      <div>
+        <h3 class="text-white/80 text-xs font-semibold uppercase tracking-wider mb-4">
+          {f.language}
+        </h3>
+        <LanguageSelector lang={lang} />
+      </div>
+    </div>
+
+    <!-- Bottom bar -->
+    <div class="border-t border-white/10 pt-8 flex flex-col sm:flex-row items-center justify-between gap-4">
+      <p class="text-white/30 text-xs">
+        &copy; {year} {f.copyright}
+      </p>
+      <p class="text-white/20 text-xs">
+        Made with Optim
+      </p>
+    </div>
+  </div>
+</footer>
