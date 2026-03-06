@@ -79,13 +79,59 @@
   },
   "screenshots": {
     "title": "Designed to be simple",
-    "subtitle": "A clean, intuitive interface that gives you control without overwhelming you with unnecessary information."
+    "subtitle": "A clean, intuitive interface that gives you control without overwhelming you with unnecessary information.",
+    "items": [
+      {
+        "src": "/screenshots/es_dashboard.png",
+        "alt": "Optim home screen",
+        "caption": "Your summary at a glance. See how many contracts are active and which ones expire soon."
+      },
+      {
+        "src": "/screenshots/es_contract_list.png",
+        "alt": "Contract list in Optim",
+        "caption": "All your contracts at a glance. Sorted by renewal date so nothing slips through."
+      },
+      {
+        "src": "/screenshots/es_finance.png",
+        "alt": "Financial overview in Optim",
+        "caption": "Know your real spend. Monthly and estimated annual, so you can make informed decisions."
+      },
+      {
+        "src": "/screenshots/es_contract_renovation.png",
+        "alt": "Contract renewal in Optim",
+        "caption": "Renew or modify with a tap. No paperwork, no hassle, done in seconds."
+      }
+    ]
+  },
+  "serviceCategories": {
+    "title": "For all your recurring expenses",
+    "subtitle": "Not just insurance. Optim centralizes everything you pay periodically in one single place.",
+    "insurance": {
+      "label": "Insurance",
+      "items": [
+        { "icon": "🚗", "name": "Auto" },
+        { "icon": "🏠", "name": "Home" },
+        { "icon": "🏥", "name": "Health" },
+        { "icon": "❤️", "name": "Life" },
+        { "icon": "🏍️", "name": "Motorcycle" }
+      ]
+    },
+    "utilities": {
+      "label": "Utilities",
+      "items": [
+        { "icon": "⚡", "name": "Electricity" },
+        { "icon": "💧", "name": "Water" },
+        { "icon": "🔥", "name": "Gas" },
+        { "icon": "📶", "name": "Internet" }
+      ]
+    }
   },
   "cta": {
     "title": "Start optimizing today",
-    "subtitle": "Join thousands of users who already have control of their insurance and expenses. Free, no complications.",
-    "button": "Download on Google Play",
-    "note": "Free for Android"
+    "subtitle": "Take control of all your insurance and utilities. Free, no subscription, no ads.",
+    "googlePlay": "Download on Google Play",
+    "appStore": "Coming soon on App Store",
+    "note": "Free for Android · iOS coming soon"
   },
   "footer": {
     "tagline": "Manage your insurance and expenses with intelligence.",

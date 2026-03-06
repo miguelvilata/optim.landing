@@ -79,13 +79,59 @@
   },
   "screenshots": {
     "title": "Projetado para ser simples",
-    "subtitle": "Uma interface limpa e intuitiva que te da controle sem te sobrecarregar com informacoes desnecessarias."
+    "subtitle": "Uma interface limpa e intuitiva que te da controle sem te sobrecarregar com informacoes desnecessarias.",
+    "items": [
+      {
+        "src": "/screenshots/es_dashboard.png",
+        "alt": "Tela inicial do Optim",
+        "caption": "Seu resumo na hora. Veja quantos contratos estao ativos e quais vencem em breve."
+      },
+      {
+        "src": "/screenshots/es_contract_list.png",
+        "alt": "Lista de contratos no Optim",
+        "caption": "Todos os seus contratos em um so lugar. Ordenados por data de renovacao."
+      },
+      {
+        "src": "/screenshots/es_finance.png",
+        "alt": "Visao financeira no Optim",
+        "caption": "Conheca seu gasto real. Mensal e anual estimado, para tomar decisoes com dados."
+      },
+      {
+        "src": "/screenshots/es_contract_renovation.png",
+        "alt": "Renovacao de contrato no Optim",
+        "caption": "Renove ou modifique com um toque. Sem burocracia, sem complicacoes."
+      }
+    ]
+  },
+  "serviceCategories": {
+    "title": "Para todas as suas despesas recorrentes",
+    "subtitle": "Nao so seguros. O Optim centraliza tudo o que voce paga periodicamente em um unico lugar.",
+    "insurance": {
+      "label": "Seguros",
+      "items": [
+        { "icon": "🚗", "name": "Auto" },
+        { "icon": "🏠", "name": "Casa" },
+        { "icon": "🏥", "name": "Saude" },
+        { "icon": "❤️", "name": "Vida" },
+        { "icon": "🏍️", "name": "Moto" }
+      ]
+    },
+    "utilities": {
+      "label": "Servicos",
+      "items": [
+        { "icon": "⚡", "name": "Eletricidade" },
+        { "icon": "💧", "name": "Agua" },
+        { "icon": "🔥", "name": "Gas" },
+        { "icon": "📶", "name": "Internet" }
+      ]
+    }
   },
   "cta": {
     "title": "Comece a otimizar hoje",
-    "subtitle": "Junte-se a milhares de usuarios que ja tem controle dos seus seguros e despesas. Gratis, sem complicacoes.",
-    "button": "Baixar no Google Play",
-    "note": "Gratis para Android"
+    "subtitle": "Tenha controle de todos os seus seguros e servicos. Gratis, sem assinatura, sem publicidade.",
+    "googlePlay": "Baixar no Google Play",
+    "appStore": "Em breve na App Store",
+    "note": "Gratis para Android · iOS em breve"
   },
   "footer": {
     "tagline": "Gerencie seus seguros e despesas com inteligencia.",

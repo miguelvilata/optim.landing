@@ -12,13 +12,13 @@
     "logoAlt": "Optim – Seguros y Gastos"
   },
   "hero": {
-    "badge": "Disponible en Android",
+    "badge": "Disponible en Android · iOS proximimamente",
     "title": "Controla todos tus seguros y gastos",
     "titleHighlight": "en un solo lugar",
-    "subtitle": "Optim centraliza tus polizas de seguro, suscripciones y gastos recurrentes. Nunca te pierdas un vencimiento y optimiza lo que pagas.",
-    "cta": "Descargar gratis",
+    "subtitle": "Optim centraliza tus polizas de seguro, suministros y gastos recurrentes. Nunca te pierdas un vencimiento y optimiza lo que pagas.",
+    "cta": "Descargar en Google Play",
     "ctaSecondary": "Ver caracteristicas",
-    "trustedBy": "Miles de usuarios ya optimizan sus gastos"
+    "trustedBy": "Gratis, sin suscripcion, sin publicidad"
   },
   "features": {
     "title": "Todo lo que necesitas",
@@ -36,23 +36,23 @@
       },
       {
         "icon": "chart",
-        "title": "Analisis de Gastos",
-        "description": "Visualiza cuanto gastas en seguros y suscripciones cada mes. Identifica oportunidades de ahorro de un vistazo."
+        "title": "Control Financiero",
+        "description": "Visualiza cuanto gastas en seguros y suministros cada mes. Conoce tu gasto anual estimado de un vistazo."
       },
       {
         "icon": "building",
-        "title": "Multiples Aseguradoras",
-        "description": "Compatible con cualquier aseguradora o proveedor. Agrega tus polizas independientemente de quien las emita."
-      },
-      {
-        "icon": "lock",
-        "title": "Seguro y Privado",
-        "description": "Tus datos estan protegidos con cifrado de extremo a extremo. Tu informacion es tuya y de nadie mas."
+        "title": "Cualquier Aseguradora",
+        "description": "Compatible con Mapfre, Sanitas, Generali, Mutua Madrileña y cualquier otro proveedor. Tu decides que registras."
       },
       {
         "icon": "refresh",
-        "title": "Gastos Recurrentes",
-        "description": "Registra servicios, suscripciones y cualquier gasto periodico. Ten siempre el control total de tu economia."
+        "title": "Suministros y Suscripciones",
+        "description": "Registra la luz, el gas, el agua, internet y cualquier gasto periodico. Ten el control total de tu economia."
+      },
+      {
+        "icon": "lock",
+        "title": "Simple y Privado",
+        "description": "Sin cuentas complicadas. Tus datos se guardan en tu dispositivo. Tu informacion es tuya y de nadie mas."
       }
     ]
   },
@@ -68,24 +68,70 @@
       {
         "number": "02",
         "title": "Agrega tus polizas",
-        "description": "Introduce tus seguros y gastos recurrentes. Solo necesitas los datos basicos de cada poliza."
+        "description": "Introduce tus seguros y gastos recurrentes. Solo necesitas los datos basicos de cada contrato."
       },
       {
         "number": "03",
         "title": "Recibe alertas y ahorra",
-        "description": "Optim te notifica antes de cada vencimiento y te muestra donde puedes optimizar tu gasto."
+        "description": "Optim te notifica antes de cada vencimiento y te muestra cuanto gastas para que puedas optimizar."
       }
     ]
   },
   "screenshots": {
     "title": "Disenado para ser simple",
-    "subtitle": "Una interfaz limpia e intuitiva que te da el control sin abrumarte con informacion innecesaria."
+    "subtitle": "Una interfaz limpia e intuitiva que te da el control sin abrumarte con informacion innecesaria.",
+    "items": [
+      {
+        "src": "/screenshots/es_dashboard.png",
+        "alt": "Pantalla de inicio de Optim",
+        "caption": "Tu resumen al instante. Controla cuantos contratos tienes activos y cuales vencen pronto."
+      },
+      {
+        "src": "/screenshots/es_contract_list.png",
+        "alt": "Lista de contratos en Optim",
+        "caption": "Todos tus contratos en un vistazo. Ordenados por fecha de renovacion, ninguno se te escapa."
+      },
+      {
+        "src": "/screenshots/es_finance.png",
+        "alt": "Control financiero en Optim",
+        "caption": "Conoce tu gasto real. Mensual y anual estimado, para que tomes decisiones con datos."
+      },
+      {
+        "src": "/screenshots/es_contract_renovation.png",
+        "alt": "Renovacion de contrato en Optim",
+        "caption": "Renueva o modifica con un toque. Sin papeleo, sin complicaciones, en segundos."
+      }
+    ]
+  },
+  "serviceCategories": {
+    "title": "Para todos tus gastos recurrentes",
+    "subtitle": "No solo seguros. Optim centraliza todo lo que pagas de forma periodica en un unico lugar.",
+    "insurance": {
+      "label": "Seguros",
+      "items": [
+        { "icon": "🚗", "name": "Auto" },
+        { "icon": "🏠", "name": "Hogar" },
+        { "icon": "🏥", "name": "Salud" },
+        { "icon": "❤️", "name": "Vida" },
+        { "icon": "🏍️", "name": "Moto" }
+      ]
+    },
+    "utilities": {
+      "label": "Suministros",
+      "items": [
+        { "icon": "⚡", "name": "Electricidad" },
+        { "icon": "💧", "name": "Agua" },
+        { "icon": "🔥", "name": "Gas" },
+        { "icon": "📶", "name": "Internet" }
+      ]
+    }
   },
   "cta": {
     "title": "Empieza a optimizar hoy",
-    "subtitle": "Unete a miles de usuarios que ya tienen el control de sus seguros y gastos. Gratis, sin complicaciones.",
-    "button": "Descargar en Google Play",
-    "note": "Gratis para Android"
+    "subtitle": "Ten el control de todos tus seguros y suministros. Gratis, sin suscripcion, sin publicidad.",
+    "googlePlay": "Descargar en Google Play",
+    "appStore": "Proximamente en App Store",
+    "note": "Gratis para Android · iOS proximamente"
   },
   "footer": {
     "tagline": "Gestiona tus seguros y gastos con inteligencia.",
