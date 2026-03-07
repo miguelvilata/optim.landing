@@ -1,4 +1,4 @@
-.PHONY: help install dev start stop build preview serve clean clean-all
+.PHONY: help install dev start stop build preview serve deploy clean clean-all
 
 # Ports
 PORT_DEV     := 4321
@@ -65,3 +65,8 @@ clean:
 ## clean-all   Elimina dist/, node_modules y logs
 clean-all: clean
 	rm -rf node_modules .dev.log .dev.pid
+
+## deploy      Genera la build y despliega en Cloudflare Pages
+deploy: build
+	@command -v npx >/dev/null 2>&1 || { echo "npx no encontrado"; exit 1; }
+	npx wrangler pages deploy dist --project-name=optim-landing

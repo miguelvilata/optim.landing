@@ -25,7 +25,7 @@ const s = tr.screenshots;
     </div>
 
     <!-- Carousel -->
-    <div class="relative max-w-xs mx-auto" id="screenshots-carousel">
+    <div class="relative max-w-sm mx-auto" id="screenshots-carousel">
       <!-- Phone frame with sliding images -->
       <div class="relative mx-auto" style="width: 260px;">
         <!-- Outer phone frame -->
@@ -83,7 +83,7 @@ const s = tr.screenshots;
       <!-- Prev / Next arrows -->
       <button
         id="carousel-prev"
-        class="absolute left-0 top-1/3 -translate-x-12 -translate-y-1/2 w-10 h-10 rounded-full bg-white/10 border border-white/20 flex items-center justify-center text-white hover:bg-white/20 transition-colors focus:outline-none focus:ring-2 focus:ring-white/40"
+        class="absolute left-0 w-10 h-10 rounded-full bg-white/10 border border-white/20 flex items-center justify-center text-white hover:bg-white/20 transition-colors focus:outline-none focus:ring-2 focus:ring-white/40"
         aria-label="Anterior"
         style="top: 260px;"
       >
@@ -93,7 +93,7 @@ const s = tr.screenshots;
       </button>
       <button
         id="carousel-next"
-        class="absolute right-0 top-1/3 translate-x-12 -translate-y-1/2 w-10 h-10 rounded-full bg-white/10 border border-white/20 flex items-center justify-center text-white hover:bg-white/20 transition-colors focus:outline-none focus:ring-2 focus:ring-white/40"
+        class="absolute right-0 w-10 h-10 rounded-full bg-white/10 border border-white/20 flex items-center justify-center text-white hover:bg-white/20 transition-colors focus:outline-none focus:ring-2 focus:ring-white/40"
         aria-label="Siguiente"
         style="top: 260px;"
       >
@@ -156,31 +156,6 @@ const s = tr.screenshots;
   const carousel = document.getElementById('screenshots-carousel');
   carousel?.addEventListener('mouseenter', stopAuto);
   carousel?.addEventListener('mouseleave', startAuto);
-
-  // Swipe support
-  let touchStartX = 0;
-  let touchStartY = 0;
-
-  carousel?.addEventListener('touchstart', (e: TouchEvent) => {
-    touchStartX = e.touches[0].clientX;
-    touchStartY = e.touches[0].clientY;
-  }, { passive: true });
-
-  carousel?.addEventListener('touchend', (e: TouchEvent) => {
-    const deltaX = e.changedTouches[0].clientX - touchStartX;
-    const deltaY = e.changedTouches[0].clientY - touchStartY;
-
-    // Solo actuar si el gesto es claramente horizontal
-    if (Math.abs(deltaX) < 40 || Math.abs(deltaX) < Math.abs(deltaY)) return;
-
-    stopAuto();
-    if (deltaX < 0) {
-      goTo(current + 1);
-    } else {
-      goTo(current - 1);
-    }
-    startAuto();
-  }, { passive: true });
 
   startAuto();
 </script>
