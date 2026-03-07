@@ -157,5 +157,30 @@ const s = tr.screenshots;
   carousel?.addEventListener('mouseenter', stopAuto);
   carousel?.addEventListener('mouseleave', startAuto);
 
+  // Swipe support
+  let touchStartX = 0;
+  let touchStartY = 0;
+
+  carousel?.addEventListener('touchstart', (e: TouchEvent) => {
+    touchStartX = e.touches[0].clientX;
+    touchStartY = e.touches[0].clientY;
+  }, { passive: true });
+
+  carousel?.addEventListener('touchend', (e: TouchEvent) => {
+    const deltaX = e.changedTouches[0].clientX - touchStartX;
+    const deltaY = e.changedTouches[0].clientY - touchStartY;
+
+    // Solo actuar si el gesto es claramente horizontal
+    if (Math.abs(deltaX) < 40 || Math.abs(deltaX) < Math.abs(deltaY)) return;
+
+    stopAuto();
+    if (deltaX < 0) {
+      goTo(current + 1);
+    } else {
+      goTo(current - 1);
+    }
+    startAuto();
+  }, { passive: true });
+
   startAuto();
 </script>

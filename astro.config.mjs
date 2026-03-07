@@ -8,5 +8,6 @@ export default defineConfig({
   site: SITE_URL,
   output: 'static',
   outDir: 'dist',
+  trailingSlash: 'never',
   integrations: [tailwind()],
 });
