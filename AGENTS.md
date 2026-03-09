@@ -46,6 +46,9 @@ src/
     LanguageSelector.astro
     AppLogo.astro
     LegalPage.astro
+    Waitlist.astro             # Seccion waitlist embebida en la landing
+    WaitlistPage.astro         # Componente de pagina dedicada /es/waitlist etc.
+    ConfirmBanner.astro        # Banner flotante que lee ?confirm=<type> de la URL
   layouts/
     BaseLayout.astro   # HTML base: SEO, hreflang, OG, fuentes, analytics
   i18n/
@@ -55,12 +58,14 @@ src/
     index.ts           # t(lang), getLangFromUrl, getAlternateUrls, supportedLangs
   pages/
     index.astro        # Redirige a /es/
+    confirm.astro      # Pagina de confirmacion de email del waitlist (sin idioma)
     es/index.astro     # Landing ES
     en/index.astro     # Landing EN
     pt/index.astro     # Landing PT
     {lang}/privacy.astro
     {lang}/terms.astro
-  config.ts            # Constantes globales: SITE_URL, GOOGLE_PLAY_URL, APP_STORE_URL
+    {lang}/waitlist.astro      # Pagina dedicada del waitlist por idioma
+  config.ts            # Constantes globales: SITE_URL, GOOGLE_PLAY_URL, APP_STORE_URL, SUPABASE_URL, SUPABASE_ANON_KEY
 public/
   screenshots/         # Imagenes reales de la app (PNG, ~700KB c/u)
     es_dashboard.png
@@ -147,7 +152,15 @@ PUBLIC_GOOGLE_PLAY_URL=https://play.google.com/store/apps/details?id=...
 PUBLIC_APP_STORE_URL=https://apps.apple.com/app/...   # cuando este disponible
 PUBLIC_ANALYTICS_DOMAIN=tudominio.com                 # activa Plausible
 SITE_URL=https://optim-app.com
+
+# Supabase — waitlist y confirmacion de email
+PUBLIC_SUPABASE_URL=https://<ref>.supabase.co         # URL publica del proyecto Supabase
+SUPABASE_ANON_KEY=eyJ...                              # Anon key (inyectada en build via define:vars, NO en el cliente directamente)
 ```
+
+**Convencion de prefijos**:
+- `PUBLIC_*` → disponible en cliente via `import.meta.env.PUBLIC_*`
+- Sin prefijo → solo disponible en frontmatter/build; se pasa al cliente mediante `<script define:vars={{}}>` cuando es necesario (ver `confirm.astro` y `Waitlist.astro`)
 
 ---
 
@@ -197,3 +210,72 @@ make clean-all   # elimina dist/, node_modules, logs
 1. Copiar la imagen a `public/screenshots/`.
 2. Editar el array `screenshots.items` en cada JSON (`es.json`, `en.json`, `pt.json`) con `src`, `alt` y `caption`.
 3. El carrusel (`Screenshots.astro`) itera sobre `s.items` automaticamente — no requiere cambios en el componente.
+
+---
+
+## Sistema de waitlist
+
+### Componentes implicados
+
+| Componente | Uso |
+|---|---|
+| `Waitlist.astro` | Seccion embebida en la landing (`LandingPage.astro`) |
+| `WaitlistPage.astro` | Pagina dedicada usada en `{lang}/waitlist.astro` |
+| `ConfirmBanner.astro` | Banner flotante incluido en todas las paginas; lee `?confirm=<type>` |
+| `confirm.astro` | Pagina `/confirm` que intermedia la llamada a la Edge Function con auth |
+
+### Flujo completo
+
+```
+Usuario rellena el formulario (email + nombre opcional)
+  → POST a Edge Function submit-lead con Authorization Bearer
+  → Supabase guarda el lead y manda email con enlace
+     https://getoptim.app/confirm?token=<token>
+  → Usuario hace clic → carga /confirm
+  → JS en /confirm hace GET a confirm-lead?token con Authorization Bearer
+  → Edge Function valida y devuelve 302 → Location: https://getoptim.app/es/?confirm=success
+  → JS redirige con window.location.replace(response.url)
+  → ConfirmBanner detecta ?confirm=success y muestra el banner verde
+```
+
+### Edge Functions de Supabase
+
+| Funcion | Metodo | Proposito |
+|---|---|---|
+| `submit-lead` | POST | Registra el email, guarda lead, envia email de confirmacion |
+| `confirm-lead` | GET `?token=` | Valida token, marca lead como confirmado, devuelve 302 |
+
+URL base: `${SUPABASE_URL}/functions/v1/<nombre>`
+Auth: cabecera `Authorization: Bearer ${SUPABASE_ANON_KEY}` en todas las llamadas.
+
+### Estados de confirmacion (`?confirm=`)
+
+| Valor | Significado | Banner |
+|---|---|---|
+| `success` | Confirmacion exitosa | Verde |
+| `already` | Email ya confirmado previamente | Azul |
+| `invalid` | Token invalido o expirado | Rojo |
+| `error` | Error de red o respuesta inesperada | Rojo |
+
+### Traducciones del waitlist (`es.json` → clave `waitlist`)
+
+```
+title, subtitle
+namePlaceholder, emailPlaceholder, submit, submitting
+successTitle, successDetail
+alreadyConfirmed, confirmationResent
+errorValidation, errorRateLimit, errorServer
+confirmSuccess, confirmAlready, confirmInvalid
+```
+
+### Honeypot anti-bot
+
+El formulario incluye un campo `name="website"` oculto con CSS. Si viene relleno, el JS aborta el envio silenciosamente (sin mensaje de error al usuario).
+
+### Pagina `/confirm` (sin idioma)
+
+- **Archivo**: `src/pages/confirm.astro`
+- **Sin i18n**: la pagina es funcional (spinner + mensaje de error), no necesita traduccion
+- **Patron `define:vars`**: `SUPABASE_ANON_KEY` (sin prefijo PUBLIC_) se inyecta al script cliente via `<script define:vars={{ supabaseAnonKey, edgeFunctionBase }}>`
+- **Sin redireccion manual**: usa `redirect: 'follow'` (default) y lee `response.url` para obtener la URL final tras el 302
+- **Fallback de error**: si no hay token o el fetch falla, muestra el bloque `#state-error` con enlace a `/es/`

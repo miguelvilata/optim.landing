@@ -1,0 +1,102 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const supabaseUrl  = import.meta.env.PUBLIC_SUPABASE_URL  || '';
+const supabaseAnonKey = import.meta.env.SUPABASE_ANON_KEY || '';
+const edgeFunctionBase = `${supabaseUrl}/functions/v1/confirm-lead`;
+---
+
+<BaseLayout
+  title="Confirmando suscripción — Optim"
+  description="Confirmando tu suscripción al waitlist de Optim"
+  lang="es"
+>
+  <div class="min-h-screen bg-brand-primary flex items-center justify-center px-4">
+    <div class="text-center max-w-md" id="confirm-container">
+
+      <!-- Spinner -->
+      <div id="state-loading">
+        <svg
+          class="w-12 h-12 text-brand-secondary mx-auto mb-6 animate-spin"
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          aria-hidden="true"
+        >
+          <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+          <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z"></path>
+        </svg>
+        <h1 class="text-2xl font-bold text-white mb-2">Confirmando tu suscripción…</h1>
+        <p class="text-blue-200">Un momento, estamos verificando tu enlace.</p>
+      </div>
+
+      <!-- Error (oculto inicialmente) -->
+      <div id="state-error" class="hidden">
+        <svg
+          class="w-12 h-12 text-red-400 mx-auto mb-6"
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+          aria-hidden="true"
+        >
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+            d="M12 9v2m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+        </svg>
+        <h1 class="text-2xl font-bold text-white mb-2">Enlace no válido</h1>
+        <p class="text-blue-200 mb-6">El enlace ha expirado o no es válido. Vuelve a registrarte.</p>
+        <a
+          href="/es/"
+          class="inline-block bg-brand-secondary hover:bg-blue-500 text-white font-semibold py-3 px-6 rounded-xl transition-colors"
+        >
+          Volver al inicio
+        </a>
+      </div>
+
+    </div>
+  </div>
+</BaseLayout>
+
+<script define:vars={{ edgeFunctionBase, supabaseAnonKey }}>
+  (async () => {
+    const params = new URLSearchParams(window.location.search);
+    const token  = params.get('token');
+
+    if (!token) {
+      window.location.replace('/');
+      return;
+    }
+
+    try {
+      const response = await fetch(`${edgeFunctionBase}?token=${encodeURIComponent(token)}`, {
+        method: 'GET',
+        headers: { 'Authorization': `Bearer ${supabaseAnonKey}` },
+        // redirect: 'follow' es el default — el browser sigue el 302 y response.url
+        // contiene la URL final (p.ej. https://getoptim.app/es/?confirm=success)
+      });
+
+      const destination = response.url;
+
+      if (!destination) {
+        showError();
+        return;
+      }
+
+      // Reemplazar el origen de la URL devuelta por la Edge Function
+      // con el origen actual, para que funcione igual en local y en producción.
+      // Ej: https://getoptim.app/es/?confirm=success → http://localhost:4321/es/?confirm=success
+      const redirectUrl = new URL(destination);
+      redirectUrl.protocol = window.location.protocol;
+      redirectUrl.host     = window.location.host;
+
+      window.location.replace(redirectUrl.toString());
+    } catch (_err) {
+      showError();
+    }
+  })();
+
+  function showError() {
+    document.getElementById('state-loading').classList.add('hidden');
+    document.getElementById('state-error').classList.remove('hidden');
+  }
+</script>
