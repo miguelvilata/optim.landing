@@ -68,12 +68,10 @@ const edgeFunctionBase = `${supabaseUrl}/functions/v1/confirm-lead`;
     }
 
     try {
-      const response = await fetch(`${edgeFunctionBase}?token=${encodeURIComponent(token)}`, {
-        method: 'GET',
-        headers: { 'Authorization': `Bearer ${supabaseAnonKey}` },
-        // redirect: 'follow' es el default — el browser sigue el 302 y response.url
-        // contiene la URL final (p.ej. https://getoptim.app/es/?confirm=success)
-      });
+      const response = await fetch(
+        `${edgeFunctionBase}?token=${encodeURIComponent(token)}&apikey=${encodeURIComponent(supabaseAnonKey)}`,
+        // Sin headers custom → GET simple → sin preflight CORS
+      );
 
       const destination = response.url;
 
