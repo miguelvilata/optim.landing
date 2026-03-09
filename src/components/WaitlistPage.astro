@@ -175,6 +175,7 @@ const submitUrl = `${SUPABASE_URL}/functions/v1/submit-lead`;
       });
 
       const data = await res.json();
+      console.log('[waitlist] response:', res.status, data);
 
       if (res.ok) {
         form.classList.add('hidden');
@@ -195,7 +196,8 @@ const submitUrl = `${SUPABASE_URL}/functions/v1/submit-lead`;
         showStatus(w.errorServer, null, true);
         resetSubmitBtn();
       }
-    } catch {
+    } catch (err) {
+      console.error('[waitlist] fetch error:', err);
       showStatus(w.errorServer, null, true);
       resetSubmitBtn();
     }
