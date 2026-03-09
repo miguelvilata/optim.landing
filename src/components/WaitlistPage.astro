@@ -1,7 +1,7 @@
 ---
 import type { Lang } from '../i18n/index.ts';
 import { t } from '../i18n/index.ts';
-import { SUPABASE_URL } from '../config.ts';
+import { SUPABASE_URL, SUPABASE_ANON_KEY } from '../config.ts';
 import Navbar from './Navbar.astro';
 import Footer from './Footer.astro';
 import ConfirmBanner from './ConfirmBanner.astro';
@@ -14,6 +14,7 @@ const tr = t(lang);
 const w = tr.waitlist;
 const p = tr.waitlistPage;
 const submitUrl = `${SUPABASE_URL}/functions/v1/submit-lead`;
+const anonKey = SUPABASE_ANON_KEY;
 ---
 
 <ConfirmBanner lang={lang} />
@@ -118,7 +119,7 @@ const submitUrl = `${SUPABASE_URL}/functions/v1/submit-lead`;
 
 <Footer lang={lang} />
 
-<script define:vars={{ submitUrl, lang, w }}>
+<script define:vars={{ submitUrl, anonKey, lang, w }}>
   const form = document.getElementById('waitlist-form');
   const submitBtn = document.getElementById('waitlist-submit');
   const statusDiv = document.getElementById('waitlist-status');
@@ -166,7 +167,10 @@ const submitUrl = `${SUPABASE_URL}/functions/v1/submit-lead`;
     try {
       const res = await fetch(submitUrl, {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
+        headers: {
+          'Content-Type': 'application/json',
+          'Authorization': `Bearer ${anonKey}`,
+        },
         body: JSON.stringify({
           email,
           ...(name ? { name } : {}),

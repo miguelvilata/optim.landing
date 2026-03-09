@@ -15,3 +15,6 @@ export const APP_STORE_URL = import.meta.env.PUBLIC_APP_STORE_URL || '#';
 
 // Supabase project URL (for Edge Functions)
 export const SUPABASE_URL = import.meta.env.PUBLIC_SUPABASE_URL || '';
+
+// Supabase anon key (required for Edge Function authorization)
+export const SUPABASE_ANON_KEY = import.meta.env.SUPABASE_ANON_KEY || '';
