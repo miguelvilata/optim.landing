@@ -68,20 +68,26 @@ const edgeFunctionBase = `${supabaseUrl}/functions/v1/confirm-lead`;
     }
 
     try {
+      // La anon key va en la cabecera, nunca en la URL.
+      // redirect:'follow' hace que el browser siga el 302 de la Edge Function;
+      // response.url contiene la URL final (p.ej. https://getoptim.app/es/?confirm=success).
       const response = await fetch(
-        `${edgeFunctionBase}?token=${encodeURIComponent(token)}&apikey=${encodeURIComponent(supabaseAnonKey)}`,
-        // Sin headers custom → GET simple → sin preflight CORS
+        `${edgeFunctionBase}?token=${encodeURIComponent(token)}`,
+        {
+          method: 'GET',
+          headers: { 'Authorization': `Bearer ${supabaseAnonKey}` },
+        }
       );
 
+      // response.url es la URL tras seguir el 302; puede ser vacío si falló CORS.
       const destination = response.url;
 
-      if (!destination) {
+      if (!destination || destination === '') {
         showError();
         return;
       }
 
-      // Reemplazar el origen de la URL devuelta por la Edge Function
-      // con el origen actual, para que funcione igual en local y en producción.
+      // Normalizar el origen para que funcione igual en local y en producción.
       // Ej: https://getoptim.app/es/?confirm=success → http://localhost:4321/es/?confirm=success
       const redirectUrl = new URL(destination);
       redirectUrl.protocol = window.location.protocol;
