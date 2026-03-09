@@ -11,7 +11,7 @@ Landing page de **Optim**, una app movil de gestion de seguros y gastos recurren
 - **App**: gestiona seguros (auto, hogar, salud, vida, moto) y suministros (luz, agua, gas, internet)
 - **Plataformas**: Android (disponible), iOS (proximamente)
 - **Idioma de trabajo activo**: español (`es`). No generar traducciones hasta completar `es`.
-- **URL de produccion**: configurable via env `SITE_URL` (default `https://optim-app.com`)
+- **URL de produccion**: configurable via env `SITE_URL` (default `https://getoptim.app`)
 
 ---
 

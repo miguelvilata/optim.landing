@@ -1,7 +1,7 @@
 // Site configuration
 // Set environment variables to customize for your deployment
 
-export const SITE_URL = import.meta.env.SITE || 'https://optim-app.com';
+export const SITE_URL = import.meta.env.SITE || 'https://getoptim.app';
 
 // Analytics: set PUBLIC_ANALYTICS_DOMAIN to enable Plausible Analytics
 // Example: PUBLIC_ANALYTICS_DOMAIN=yourdomain.com
