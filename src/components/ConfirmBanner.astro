@@ -1,0 +1,78 @@
+---
+import type { Lang } from '../i18n/index.ts';
+import { t } from '../i18n/index.ts';
+
+interface Props {
+  lang: Lang;
+}
+const { lang } = Astro.props;
+const tr = t(lang);
+const w = tr.waitlist;
+---
+
+<!-- Banner hidden by default, shown via JS when ?confirm= is in URL -->
+<div
+  id="confirm-banner"
+  role="alert"
+  aria-live="polite"
+  class="hidden fixed top-4 left-1/2 -translate-x-1/2 z-50 w-full max-w-md px-4"
+>
+  <div id="confirm-banner-inner" class="flex items-start gap-3 rounded-2xl px-5 py-4 shadow-xl text-sm font-medium">
+    <span id="confirm-banner-icon" class="flex-shrink-0 mt-0.5"></span>
+    <p id="confirm-banner-msg"></p>
+    <button
+      id="confirm-banner-close"
+      aria-label="Cerrar"
+      class="ml-auto flex-shrink-0 opacity-60 hover:opacity-100 transition-opacity"
+    >
+      <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" aria-hidden="true">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+      </svg>
+    </button>
+  </div>
+</div>
+
+<script define:vars={{ w }}>
+  const messages = {
+    success: { text: w.confirmSuccess, type: 'success' },
+    already: { text: w.confirmAlready, type: 'info' },
+    invalid: { text: w.confirmInvalid, type: 'error' },
+  };
+
+  const styles = {
+    success: { bg: 'bg-green-50 border border-green-200 text-green-800', icon: `<svg class="w-5 h-5 text-green-500" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>` },
+    info:    { bg: 'bg-blue-50 border border-blue-200 text-blue-800',   icon: `<svg class="w-5 h-5 text-blue-500" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>` },
+    error:   { bg: 'bg-red-50 border border-red-200 text-red-800',     icon: `<svg class="w-5 h-5 text-red-500" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>` },
+  };
+
+  const params = new URLSearchParams(window.location.search);
+  const confirm = params.get('confirm');
+
+  if (confirm && messages[confirm]) {
+    const { text, type } = messages[confirm];
+    const style = styles[type];
+
+    const banner = document.getElementById('confirm-banner');
+    const inner = document.getElementById('confirm-banner-inner');
+    const icon = document.getElementById('confirm-banner-icon');
+    const msg = document.getElementById('confirm-banner-msg');
+
+    inner.className = `flex items-start gap-3 rounded-2xl px-5 py-4 shadow-xl text-sm font-medium ${style.bg}`;
+    icon.innerHTML = style.icon;
+    msg.textContent = text;
+    banner.classList.remove('hidden');
+
+    // Clean the URL without reloading
+    const url = new URL(window.location.href);
+    url.searchParams.delete('confirm');
+    window.history.replaceState({}, '', url.toString());
+
+    // Auto-dismiss after 6s
+    const timer = setTimeout(() => banner.classList.add('hidden'), 6000);
+
+    document.getElementById('confirm-banner-close').addEventListener('click', () => {
+      clearTimeout(timer);
+      banner.classList.add('hidden');
+    });
+  }
+</script>

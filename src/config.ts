@@ -12,3 +12,6 @@ export const GOOGLE_PLAY_URL = import.meta.env.PUBLIC_GOOGLE_PLAY_URL || '#';
 
 // App Store link (iOS - coming soon)
 export const APP_STORE_URL = import.meta.env.PUBLIC_APP_STORE_URL || '#';
+
+// Supabase project URL (for Edge Functions)
+export const SUPABASE_URL = import.meta.env.PUBLIC_SUPABASE_URL || '';

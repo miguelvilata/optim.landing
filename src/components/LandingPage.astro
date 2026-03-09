@@ -6,8 +6,10 @@ import Features from './Features.astro';
 import HowItWorks from './HowItWorks.astro';
 import ServiceCategories from './ServiceCategories.astro';
 import Screenshots from './Screenshots.astro';
+import Waitlist from './Waitlist.astro';
 import CTA from './CTA.astro';
 import Footer from './Footer.astro';
+import ConfirmBanner from './ConfirmBanner.astro';
 
 interface Props {
   lang: Lang;
@@ -15,6 +17,7 @@ interface Props {
 const { lang } = Astro.props;
 ---
 
+<ConfirmBanner lang={lang} />
 <Navbar lang={lang} />
 <main>
   <Hero lang={lang} />
@@ -22,6 +25,7 @@ const { lang } = Astro.props;
   <ServiceCategories lang={lang} />
   <HowItWorks lang={lang} />
   <Screenshots lang={lang} />
+  <Waitlist lang={lang} />
   <CTA lang={lang} />
 </main>
 <Footer lang={lang} />

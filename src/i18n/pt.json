@@ -8,6 +8,7 @@
   "nav": {
     "features": "Recursos",
     "howItWorks": "Como funciona",
+    "waitlist": "Beta testers",
     "download": "Baixar",
     "logoAlt": "Optim – Seguros e Despesas"
   },
@@ -139,6 +140,37 @@
     "terms": "Termos e Condicoes",
     "language": "Idioma",
     "copyright": "Optim. Todos os direitos reservados."
+  },
+  "waitlist": {
+    "title": "Acesso antecipado para testers",
+    "subtitle": "Estamos abrindo o acesso a um grupo reduzido. Cadastre-se e avisamos quando sua vaga estiver pronta.",
+    "namePlaceholder": "Seu nome (opcional)",
+    "emailPlaceholder": "voce@email.com",
+    "submit": "Me avise",
+    "submitting": "Enviando...",
+    "successTitle": "Verifique seu email",
+    "successDetail": "Enviamos um link de confirmacao. Clique nele para concluir o cadastro.",
+    "alreadyConfirmed": "Este email ja esta na lista. Obrigado pelo interesse.",
+    "confirmationResent": "Ja tinhamos seu email. Reenviamos o link de confirmacao.",
+    "errorValidation": "O email nao e valido. Verifique e tente novamente.",
+    "errorRateLimit": "Muitas tentativas. Tente novamente em uma hora.",
+    "errorServer": "Ocorreu um erro. Tente novamente.",
+    "confirmSuccess": "Email confirmado. Voce esta na lista.",
+    "confirmAlready": "Este email ja estava confirmado.",
+    "confirmInvalid": "Link invalido ou expirado."
+  },
+  "waitlistPage": {
+    "badge": "Programa de beta testers",
+    "title": "Seja o primeiro a experimentar o Optim",
+    "subtitle": "Ainda nao lancamos oficialmente. Estamos abrindo acesso antecipado a um grupo reduzido de testers que queiram nos ajudar a melhorar o app.",
+    "bullets": [
+      "Acesso ao app antes do lancamento oficial",
+      "Sua opiniao ajuda a moldar o produto",
+      "Sem compromisso — cancele quando quiser"
+    ],
+    "privacyNote": "Usaremos seu email apenas para avisar sobre o status do app. Sem spam, sem compartilhamento com terceiros.",
+    "metaTitle": "Beta testers – Optim",
+    "metaDescription": "Entre na lista de espera do Optim e seja um dos primeiros a experimentar o app antes do lancamento oficial."
   },
   "legal": {
     "privacy": {

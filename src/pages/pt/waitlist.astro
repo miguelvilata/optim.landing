@@ -1,0 +1,17 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import WaitlistPage from '../../components/WaitlistPage.astro';
+import { t } from '../../i18n/index.ts';
+
+const lang = 'pt';
+const tr = t(lang);
+---
+
+<BaseLayout
+  lang={lang}
+  title={tr.waitlistPage.metaTitle}
+  description={tr.waitlistPage.metaDescription}
+  canonicalPath="/pt/waitlist"
+>
+  <WaitlistPage lang={lang} />
+</BaseLayout>

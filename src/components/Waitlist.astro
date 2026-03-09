@@ -1,0 +1,156 @@
+---
+import type { Lang } from '../i18n/index.ts';
+import { t } from '../i18n/index.ts';
+import { SUPABASE_URL } from '../config.ts';
+
+interface Props {
+  lang: Lang;
+}
+const { lang } = Astro.props;
+const tr = t(lang);
+const w = tr.waitlist;
+const submitUrl = `${SUPABASE_URL}/functions/v1/submit-lead`;
+---
+
+<section id="waitlist" class="py-24 bg-brand-surface">
+  <div class="max-w-xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+    <!-- Icon -->
+    <div class="inline-flex w-14 h-14 rounded-2xl bg-brand-secondary/10 items-center justify-center mb-6">
+      <svg class="w-7 h-7 text-brand-secondary" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9" />
+      </svg>
+    </div>
+
+    <h2 class="text-3xl sm:text-4xl font-extrabold text-brand-primary mb-4">{w.title}</h2>
+    <p class="text-lg text-brand-muted mb-10">{w.subtitle}</p>
+
+    <form id="waitlist-form" novalidate>
+      <!-- Honeypot: bots fill this, humans don't -->
+      <input
+        type="text"
+        name="website"
+        tabindex="-1"
+        autocomplete="off"
+        aria-hidden="true"
+        style="position:absolute;left:-9999px;opacity:0;pointer-events:none;"
+      />
+
+      <div class="flex flex-col gap-3">
+        <input
+          type="text"
+          name="name"
+          placeholder={w.namePlaceholder}
+          autocomplete="name"
+          class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-brand-secondary text-brand-primary placeholder-brand-muted bg-white text-base"
+        />
+        <input
+          type="email"
+          name="email"
+          required
+          placeholder={w.emailPlaceholder}
+          autocomplete="email"
+          class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-brand-secondary text-brand-primary placeholder-brand-muted bg-white text-base"
+        />
+        <button
+          type="submit"
+          id="waitlist-submit"
+          class="w-full px-8 py-3.5 bg-brand-secondary text-white font-bold rounded-xl hover:bg-blue-600 transition-all duration-200 disabled:opacity-60 disabled:cursor-not-allowed text-base"
+        >
+          {w.submit}
+        </button>
+      </div>
+    </form>
+
+    <!-- Status messages (shown after submit) -->
+    <div id="waitlist-status" class="mt-6 hidden">
+      <div id="waitlist-icon" class="flex justify-center mb-3"></div>
+      <p id="waitlist-msg" class="text-base font-semibold"></p>
+      <p id="waitlist-detail" class="text-sm text-brand-muted mt-2 hidden"></p>
+    </div>
+  </div>
+</section>
+
+<script define:vars={{ submitUrl, lang, w }}>
+  const form = document.getElementById('waitlist-form');
+  const submitBtn = document.getElementById('waitlist-submit');
+  const statusDiv = document.getElementById('waitlist-status');
+  const iconEl = document.getElementById('waitlist-icon');
+  const msgEl = document.getElementById('waitlist-msg');
+  const detailEl = document.getElementById('waitlist-detail');
+
+  const iconSuccess = `<svg class="w-10 h-10 text-green-500" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>`;
+  const iconError = `<svg class="w-10 h-10 text-red-500" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>`;
+
+  function showStatus(msg, detail, isError) {
+    statusDiv.classList.remove('hidden');
+    iconEl.innerHTML = isError ? iconError : iconSuccess;
+    msgEl.textContent = msg;
+    msgEl.className = `text-base font-semibold ${isError ? 'text-red-600' : 'text-green-700'}`;
+    if (detail) {
+      detailEl.textContent = detail;
+      detailEl.classList.remove('hidden');
+    } else {
+      detailEl.classList.add('hidden');
+    }
+  }
+
+  function resetSubmitBtn() {
+    submitBtn.disabled = false;
+    submitBtn.textContent = w.submit;
+  }
+
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+
+    // Honeypot check
+    if (form.elements['website'].value) return;
+
+    const email = form.elements['email'].value.trim();
+    const name = form.elements['name'].value.trim();
+
+    if (!email) {
+      showStatus(w.errorValidation, null, true);
+      return;
+    }
+
+    submitBtn.disabled = true;
+    submitBtn.textContent = w.submitting;
+
+    try {
+      const res = await fetch(submitUrl, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          email,
+          ...(name ? { name } : {}),
+          lang,
+        }),
+      });
+
+      const data = await res.json();
+
+      if (res.ok) {
+        form.classList.add('hidden');
+        if (data.message === 'already_confirmed') {
+          showStatus(w.alreadyConfirmed, null, false);
+        } else if (data.message === 'confirmation_resent') {
+          showStatus(w.successTitle, w.confirmationResent, false);
+        } else {
+          showStatus(w.successTitle, w.successDetail, false);
+        }
+      } else if (res.status === 400) {
+        showStatus(w.errorValidation, null, true);
+        resetSubmitBtn();
+      } else if (res.status === 429) {
+        showStatus(w.errorRateLimit, null, true);
+        resetSubmitBtn();
+      } else {
+        showStatus(w.errorServer, null, true);
+        resetSubmitBtn();
+      }
+    } catch {
+      showStatus(w.errorServer, null, true);
+      resetSubmitBtn();
+    }
+  });
+</script>

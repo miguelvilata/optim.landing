@@ -8,6 +8,7 @@
   "nav": {
     "features": "Caracteristicas",
     "howItWorks": "Como funciona",
+    "waitlist": "Beta testers",
     "download": "Descargar",
     "logoAlt": "Optim – Seguros y Gastos"
   },
@@ -139,6 +140,37 @@
     "terms": "Terminos y Condiciones",
     "language": "Idioma",
     "copyright": "Optim. Todos los derechos reservados."
+  },
+  "waitlist": {
+    "title": "Acceso anticipado para testers",
+    "subtitle": "Estamos abriendo el acceso a un grupo reducido. Apuntate y te avisamos cuando tu plaza este lista.",
+    "namePlaceholder": "Tu nombre (opcional)",
+    "emailPlaceholder": "tu@email.com",
+    "submit": "Avisame",
+    "submitting": "Enviando...",
+    "successTitle": "Revisa tu email",
+    "successDetail": "Te hemos enviado un enlace de confirmacion. Haz clic en el para completar tu registro.",
+    "alreadyConfirmed": "Este email ya esta en la lista. Gracias por tu interes.",
+    "confirmationResent": "Ya te habiamos enviado un correo. Hemos reenviado el enlace de confirmacion.",
+    "errorValidation": "El email no es valido. Revisalo e intentalo de nuevo.",
+    "errorRateLimit": "Demasiados intentos. Prueba de nuevo en una hora.",
+    "errorServer": "Ha ocurrido un error. Intentalo de nuevo.",
+    "confirmSuccess": "Email confirmado. Ya estas en la lista.",
+    "confirmAlready": "Este correo ya estaba confirmado.",
+    "confirmInvalid": "Enlace invalido o expirado."
+  },
+  "waitlistPage": {
+    "badge": "Programa de beta testers",
+    "title": "Se el primero en probar Optim",
+    "subtitle": "Todavia no hemos lanzado oficialmente. Estamos abriendo acceso anticipado a un grupo reducido de testers que quieran ayudarnos a mejorar la app.",
+    "bullets": [
+      "Acceso a la app antes del lanzamiento oficial",
+      "Tu opinion ayuda a dar forma al producto",
+      "Sin compromiso — te puedes dar de baja cuando quieras"
+    ],
+    "privacyNote": "Solo usaremos tu correo para avisarte sobre el estado de la app. Sin spam, sin ceder datos a terceros.",
+    "metaTitle": "Beta testers – Optim",
+    "metaDescription": "Apuntate a la lista de espera de Optim y se de los primeros en probar la app antes de su lanzamiento oficial."
   },
   "legal": {
     "privacy": {

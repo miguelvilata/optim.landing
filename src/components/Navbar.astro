@@ -16,7 +16,7 @@ const tr = t(lang);
   <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
     <nav class="flex items-center justify-between h-16" aria-label="Main navigation">
       <!-- Logo -->
-      <a href={`/${lang}/`} class="flex items-center gap-3 shrink-0" aria-label={tr.nav.logoAlt}>
+      <a href={`/${lang}`} class="flex items-center gap-3 shrink-0" aria-label={tr.nav.logoAlt}>
         <AppLogo size={36} />
         <span class="text-white font-bold text-lg tracking-tight">Optim</span>
       </a>
@@ -24,16 +24,23 @@ const tr = t(lang);
       <!-- Desktop nav links -->
       <div class="hidden md:flex items-center gap-8">
         <a
-          href={`/${lang}/#features`}
+          href={`/${lang}#features`}
           class="text-sm text-white/80 hover:text-white transition-colors"
         >
           {tr.nav.features}
         </a>
         <a
-          href={`/${lang}/#how-it-works`}
+          href={`/${lang}#how-it-works`}
           class="text-sm text-white/80 hover:text-white transition-colors"
         >
           {tr.nav.howItWorks}
+        </a>
+        <a
+          href={`/${lang}/waitlist`}
+          class="text-sm text-brand-secondary hover:text-blue-400 font-semibold transition-colors flex items-center gap-1.5"
+        >
+          <span class="w-1.5 h-1.5 rounded-full bg-brand-secondary animate-pulse"></span>
+          {tr.nav.waitlist}
         </a>
         <LanguageSelector lang={lang} />
         <a
@@ -48,6 +55,13 @@ const tr = t(lang);
 
       <!-- Mobile: lang selector + CTA -->
       <div class="flex md:hidden items-center gap-3">
+        <a
+          href={`/${lang}/waitlist`}
+          class="text-xs text-brand-secondary font-semibold flex items-center gap-1"
+        >
+          <span class="w-1.5 h-1.5 rounded-full bg-brand-secondary animate-pulse"></span>
+          {tr.nav.waitlist}
+        </a>
         <LanguageSelector lang={lang} />
         <a
           href={GOOGLE_PLAY_URL}

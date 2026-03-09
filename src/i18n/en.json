@@ -8,6 +8,7 @@
   "nav": {
     "features": "Features",
     "howItWorks": "How it works",
+    "waitlist": "Beta testers",
     "download": "Download",
     "logoAlt": "Optim – Insurance & Expenses"
   },
@@ -139,6 +140,37 @@
     "terms": "Terms & Conditions",
     "language": "Language",
     "copyright": "Optim. All rights reserved."
+  },
+  "waitlist": {
+    "title": "Early access for testers",
+    "subtitle": "We're opening access to a small group. Sign up and we'll let you know when your spot is ready.",
+    "namePlaceholder": "Your name (optional)",
+    "emailPlaceholder": "you@email.com",
+    "submit": "Notify me",
+    "submitting": "Sending...",
+    "successTitle": "Check your email",
+    "successDetail": "We've sent you a confirmation link. Click it to complete your registration.",
+    "alreadyConfirmed": "This email is already on the list. Thanks for your interest.",
+    "confirmationResent": "We already had your email. We've resent the confirmation link.",
+    "errorValidation": "The email is not valid. Please check it and try again.",
+    "errorRateLimit": "Too many attempts. Please try again in an hour.",
+    "errorServer": "Something went wrong. Please try again.",
+    "confirmSuccess": "Email confirmed. You're on the list.",
+    "confirmAlready": "This email was already confirmed.",
+    "confirmInvalid": "Invalid or expired link."
+  },
+  "waitlistPage": {
+    "badge": "Beta tester program",
+    "title": "Be the first to try Optim",
+    "subtitle": "We haven't officially launched yet. We're opening early access to a small group of testers who want to help us shape the app.",
+    "bullets": [
+      "Access the app before the official launch",
+      "Your feedback helps shape the product",
+      "No commitment — unsubscribe whenever you want"
+    ],
+    "privacyNote": "We'll only use your email to notify you about the app. No spam, no third-party sharing.",
+    "metaTitle": "Beta testers – Optim",
+    "metaDescription": "Join the Optim waitlist and be among the first to try the app before its official launch."
   },
   "legal": {
     "privacy": {
