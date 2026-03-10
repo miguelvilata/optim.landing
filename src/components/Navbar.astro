@@ -3,7 +3,6 @@ import type { Lang } from '../i18n/index.ts';
 import { t } from '../i18n/index.ts';
 import AppLogo from './AppLogo.astro';
 import LanguageSelector from './LanguageSelector.astro';
-import { GOOGLE_PLAY_URL } from '../config.ts';
 
 interface Props {
   lang: Lang;
@@ -43,14 +42,6 @@ const tr = t(lang);
           {tr.nav.waitlist}
         </a>
         <LanguageSelector lang={lang} />
-        <a
-          href={GOOGLE_PLAY_URL}
-          target="_blank"
-          rel="noopener noreferrer"
-          class="px-4 py-2 bg-brand-secondary hover:bg-blue-500 text-white text-sm font-semibold rounded-full transition-colors"
-        >
-          {tr.nav.download}
-        </a>
       </div>
 
       <!-- Mobile: lang selector + CTA -->
@@ -63,14 +54,6 @@ const tr = t(lang);
           {tr.nav.waitlist}
         </a>
         <LanguageSelector lang={lang} />
-        <a
-          href={GOOGLE_PLAY_URL}
-          target="_blank"
-          rel="noopener noreferrer"
-          class="px-3 py-1.5 bg-brand-secondary text-white text-xs font-semibold rounded-full"
-        >
-          {tr.nav.download}
-        </a>
       </div>
     </nav>
   </div>

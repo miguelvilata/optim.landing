@@ -13,11 +13,11 @@
     "logoAlt": "Optim – Seguros e Despesas"
   },
   "hero": {
-    "badge": "Disponivel no Android",
+    "badge": "Em breve no Android e iOS",
     "title": "Controle todos os seus seguros",
     "titleHighlight": "e despesas em um lugar",
     "subtitle": "O Optim centraliza suas apolices de seguro, assinaturas e despesas recorrentes. Nunca perca um vencimento e otimize o que voce paga.",
-    "cta": "Baixar gratis",
+    "cta": "Entrar na lista",
     "ctaSecondary": "Ver recursos",
     "trustedBy": "Milhares de usuarios ja otimizando suas despesas"
   },
@@ -83,22 +83,22 @@
     "subtitle": "Uma interface limpa e intuitiva que te da controle sem te sobrecarregar com informacoes desnecessarias.",
     "items": [
       {
-        "src": "/screenshots/es_dashboard.png",
+        "src": "/screenshots/pt/dashboard.png",
         "alt": "Tela inicial do Optim",
         "caption": "Seu resumo na hora. Veja quantos contratos estao ativos e quais vencem em breve."
       },
       {
-        "src": "/screenshots/es_contract_list.png",
+        "src": "/screenshots/pt/contract_list.png",
         "alt": "Lista de contratos no Optim",
         "caption": "Todos os seus contratos em um so lugar. Ordenados por data de renovacao."
       },
       {
-        "src": "/screenshots/es_finance.png",
+        "src": "/screenshots/pt/finance.png",
         "alt": "Visao financeira no Optim",
         "caption": "Conheca seu gasto real. Mensal e anual estimado, para tomar decisoes com dados."
       },
       {
-        "src": "/screenshots/es_contract_renovation.png",
+        "src": "/screenshots/pt/contract_renovation.png",
         "alt": "Renovacao de contrato no Optim",
         "caption": "Renove ou modifique com um toque. Sem burocracia, sem complicacoes."
       }
@@ -132,7 +132,8 @@
     "subtitle": "Tenha controle de todos os seus seguros e servicos. Gratis, sem assinatura, sem publicidade.",
     "googlePlay": "Baixar no Google Play",
     "appStore": "Em breve na App Store",
-    "note": "Gratis para Android · iOS em breve"
+    "waitlist": "Entrar na lista",
+    "note": "Lancamento em breve · Cadastro aberto"
   },
   "footer": {
     "tagline": "Gerencie seus seguros e despesas com inteligencia.",

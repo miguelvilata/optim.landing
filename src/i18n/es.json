@@ -13,11 +13,11 @@
     "logoAlt": "Optim – Seguros y Gastos"
   },
   "hero": {
-    "badge": "Disponible en Android · iOS proximimamente",
+    "badge": "Proximamente en Android e iOS",
     "title": "Controla todos tus seguros y gastos",
     "titleHighlight": "en un solo lugar",
     "subtitle": "Optim centraliza tus polizas de seguro, suministros y gastos recurrentes. Nunca te pierdas un vencimiento y optimiza lo que pagas.",
-    "cta": "Descargar en Google Play",
+    "cta": "Apuntarme a la lista",
     "ctaSecondary": "Ver caracteristicas",
     "trustedBy": "Gratis, sin suscripcion, sin publicidad"
   },
@@ -53,7 +53,7 @@
       {
         "icon": "lock",
         "title": "Simple y Privado",
-        "description": "Sin cuentas complicadas. Tus datos se guardan en tu dispositivo. Tu informacion es tuya y de nadie mas."
+        "description": "Registro rapido y seguro. Tus datos se almacenan en la nube, cifrados y protegidos, para que puedas acceder a ellos desde cualquier dispositivo."
       }
     ]
   },
@@ -64,7 +64,7 @@
       {
         "number": "01",
         "title": "Descarga la app",
-        "description": "Disponible gratuitamente en Google Play. Instala Optim en segundos y crea tu cuenta."
+        "description": "Disponible gratuitamente. Instala Optim en segundos y crea tu cuenta."
       },
       {
         "number": "02",
@@ -83,22 +83,22 @@
     "subtitle": "Una interfaz limpia e intuitiva que te da el control sin abrumarte con informacion innecesaria.",
     "items": [
       {
-        "src": "/screenshots/es_dashboard.png",
+        "src": "/screenshots/es/dashboard.png",
         "alt": "Pantalla de inicio de Optim",
         "caption": "Tu resumen al instante. Controla cuantos contratos tienes activos y cuales vencen pronto."
       },
       {
-        "src": "/screenshots/es_contract_list.png",
+        "src": "/screenshots/es/contract_list.png",
         "alt": "Lista de contratos en Optim",
         "caption": "Todos tus contratos en un vistazo. Ordenados por fecha de renovacion, ninguno se te escapa."
       },
       {
-        "src": "/screenshots/es_finance.png",
+        "src": "/screenshots/es/finance.png",
         "alt": "Control financiero en Optim",
         "caption": "Conoce tu gasto real. Mensual y anual estimado, para que tomes decisiones con datos."
       },
       {
-        "src": "/screenshots/es_contract_renovation.png",
+        "src": "/screenshots/es/contract_renovation.png",
         "alt": "Renovacion de contrato en Optim",
         "caption": "Renueva o modifica con un toque. Sin papeleo, sin complicaciones, en segundos."
       }
@@ -132,7 +132,8 @@
     "subtitle": "Ten el control de todos tus seguros y suministros. Gratis, sin suscripcion, sin publicidad.",
     "googlePlay": "Descargar en Google Play",
     "appStore": "Proximamente en App Store",
-    "note": "Gratis para Android · iOS proximamente"
+    "waitlist": "Apuntarme a la lista",
+    "note": "Lanzamiento proximo · Registro abierto"
   },
   "footer": {
     "tagline": "Gestiona tus seguros y gastos con inteligencia.",

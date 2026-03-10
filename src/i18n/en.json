@@ -13,11 +13,11 @@
     "logoAlt": "Optim – Insurance & Expenses"
   },
   "hero": {
-    "badge": "Available on Android",
+    "badge": "Coming soon on Android & iOS",
     "title": "Take control of all your insurance",
     "titleHighlight": "and expenses",
     "subtitle": "Optim centralizes your insurance policies, subscriptions and recurring expenses. Never miss a renewal and optimize what you pay.",
-    "cta": "Download for free",
+    "cta": "Join the waitlist",
     "ctaSecondary": "See features",
     "trustedBy": "Thousands of users already optimizing their expenses"
   },
@@ -83,22 +83,22 @@
     "subtitle": "A clean, intuitive interface that gives you control without overwhelming you with unnecessary information.",
     "items": [
       {
-        "src": "/screenshots/es_dashboard.png",
+        "src": "/screenshots/en/dashboard.png",
         "alt": "Optim home screen",
         "caption": "Your summary at a glance. See how many contracts are active and which ones expire soon."
       },
       {
-        "src": "/screenshots/es_contract_list.png",
+        "src": "/screenshots/en/contract_list.png",
         "alt": "Contract list in Optim",
         "caption": "All your contracts at a glance. Sorted by renewal date so nothing slips through."
       },
       {
-        "src": "/screenshots/es_finance.png",
+        "src": "/screenshots/en/finance.png",
         "alt": "Financial overview in Optim",
         "caption": "Know your real spend. Monthly and estimated annual, so you can make informed decisions."
       },
       {
-        "src": "/screenshots/es_contract_renovation.png",
+        "src": "/screenshots/en/contract_renovation.png",
         "alt": "Contract renewal in Optim",
         "caption": "Renew or modify with a tap. No paperwork, no hassle, done in seconds."
       }
@@ -132,7 +132,8 @@
     "subtitle": "Take control of all your insurance and utilities. Free, no subscription, no ads.",
     "googlePlay": "Download on Google Play",
     "appStore": "Coming soon on App Store",
-    "note": "Free for Android · iOS coming soon"
+    "waitlist": "Join the waitlist",
+    "note": "Launching soon · Registration open"
   },
   "footer": {
     "tagline": "Manage your insurance and expenses with intelligence.",
