@@ -94,7 +94,11 @@ const edgeFunctionBase = `${supabaseUrl}/functions/v1/confirm-lead`;
 
     try {
       const response = await fetch(
-        `${edgeFunctionBase}?token=${encodeURIComponent(token)}&apikey=${encodeURIComponent(supabaseAnonKey)}`
+        `${edgeFunctionBase}?token=${encodeURIComponent(token)}`,
+        {
+          method: 'GET',
+          headers: { 'Authorization': `Bearer ${supabaseAnonKey}` },
+        }
       );
 
       if (!response.ok) {
