@@ -97,14 +97,17 @@ const edgeFunctionBase = `${supabaseUrl}/functions/v1/confirm-lead`;
         `${edgeFunctionBase}?token=${encodeURIComponent(token)}&apikey=${encodeURIComponent(supabaseAnonKey)}`
       );
 
-      // Intentar leer el estado desde la URL final (tras seguir el 302)
+      if (!response.ok) {
+        showError();
+        return;
+      }
+
       const finalUrl = response.url || '';
       if (finalUrl.includes('confirm=already')) {
         show('state-already');
       } else if (finalUrl.includes('confirm=invalid')) {
         show('state-invalid');
       } else {
-        // Si el fetch no lanzó excepción, el token fue procesado correctamente
         show('state-success');
       }
     } catch (_err) {
