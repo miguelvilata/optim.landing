@@ -1,8 +1,8 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 
-const supabaseUrl  = import.meta.env.PUBLIC_SUPABASE_URL  || '';
-const supabaseAnonKey = import.meta.env.SUPABASE_ANON_KEY || '';
+const supabaseUrl     = import.meta.env.PUBLIC_SUPABASE_URL  || '';
+const supabaseAnonKey = import.meta.env.SUPABASE_ANON_KEY    || '';
 const edgeFunctionBase = `${supabaseUrl}/functions/v1/confirm-lead`;
 ---
 
@@ -12,17 +12,11 @@ const edgeFunctionBase = `${supabaseUrl}/functions/v1/confirm-lead`;
   lang="es"
 >
   <div class="min-h-screen bg-brand-primary flex items-center justify-center px-4">
-    <div class="text-center max-w-md" id="confirm-container">
+    <div class="text-center max-w-md">
 
-      <!-- Spinner -->
+      <!-- Cargando -->
       <div id="state-loading">
-        <svg
-          class="w-12 h-12 text-brand-secondary mx-auto mb-6 animate-spin"
-          xmlns="http://www.w3.org/2000/svg"
-          fill="none"
-          viewBox="0 0 24 24"
-          aria-hidden="true"
-        >
+        <svg class="w-12 h-12 text-brand-secondary mx-auto mb-6 animate-spin" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" aria-hidden="true">
           <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
           <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z"></path>
         </svg>
@@ -30,25 +24,58 @@ const edgeFunctionBase = `${supabaseUrl}/functions/v1/confirm-lead`;
         <p class="text-blue-200">Un momento, estamos verificando tu enlace.</p>
       </div>
 
-      <!-- Error (oculto inicialmente) -->
-      <div id="state-error" class="hidden">
-        <svg
-          class="w-12 h-12 text-red-400 mx-auto mb-6"
-          xmlns="http://www.w3.org/2000/svg"
-          fill="none"
-          viewBox="0 0 24 24"
-          stroke="currentColor"
-          aria-hidden="true"
-        >
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-            d="M12 9v2m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-        </svg>
+      <!-- Éxito -->
+      <div id="state-success" class="hidden">
+        <div class="w-16 h-16 rounded-full bg-green-500/20 flex items-center justify-center mx-auto mb-6">
+          <svg class="w-8 h-8 text-green-400" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+          </svg>
+        </div>
+        <h1 class="text-2xl font-bold text-white mb-2">¡Email confirmado!</h1>
+        <p class="text-blue-200 mb-8">Ya estás en la lista. Te avisaremos cuando tu acceso esté listo.</p>
+        <a href="/es/" class="inline-block bg-brand-secondary hover:bg-blue-500 text-white font-semibold py-3 px-8 rounded-xl transition-colors">
+          Ir al inicio
+        </a>
+      </div>
+
+      <!-- Ya confirmado -->
+      <div id="state-already" class="hidden">
+        <div class="w-16 h-16 rounded-full bg-blue-500/20 flex items-center justify-center mx-auto mb-6">
+          <svg class="w-8 h-8 text-blue-400" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+          </svg>
+        </div>
+        <h1 class="text-2xl font-bold text-white mb-2">Ya estabas confirmado</h1>
+        <p class="text-blue-200 mb-8">Este correo ya estaba en la lista. No necesitas hacer nada más.</p>
+        <a href="/es/" class="inline-block bg-brand-secondary hover:bg-blue-500 text-white font-semibold py-3 px-8 rounded-xl transition-colors">
+          Ir al inicio
+        </a>
+      </div>
+
+      <!-- Inválido -->
+      <div id="state-invalid" class="hidden">
+        <div class="w-16 h-16 rounded-full bg-red-500/20 flex items-center justify-center mx-auto mb-6">
+          <svg class="w-8 h-8 text-red-400" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+          </svg>
+        </div>
         <h1 class="text-2xl font-bold text-white mb-2">Enlace no válido</h1>
-        <p class="text-blue-200 mb-6">El enlace ha expirado o no es válido. Vuelve a registrarte.</p>
-        <a
-          href="/es/"
-          class="inline-block bg-brand-secondary hover:bg-blue-500 text-white font-semibold py-3 px-6 rounded-xl transition-colors"
-        >
+        <p class="text-blue-200 mb-8">El enlace ha expirado o ya fue usado. Vuelve a registrarte.</p>
+        <a href="/es/" class="inline-block bg-brand-secondary hover:bg-blue-500 text-white font-semibold py-3 px-8 rounded-xl transition-colors">
+          Volver al inicio
+        </a>
+      </div>
+
+      <!-- Error genérico -->
+      <div id="state-error" class="hidden">
+        <div class="w-16 h-16 rounded-full bg-red-500/20 flex items-center justify-center mx-auto mb-6">
+          <svg class="w-8 h-8 text-red-400" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+          </svg>
+        </div>
+        <h1 class="text-2xl font-bold text-white mb-2">Algo ha fallado</h1>
+        <p class="text-blue-200 mb-8">No hemos podido procesar tu confirmación. Inténtalo de nuevo.</p>
+        <a href="/es/" class="inline-block bg-brand-secondary hover:bg-blue-500 text-white font-semibold py-3 px-8 rounded-xl transition-colors">
           Volver al inicio
         </a>
       </div>
@@ -62,8 +89,13 @@ const edgeFunctionBase = `${supabaseUrl}/functions/v1/confirm-lead`;
     const params = new URLSearchParams(window.location.search);
     const token  = params.get('token');
 
+    function show(id) {
+      document.getElementById('state-loading').classList.add('hidden');
+      document.getElementById(id).classList.remove('hidden');
+    }
+
     if (!token) {
-      window.location.replace('/es/');
+      show('state-error');
       return;
     }
 
@@ -72,26 +104,23 @@ const edgeFunctionBase = `${supabaseUrl}/functions/v1/confirm-lead`;
         `${edgeFunctionBase}?token=${encodeURIComponent(token)}&apikey=${encodeURIComponent(supabaseAnonKey)}`
       );
 
-      const destination = response.url;
-
-      if (!destination) {
-        showError();
-        return;
+      // Determinar el estado a partir de la URL final (response.url tras seguir el 302)
+      // o del código HTTP si la Edge Function devuelve JSON de error.
+      const finalUrl = response.url || '';
+      if (finalUrl.includes('confirm=success')) {
+        show('state-success');
+      } else if (finalUrl.includes('confirm=already')) {
+        show('state-already');
+      } else if (finalUrl.includes('confirm=invalid') || response.status === 400) {
+        show('state-invalid');
+      } else if (response.ok || response.status === 0) {
+        // status 0 = opaque response (CORS), asumimos éxito si no lanzó
+        show('state-success');
+      } else {
+        show('state-error');
       }
-
-      // Normalizar origen para local vs producción
-      const redirectUrl = new URL(destination);
-      redirectUrl.protocol = window.location.protocol;
-      redirectUrl.host     = window.location.host;
-
-      window.location.replace(redirectUrl.toString());
     } catch (_err) {
-      showError();
+      show('state-error');
     }
   })();
-
-  function showError() {
-    document.getElementById('state-loading').classList.add('hidden');
-    document.getElementById('state-error').classList.remove('hidden');
-  }
 </script>
