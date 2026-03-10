@@ -10,69 +10,104 @@ const tr = t(lang);
 const w = tr.waitlist;
 ---
 
-<!-- Banner hidden by default, shown via JS when ?confirm= is in URL -->
+<!-- Modal oculto por defecto, mostrado via JS cuando ?confirm= está en la URL -->
 <div
-  id="confirm-banner"
-  role="alert"
-  aria-live="polite"
-  class="hidden fixed top-4 left-1/2 -translate-x-1/2 z-50 w-full max-w-md px-4"
+  id="confirm-modal-backdrop"
+  class="hidden fixed inset-0 z-[200] flex items-center justify-center p-4"
+  style="background: rgba(0,0,0,0.5);"
+  role="dialog"
+  aria-modal="true"
+  aria-labelledby="confirm-modal-title"
 >
-  <div id="confirm-banner-inner" class="flex items-start gap-3 rounded-2xl px-5 py-4 shadow-xl text-sm font-medium">
-    <span id="confirm-banner-icon" class="flex-shrink-0 mt-0.5"></span>
-    <p id="confirm-banner-msg"></p>
+  <div
+    id="confirm-modal"
+    class="relative w-full max-w-sm rounded-2xl bg-white shadow-2xl px-8 py-8 text-center"
+  >
+    <!-- Icono -->
+    <div id="confirm-modal-icon" class="flex justify-center mb-4"></div>
+
+    <!-- Título -->
+    <h2 id="confirm-modal-title" class="text-lg font-bold text-gray-900 mb-2"></h2>
+
+    <!-- Mensaje -->
+    <p id="confirm-modal-msg" class="text-sm text-gray-500 mb-6"></p>
+
+    <!-- Botón cerrar -->
     <button
-      id="confirm-banner-close"
-      aria-label="Cerrar"
-      class="ml-auto flex-shrink-0 opacity-60 hover:opacity-100 transition-opacity"
+      id="confirm-modal-btn"
+      class="w-full py-2.5 px-6 bg-brand-secondary hover:bg-blue-500 text-white text-sm font-semibold rounded-xl transition-colors"
     >
-      <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" aria-hidden="true">
-        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
-      </svg>
+      Aceptar
     </button>
   </div>
 </div>
 
 <script define:vars={{ w }}>
-  const messages = {
-    success: { text: w.confirmSuccess, type: 'success' },
-    already: { text: w.confirmAlready, type: 'info' },
-    invalid: { text: w.confirmInvalid, type: 'error' },
+  const configs = {
+    success: {
+      title: w.confirmSuccess,
+      msg: '',
+      type: 'success',
+    },
+    already: {
+      title: w.confirmAlready,
+      msg: '',
+      type: 'info',
+    },
+    invalid: {
+      title: w.confirmInvalid,
+      msg: '',
+      type: 'error',
+    },
   };
 
-  const styles = {
-    success: { bg: 'bg-green-50 border border-green-200 text-green-800', icon: `<svg class="w-5 h-5 text-green-500" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>` },
-    info:    { bg: 'bg-blue-50 border border-blue-200 text-blue-800',   icon: `<svg class="w-5 h-5 text-blue-500" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>` },
-    error:   { bg: 'bg-red-50 border border-red-200 text-red-800',     icon: `<svg class="w-5 h-5 text-red-500" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>` },
+  const icons = {
+    success: `<div style="width:52px;height:52px;border-radius:50%;background:#dcfce7;display:flex;align-items:center;justify-content:center;">
+      <svg width="28" height="28" fill="none" stroke="#16a34a" stroke-width="2.5" viewBox="0 0 24 24" aria-hidden="true">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+      </svg></div>`,
+    info: `<div style="width:52px;height:52px;border-radius:50%;background:#dbeafe;display:flex;align-items:center;justify-content:center;">
+      <svg width="28" height="28" fill="none" stroke="#2563eb" stroke-width="2.5" viewBox="0 0 24 24" aria-hidden="true">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+      </svg></div>`,
+    error: `<div style="width:52px;height:52px;border-radius:50%;background:#fee2e2;display:flex;align-items:center;justify-content:center;">
+      <svg width="28" height="28" fill="none" stroke="#dc2626" stroke-width="2.5" viewBox="0 0 24 24" aria-hidden="true">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+      </svg></div>`,
   };
 
   const params = new URLSearchParams(window.location.search);
   const confirm = params.get('confirm');
 
-  if (confirm && messages[confirm]) {
-    const { text, type } = messages[confirm];
-    const style = styles[type];
+  if (confirm && configs[confirm]) {
+    const { title, msg, type } = configs[confirm];
 
-    const banner = document.getElementById('confirm-banner');
-    const inner = document.getElementById('confirm-banner-inner');
-    const icon = document.getElementById('confirm-banner-icon');
-    const msg = document.getElementById('confirm-banner-msg');
+    document.getElementById('confirm-modal-icon').innerHTML = icons[type];
+    document.getElementById('confirm-modal-title').textContent = title;
+    document.getElementById('confirm-modal-msg').textContent = msg;
 
-    inner.className = `flex items-start gap-3 rounded-2xl px-5 py-4 shadow-xl text-sm font-medium ${style.bg}`;
-    icon.innerHTML = style.icon;
-    msg.textContent = text;
-    banner.classList.remove('hidden');
+    const backdrop = document.getElementById('confirm-modal-backdrop');
+    backdrop.classList.remove('hidden');
 
-    // Clean the URL without reloading
+    // Limpiar ?confirm= de la URL sin recargar
     const url = new URL(window.location.href);
     url.searchParams.delete('confirm');
     window.history.replaceState({}, '', url.toString());
 
-    // Auto-dismiss after 6s
-    const timer = setTimeout(() => banner.classList.add('hidden'), 6000);
+    function closeModal() {
+      backdrop.classList.add('hidden');
+    }
 
-    document.getElementById('confirm-banner-close').addEventListener('click', () => {
-      clearTimeout(timer);
-      banner.classList.add('hidden');
+    document.getElementById('confirm-modal-btn').addEventListener('click', closeModal);
+
+    // Cerrar al hacer clic fuera del modal
+    backdrop.addEventListener('click', (e) => {
+      if (e.target === backdrop) closeModal();
+    });
+
+    // Cerrar con Escape
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') closeModal();
     });
   }
 </script>
