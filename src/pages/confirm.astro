@@ -63,19 +63,13 @@ const edgeFunctionBase = `${supabaseUrl}/functions/v1/confirm-lead`;
     const token  = params.get('token');
 
     if (!token) {
-      window.location.replace('/');
+      window.location.replace('/es/');
       return;
     }
 
     try {
-      // La anon key va como ?apikey= en la petición fetch a Supabase (supabase.co),
-      // nunca en la URL que ve el usuario (que solo contiene ?token=).
-      // Usar un header 'Authorization' provocaría un preflight CORS que la Edge
-      // Function no gestiona, haciendo que el fetch falle.
       const response = await fetch(
         `${edgeFunctionBase}?token=${encodeURIComponent(token)}&apikey=${encodeURIComponent(supabaseAnonKey)}`
-        // redirect:'follow' es el default: el browser sigue el 302 automáticamente.
-        // response.url contiene la URL final: https://getoptim.app/es/?confirm=success
       );
 
       const destination = response.url;
@@ -85,8 +79,7 @@ const edgeFunctionBase = `${supabaseUrl}/functions/v1/confirm-lead`;
         return;
       }
 
-      // Normalizar el origen para que funcione igual en local y en producción.
-      // Ej: https://getoptim.app/es/?confirm=success → http://localhost:4321/es/?confirm=success
+      // Normalizar origen para local vs producción
       const redirectUrl = new URL(destination);
       redirectUrl.protocol = window.location.protocol;
       redirectUrl.host     = window.location.host;
