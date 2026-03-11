@@ -164,7 +164,11 @@
     "consentTermsAnd": "y la",
     "consentMarketing": "Acepto recibir novedades y comunicaciones de Optim",
     "errorConsent": "Debes aceptar los Términos y la Política de Privacidad para continuar.",
-    "required": "* Campo obligatorio"
+    "required": "* Campo obligatorio",
+    "privacyInfoTitle": "Información básica de privacidad",
+    "privacyInfoWaitlist": "En Optim trataremos tu correo únicamente para gestionar tu alta en la lista de espera y enviarte las alertas de tus contratos. Solo si marcas la casilla de «comunicaciones», utilizaremos tus datos para enviarte novedades sobre Optim. Tienes el control total para darte de baja o borrar tus datos en cualquier momento escribiendo a privacidad@getoptim.app.",
+    "privacyInfoContact": "En Optim trataremos tu correo únicamente para gestionar tu consulta. Solo si marcas la casilla de «comunicaciones», utilizaremos tus datos para enviarte novedades sobre Optim. Tienes el control total para darte de baja o borrar tus datos en cualquier momento escribiendo a privacidad@getoptim.app.",
+    "privacyInfoLink": "Consulta nuestra Política de Privacidad completa"
   },
   "waitlist": {
     "title": "Acceso anticipado para testers",
@@ -186,7 +190,10 @@
     "consentTermsPrefix": "He leído y acepto los",
     "consentTermsAnd": "y la",
     "consentMarketing": "Acepto recibir novedades y comunicaciones de Optim",
-    "errorConsent": "Debes aceptar los Términos y la Política de Privacidad para continuar."
+    "errorConsent": "Debes aceptar los Términos y la Política de Privacidad para continuar.",
+    "privacyInfoTitle": "Información básica de privacidad",
+    "privacyInfoWaitlist": "En Optim trataremos tu correo únicamente para gestionar tu alta en la lista de espera y enviarte las alertas de tus contratos. Solo si marcas la casilla de «comunicaciones», utilizaremos tus datos para enviarte novedades sobre Optim. Tienes el control total para darte de baja o borrar tus datos en cualquier momento escribiendo a privacidad@getoptim.app.",
+    "privacyInfoLink": "Consulta nuestra Política de Privacidad completa"
   },
   "waitlistPage": {
     "badge": "Programa de beta testers",
@@ -207,44 +214,28 @@
       "lastUpdated": "Marzo de 2026",
       "sections": [
         {
-          "heading": "1. Responsable del tratamiento",
-          "body": "<p>El responsable del tratamiento de sus datos personales es:</p><ul><li><strong>Nombre:</strong> José Miguel Vilata Martínez</li><li><strong>NIF:</strong> 52649100F</li><li><strong>Contacto:</strong> <a href=\"mailto:privacidad@getoptim.app\" class=\"text-brand-secondary hover:underline\">privacidad@getoptim.app</a></li></ul>"
+          "heading": "1. ¿Quién cuida tus datos?",
+          "body": "<p>El responsable del tratamiento es <strong>José Miguel Vilata Martínez</strong> (NIF: 52649100F). Puedes contactarnos en <a href=\"mailto:privacidad@getoptim.app\" class=\"text-brand-secondary hover:underline\">privacidad@getoptim.app</a>.</p>"
         },
         {
-          "heading": "2. Datos que recogemos",
-          "body": "<p><strong>En el sitio web (getoptim.app):</strong></p><ul><li>Dirección de correo electrónico y nombre (opcional) al registrarse en la lista de espera o rellenar el formulario de contacto.</li><li>Datos de navegación anonimizados a través de Plausible Analytics (sin cookies, sin identificadores personales).</li></ul><p><strong>En la aplicación móvil Optim:</strong></p><ul><li>Datos de cuenta: dirección de correo electrónico y contraseña (cifrada).</li><li>Datos de pólizas y contratos: aseguradora o proveedor, tipo de contrato, fechas de vencimiento, importe y demás información introducida voluntariamente.</li></ul>"
+          "heading": "2. ¿Qué datos recogemos y por qué?",
+          "body": "<p><strong>Para que la app funcione:</strong> tu email para crear la cuenta y los datos de tus pólizas (proveedor, fecha y precio) para poder enviarte las alertas de renovación.</p><p><strong>Para ayudarte a ahorrar:</strong> si consientes expresamente, usaremos tu información para buscarte ofertas mejores. Al solicitar una oferta, guardamos un registro de los datos de tu póliza en ese momento para asegurar la validez de la propuesta comercial y protegernos mutuamente.</p><p><strong>En la web:</strong> usamos <strong>Plausible Analytics</strong>, una herramienta que no usa cookies y respeta tu privacidad al 100%.</p>"
         },
         {
-          "heading": "3. Finalidad del tratamiento",
-          "body": "<p><strong>a) Prestación del servicio:</strong> registro y autenticación, gestión de pólizas y contratos, envío de alertas de vencimiento y renovación, y atención al usuario.</p><p><strong>b) Comunicaciones comerciales</strong> (únicamente con consentimiento explícito): envío de novedades, actualizaciones del producto y comunicaciones relacionadas con el servicio.</p>"
+          "heading": "3. Base jurídica",
+          "body": "<ul><li><strong>Prestación del servicio:</strong> ejecución del contrato aceptado al registrarte (art. 6.1.b RGPD).</li><li><strong>Ofertas y comunicaciones comerciales:</strong> consentimiento explícito (art. 6.1.a RGPD), revocable en cualquier momento sin que ello afecte al servicio básico.</li></ul>"
         },
         {
-          "heading": "4. Base jurídica",
-          "body": "<ul><li><strong>Prestación del servicio:</strong> ejecución del contrato aceptado al registrarse (art. 6.1.b RGPD).</li><li><strong>Comunicaciones comerciales:</strong> consentimiento explícito del interesado (art. 6.1.a RGPD), revocable en cualquier momento sin que ello afecte a la prestación del servicio.</li></ul>"
+          "heading": "4. Seguridad y destinatarios",
+          "body": "<p>Tus datos están seguros en <strong>Supabase</strong>, con tecnología avanzada de aislamiento (Row Level Security) para que solo tú puedas ver tu información. Nunca vendemos tus datos a terceros. Solo los compartimos con proveedores de ahorro cuando tú nos lo pides específicamente para gestionar una mejora de contrato.</p>"
         },
         {
-          "heading": "5. Conservación de los datos",
-          "body": "<p>Los datos se conservarán mientras la cuenta permanezca activa. Tras la solicitud de baja, los datos se eliminarán en un plazo máximo de 30 días, salvo obligación legal de conservación superior. Los registros de consentimiento se conservarán durante 3 años conforme a la normativa aplicable.</p>"
+          "heading": "5. Tus derechos",
+          "body": "<p>Tú tienes el control total. Puedes acceder, corregir o borrar tus datos, así como retirar tu consentimiento para ofertas comerciales en cualquier momento desde los ajustes de la app o escribiéndonos a <a href=\"mailto:privacidad@getoptim.app\" class=\"text-brand-secondary hover:underline\">privacidad@getoptim.app</a>. Responderemos en el plazo máximo de un mes.</p><p>Si consideras que el tratamiento de tus datos vulnera la normativa, puedes reclamar ante la <strong>Agencia Española de Protección de Datos</strong> en <a href=\"https://www.aepd.es\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-brand-secondary hover:underline\">www.aepd.es</a>.</p>"
         },
         {
-          "heading": "6. Destinatarios y transferencias internacionales",
-          "body": "<p>No se ceden datos a terceros con fines comerciales. Para la prestación del servicio se utilizan los siguientes encargados del tratamiento:</p><ul><li><strong>Supabase Inc.</strong> — almacenamiento en la nube y autenticación, con garantías de transferencia adecuadas conforme al RGPD.</li></ul><p>Todos los encargados del tratamiento han suscrito los contratos de encargo correspondientes conforme al artículo 28 del RGPD.</p>"
-        },
-        {
-          "heading": "7. Derechos del interesado",
-          "body": "<p>Usted tiene derecho a ejercer los siguientes derechos sobre sus datos personales:</p><ul><li><strong>Acceso:</strong> obtener confirmación de si se tratan sus datos y recibir una copia.</li><li><strong>Rectificación:</strong> corregir datos inexactos o incompletos.</li><li><strong>Supresión:</strong> solicitar la eliminación de sus datos («derecho al olvido»).</li><li><strong>Limitación:</strong> solicitar la restricción del tratamiento en determinadas circunstancias.</li><li><strong>Portabilidad:</strong> recibir sus datos en formato estructurado y de uso común.</li><li><strong>Oposición:</strong> oponerse al tratamiento para comunicaciones comerciales en cualquier momento.</li></ul><p>Para ejercer estos derechos, envíe un correo a <a href=\"mailto:privacidad@getoptim.app\" class=\"text-brand-secondary hover:underline\">privacidad@getoptim.app</a> indicando el derecho que desea ejercer y adjuntando copia de su documento de identidad. Responderemos en el plazo máximo de un mes.</p>"
-        },
-        {
-          "heading": "8. Cookies y tecnologías de seguimiento",
-          "body": "<p>Este sitio web utiliza <strong>Plausible Analytics</strong>, una solución de análisis respetuosa con la privacidad que <strong>no utiliza cookies</strong> y no recoge datos personales identificables. No se requiere consentimiento de cookies para su uso.</p><p>Si en el futuro se incorporaran tecnologías que utilicen cookies no esenciales, se solicitará su consentimiento previo conforme a la normativa vigente.</p>"
-        },
-        {
-          "heading": "9. Modificaciones de esta política",
-          "body": "<p>El responsable del tratamiento se reserva el derecho de modificar esta política, notificando al usuario con al menos 30 días de antelación mediante correo electrónico. El uso continuado del servicio tras la entrada en vigor de los cambios implica su aceptación.</p>"
-        },
-        {
-          "heading": "10. Autoridad de control",
-          "body": "<p>Si considera que el tratamiento de sus datos vulnera la normativa vigente, tiene derecho a presentar una reclamación ante la <strong>Agencia Española de Protección de Datos (AEPD)</strong> en <a href=\"https://www.aepd.es\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-brand-secondary hover:underline\">www.aepd.es</a>.</p>"
+          "heading": "6. Conservación",
+          "body": "<p>Guardamos tus datos mientras uses la app. Si solicitas la baja, los eliminaremos en un máximo de 30 días. En caso de cierre definitivo de la plataforma, te daremos 30 días de margen para descargar tu información antes del borrado total.</p>"
         }
       ]
     },
@@ -253,40 +244,28 @@
       "lastUpdated": "Marzo de 2026",
       "sections": [
         {
-          "heading": "1. Objeto del servicio",
-          "body": "<p>Optim es una aplicación móvil y servicio web de gestión personal de pólizas de seguro y gastos recurrentes (suministros, suscripciones). Permite centralizar contratos, recibir alertas de vencimiento y visualizar el gasto personal. El servicio se presta de forma <strong>gratuita, sin publicidad y sin intermediación comercial</strong> con aseguradoras o proveedores.</p>"
+          "heading": "1. Bienvenido a Optim",
+          "body": "<p>Optim es una herramienta diseñada para ayudarte a organizar tus seguros y gastos recurrentes (luz, suscripciones, etc.). Al usar nuestra app o el sitio web <a href=\"https://getoptim.app\" class=\"text-brand-secondary hover:underline\">getoptim.app</a>, aceptas estas condiciones.</p>"
         },
         {
-          "heading": "2. Identificación del prestador",
-          "body": "<p>El servicio es prestado por:</p><ul><li><strong>Nombre:</strong> José Miguel Vilata Martínez</li><li><strong>NIF:</strong> 52649100F</li><li><strong>Contacto:</strong> <a href=\"mailto:hola@getoptim.app\" class=\"text-brand-secondary hover:underline\">hola@getoptim.app</a></li></ul>"
+          "heading": "2. ¿Qué hacemos por ti?",
+          "body": "<p>Te permitimos registrar tus pólizas, visualizar tus gastos y recibir alertas para que no se te pase ninguna renovación.</p><p><strong>Ahorro inteligente:</strong> Para darte más valor, Optim podrá presentarte comparativas o mejores ofertas de terceros colaboradores basadas en tus datos, siempre que nos des tu permiso explícito.</p><p><strong>Modalidad del servicio:</strong> Actualmente, el acceso básico es gratuito. Nos reservamos el derecho de introducir funciones Premium o espacios publicitarios en el futuro, informándote siempre con antelación.</p>"
         },
         {
-          "heading": "3. Acceso y registro",
-          "body": "<p>El uso de la aplicación requiere la creación de una cuenta con dirección de correo electrónico válida y la aceptación expresa de estos Términos y de la Política de Privacidad. El usuario es responsable de mantener la confidencialidad de sus credenciales y de todas las actividades realizadas bajo su cuenta.</p>"
+          "heading": "3. Tus responsabilidades",
+          "body": "<p>Eres el dueño de tu información. Te comprometes a introducir datos veraces. Optim es un asistente de organización; la decisión final de contratar o renovar con un tercero es siempre tuya.</p>"
         },
         {
-          "heading": "4. Uso correcto del servicio",
-          "body": "<p>El usuario se compromete a hacer un uso lícito del servicio y a no introducir datos falsos, maliciosos o que vulneren derechos de terceros. El servicio está destinado exclusivamente a la gestión personal de contratos y seguros propios.</p>"
+          "heading": "4. Limitación de responsabilidad",
+          "body": "<p>Hacemos todo lo posible para que las alertas funcionen correctamente, pero factores técnicos (como la configuración de notificaciones de tu móvil) pueden fallar. Optim es un complemento y no sustituye tu obligación de revisar tus contratos directamente con tus proveedores.</p>"
         },
         {
-          "heading": "5. Responsabilidad sobre los datos",
-          "body": "<p>Optim actúa como herramienta de organización personal. El usuario es el único responsable de la veracidad de los datos introducidos. Optim no verifica ni valida los contratos registrados ni mantiene relación alguna con las aseguradoras o proveedores del usuario.</p>"
+          "heading": "5. Nuestro derecho a cambiar o cerrar",
+          "body": "<p><strong>Cambios:</strong> Podemos modificar estas condiciones avisándote con <strong>30 días de antelación</strong> por email. El uso continuado del servicio tras esa fecha implica la aceptación de las nuevas condiciones.</p><p><strong>Cese del servicio:</strong> Si decidiéramos dar de baja la aplicación, te informaremos con 30 días de antelación. Durante ese tiempo, podrás exportar todos tus datos en formato CSV o JSON para que no pierdas nada.</p>"
         },
         {
-          "heading": "6. Limitación de responsabilidad",
-          "body": "<p>El responsable del servicio no será responsable de pérdidas económicas derivadas de vencimientos no detectados, errores en los datos introducidos por el usuario o interrupciones del servicio. El servicio se presta «tal cual» y puede estar sujeto a interrupciones por mantenimiento o causas ajenas al control del responsable.</p>"
-        },
-        {
-          "heading": "7. Modificación de las condiciones",
-          "body": "<p>El responsable del servicio se reserva el derecho de modificar los presentes Términos, notificando al usuario con al menos <strong>30 días de antelación</strong> mediante correo electrónico. El usuario mantiene el derecho irrenunciable a darse de baja antes de la entrada en vigor de los cambios. El uso continuado del servicio tras dicha fecha implica la aceptación de las nuevas condiciones.</p>"
-        },
-        {
-          "heading": "8. Baja del servicio y portabilidad",
-          "body": "<p>El usuario puede solicitar la baja del servicio en cualquier momento desde la propia aplicación o escribiendo a <a href=\"mailto:privacidad@getoptim.app\" class=\"text-brand-secondary hover:underline\">privacidad@getoptim.app</a>. Antes de la eliminación definitiva, el usuario podrá solicitar la exportación de sus datos en formato CSV o JSON. Los datos se eliminarán en un plazo máximo de 30 días desde la solicitud de baja.</p>"
-        },
-        {
-          "heading": "9. Ley aplicable y jurisdicción",
-          "body": "<p>Los presentes Términos se rigen por la legislación española. Para la resolución de cualquier controversia, las partes se someten a los juzgados y tribunales del domicilio del usuario, de conformidad con la normativa de protección de consumidores y usuarios.</p>"
+          "heading": "6. Ley aplicable",
+          "body": "<p>Estas condiciones se rigen por la ley española. Si surge algún problema, lo resolveremos en los juzgados del domicilio del usuario, de conformidad con la normativa de protección de consumidores y usuarios.</p>"
         }
       ]
     }

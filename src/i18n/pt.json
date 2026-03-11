@@ -186,7 +186,11 @@
     "consentTermsPrefix": "Li e aceito os",
     "consentTermsAnd": "e a",
     "consentMarketing": "Aceito receber novidades e comunicações da Optim",
-    "errorConsent": "Você deve aceitar os Termos e a Política de Privacidade para continuar."
+    "errorConsent": "Você deve aceitar os Termos e a Política de Privacidade para continuar.",
+    "privacyInfoTitle": "Informação básica de privacidade",
+    "privacyInfoWaitlist": "Na Optim trataremos o seu email apenas para gerir a sua inscrição na lista de espera e enviar alertas de renovação dos seus contratos. Só se marcar a caixa de «comunicações» utilizaremos os seus dados para enviar novidades sobre a Optim. Tem controlo total para cancelar a subscrição ou apagar os seus dados a qualquer momento escrevendo para privacidad@getoptim.app.",
+    "privacyInfoContact": "Na Optim trataremos o seu email apenas para gerir a sua consulta. Só se marcar a caixa de «comunicações» utilizaremos os seus dados para enviar novidades sobre a Optim. Tem controlo total para cancelar a subscrição ou apagar os seus dados a qualquer momento escrevendo para privacidad@getoptim.app.",
+    "privacyInfoLink": "Consulte a nossa Política de Privacidade completa"
   },
   "waitlistPage": {
     "badge": "Programa de beta testers",

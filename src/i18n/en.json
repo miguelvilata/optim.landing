@@ -186,7 +186,11 @@
     "consentTermsPrefix": "I have read and accept the",
     "consentTermsAnd": "and the",
     "consentMarketing": "I agree to receive news and communications from Optim",
-    "errorConsent": "You must accept the Terms and Privacy Policy to continue."
+    "errorConsent": "You must accept the Terms and Privacy Policy to continue.",
+    "privacyInfoTitle": "Basic privacy information",
+    "privacyInfoWaitlist": "At Optim we will only use your email to manage your place on the waiting list and send you contract renewal alerts. Only if you tick the 'communications' box will we use your data to send you Optim news. You have full control to unsubscribe or delete your data at any time by writing to privacidad@getoptim.app.",
+    "privacyInfoContact": "At Optim we will only use your email to handle your enquiry. Only if you tick the 'communications' box will we use your data to send you Optim news. You have full control to unsubscribe or delete your data at any time by writing to privacidad@getoptim.app.",
+    "privacyInfoLink": "Read our full Privacy Policy"
   },
   "waitlistPage": {
     "badge": "Beta tester program",

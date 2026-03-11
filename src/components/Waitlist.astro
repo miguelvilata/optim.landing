@@ -81,6 +81,15 @@ const anonKey = SUPABASE_ANON_KEY;
           </label>
         </div>
 
+        <!-- Privacy info layer -->
+        <div class="text-left rounded-xl bg-brand-surface border border-gray-200 px-4 py-3">
+          <p class="text-xs text-brand-muted leading-relaxed">
+            <span class="font-semibold text-brand-primary">{w.privacyInfoTitle}:</span>
+            {w.privacyInfoWaitlist}
+            <a href={privacyUrl} class="text-brand-secondary hover:underline ml-1">{w.privacyInfoLink} →</a>
+          </p>
+        </div>
+
         <button
           type="submit"
           id="waitlist-submit"
