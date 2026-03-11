@@ -9,6 +9,8 @@ interface Props {
 const { lang } = Astro.props;
 const tr = t(lang);
 const w = tr.waitlist;
+const termsUrl = `/${lang}/terms`;
+const privacyUrl = `/${lang}/privacy`;
 const submitUrl = `${SUPABASE_URL}/functions/v1/submit-lead`;
 const anonKey = SUPABASE_ANON_KEY;
 ---
@@ -52,6 +54,33 @@ const anonKey = SUPABASE_ANON_KEY;
           autocomplete="email"
           class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-brand-secondary text-brand-primary placeholder-brand-muted bg-white text-base"
         />
+        <!-- Consent checkboxes -->
+        <div class="flex flex-col gap-2 text-left">
+          <label class="flex items-start gap-2.5 cursor-pointer">
+            <input
+              type="checkbox"
+              name="consent_terms"
+              id="consent-terms"
+              class="mt-0.5 w-4 h-4 flex-shrink-0 accent-brand-secondary cursor-pointer"
+            />
+            <span class="text-sm text-brand-muted">
+              {w.consentTermsPrefix}
+              <a href={termsUrl} target="_blank" class="text-brand-secondary hover:underline">{tr.footer.terms}</a>
+              {w.consentTermsAnd}
+              <a href={privacyUrl} target="_blank" class="text-brand-secondary hover:underline">{tr.footer.privacy}</a>*
+            </span>
+          </label>
+          <label class="flex items-start gap-2.5 cursor-pointer">
+            <input
+              type="checkbox"
+              name="consent_marketing"
+              id="consent-marketing"
+              class="mt-0.5 w-4 h-4 flex-shrink-0 accent-brand-secondary cursor-pointer"
+            />
+            <span class="text-sm text-brand-muted">{w.consentMarketing}</span>
+          </label>
+        </div>
+
         <button
           type="submit"
           id="waitlist-submit"
@@ -108,9 +137,16 @@ const anonKey = SUPABASE_ANON_KEY;
 
     const email = form.elements['email'].value.trim();
     const name = form.elements['name'].value.trim();
+    const consentTerms = form.elements['consent_terms'].checked;
+    const consentMarketing = form.elements['consent_marketing'].checked;
 
     if (!email) {
       showStatus(w.errorValidation, null, true);
+      return;
+    }
+
+    if (!consentTerms) {
+      showStatus(w.errorConsent, null, true);
       return;
     }
 
@@ -128,6 +164,8 @@ const anonKey = SUPABASE_ANON_KEY;
           email,
           ...(name ? { name } : {}),
           lang,
+          consent_terms: true,
+          consent_marketing: consentMarketing,
         }),
       });
 

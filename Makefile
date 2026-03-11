@@ -1,4 +1,4 @@
-.PHONY: help install dev start stop build preview serve deploy clean clean-all
+.PHONY: help install dev start stop build preview serve deploy clean clean-all test test-unit test-e2e
 
 # Ports
 PORT_DEV     := 4321
@@ -57,6 +57,18 @@ preview: build
 ## serve       Sirve dist/ con npx serve (util si ya tienes la build)
 serve:
 	npx serve dist -p 3000
+
+## test        Ejecuta todos los tests (unit + e2e)
+test:
+	npm run test:unit && npm run test:e2e
+
+## test-unit   Ejecuta solo los tests unitarios (i18n, config)
+test-unit:
+	npm run test:unit
+
+## test-e2e    Ejecuta solo los tests end-to-end (requiere dev server)
+test-e2e:
+	npm run test:e2e
 
 ## clean       Elimina la carpeta dist/
 clean:

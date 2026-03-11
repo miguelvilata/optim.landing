@@ -5,14 +5,14 @@ import { t } from '../../i18n/index.ts';
 
 const lang = 'en';
 const tr = t(lang);
-const { title, content } = tr.legal.privacy;
+const { title, lastUpdated, sections } = tr.legal.privacy;
 ---
 
 <BaseLayout
   lang={lang}
   title={`${title} | Optim`}
   description={tr.meta.description}
-  canonicalPath="/en/privacy/"
+  canonicalPath="/en/privacy"
 >
-  <LegalPage lang={lang} title={title} content={content} />
+  <LegalPage lang={lang} title={title} lastUpdated={lastUpdated} sections={sections} />
 </BaseLayout>

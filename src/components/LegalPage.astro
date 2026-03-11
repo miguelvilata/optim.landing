@@ -6,9 +6,10 @@ import Footer from './Footer.astro';
 interface Props {
   lang: Lang;
   title: string;
-  content: string;
+  lastUpdated: string;
+  sections: Array<{ heading: string; body: string }>;
 }
-const { lang, title, content } = Astro.props;
+const { lang, title, lastUpdated, sections } = Astro.props;
 ---
 
 <Navbar lang={lang} />
@@ -31,10 +32,14 @@ const { lang, title, content } = Astro.props;
 
     <!-- Page content -->
     <article class="prose prose-slate max-w-none">
-      <h1 class="text-3xl sm:text-4xl font-extrabold text-brand-primary mb-8">{title}</h1>
-      <div class="text-brand-muted leading-relaxed">
-        <p>{content}</p>
-      </div>
+      <h1 class="text-3xl sm:text-4xl font-extrabold text-brand-primary mb-2">{title}</h1>
+      <p class="text-sm text-brand-muted mb-8">{lastUpdated}</p>
+      {sections.map((section) => (
+        <section class="mb-8">
+          <h2 class="text-xl font-bold text-brand-primary mb-3">{section.heading}</h2>
+          <div class="text-brand-muted leading-relaxed [&_a]:text-brand-secondary [&_a:hover]:underline [&_ul]:list-disc [&_ul]:pl-5 [&_ul]:space-y-1 [&_p]:mb-3 [&_li]:mb-1" set:html={section.body} />
+        </section>
+      ))}
     </article>
   </div>
 </main>
