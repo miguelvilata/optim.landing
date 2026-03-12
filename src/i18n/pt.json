@@ -5,6 +5,10 @@
     "ogTitle": "Optim: Gestão inteligente dos seus seguros e faturas",
     "ogDescription": "A app que centraliza as suas apólices, faturas e despesas recorrentes. Nunca perca uma renovação. Grátis, segura e com exportação garantida."
   },
+  "anchors": {
+    "features": "recursos",
+    "howItWorks": "como-funciona"
+  },
   "nav": {
     "features": "Recursos",
     "howItWorks": "Como funciona",
@@ -273,8 +277,8 @@
     "errorConsent": "Você deve aceitar os Termos e a Política de Privacidade para continuar.",
     "required": "* Campo obrigatório",
     "privacyInfoTitle": "Informação básica de privacidade",
-    "privacyInfoWaitlist": "Na Optim usamos o seu email para gerir a sua vaga na lista de espera e as alertas dos seus contratos. Se marcar «comunicações», utilizaremos os seus dados para enviar novidades e propostas de poupança personalizadas de terceiros colaboradores. Tem controlo total para cancelar ou apagar os seus dados a qualquer momento escrevendo para privacidad@getoptim.app.",
-    "privacyInfoContact": "Na Optim usamos o seu email para gerir a sua consulta. Se marcar «comunicações», utilizaremos os seus dados para enviar novidades e propostas de poupança personalizadas de terceiros colaboradores. Tem controlo total para cancelar ou apagar os seus dados a qualquer momento escrevendo para privacidad@getoptim.app.",
+    "privacyInfoWaitlist": "Na Optim usamos o seu email para gerir a sua vaga na lista de espera e as alertas dos seus contratos. Se marcar «comunicações», utilizaremos os seus dados para enviar novidades e propostas de poupança personalizadas de terceiros colaboradores. Tem controlo total para cancelar ou apagar os seus dados a qualquer momento escrevendo para <a data-sensitive=\"email\" class=\"text-brand-secondary hover:underline\" href=\"#\"></a>.",
+    "privacyInfoContact": "Na Optim usamos o seu email para gerir a sua consulta. Se marcar «comunicações», utilizaremos os seus dados para enviar novidades e propostas de poupança personalizadas de terceiros colaboradores. Tem controlo total para cancelar ou apagar os seus dados a qualquer momento escrevendo para <a data-sensitive=\"email\" class=\"text-brand-secondary hover:underline\" href=\"#\"></a>.",
     "privacyInfoLink": "Consulte a nossa Política de Privacidade completa"
   },
   "waitlist": {
@@ -299,7 +303,7 @@
     "consentMarketing": "Aceito receber novidades e comunicações da Optim",
     "errorConsent": "Você deve aceitar os Termos e a Política de Privacidade para continuar.",
     "privacyInfoTitle": "Informação básica de privacidade",
-    "privacyInfoWaitlist": "Na Optim usamos o seu email para gerir a sua vaga na lista de espera e as alertas dos seus contratos. Se marcar «comunicações», utilizaremos os seus dados para enviar novidades e propostas de poupança personalizadas de terceiros colaboradores. Tem controlo total para cancelar ou apagar os seus dados a qualquer momento escrevendo para privacidad@getoptim.app.",
+    "privacyInfoWaitlist": "Na Optim usamos o seu email para gerir a sua vaga na lista de espera e as alertas dos seus contratos. Se marcar «comunicações», utilizaremos os seus dados para enviar novidades e propostas de poupança personalizadas de terceiros colaboradores. Tem controlo total para cancelar ou apagar os seus dados a qualquer momento escrevendo para <a data-sensitive=\"email\" class=\"text-brand-secondary hover:underline\" href=\"#\"></a>.",
     "privacyInfoLink": "Consulte a nossa Política de Privacidade completa",
     "legalSummary": "O Optim não mostra publicidade de terceiros. Se ativar as comunicações, poderá receber propostas de poupança personalizadas. Os seus dados estão protegidos e pode exportá-los ou apagá-los quando quiser."
   },
@@ -323,11 +327,11 @@
       "sections": [
         {
           "heading": "1. Informação Geral (Art. 10 LSSI-CE)",
-          "body": "<p>Este site é operado por <strong>José Miguel Vilata Martínez</strong> (NIF: 52649100F), titular do domínio getoptim.app e dos serviços oferecidos através do site e da aplicação Optim.</p><p>Pode contactar-nos em <a href=\"mailto:privacidad@getoptim.app\" class=\"text-brand-secondary hover:underline\">privacidad@getoptim.app</a> para qualquer questão legal, comercial ou de privacidade.</p><p>Esta informação é prestada em cumprimento do artigo 10.º da Lei 34/2002, de 11 de julho, de Serviços da Sociedade da Informação e de Comércio Eletrónico (LSSI-CE).</p>"
+          "body": "<p>Este site é operado por <strong><span data-sensitive=\"owner\"></span></strong> (NIF: <span data-sensitive=\"nif\"></span>), titular do domínio <span data-sensitive=\"domain\"></span> e dos serviços oferecidos através do site e da aplicação Optim.</p><p>Pode contactar-nos em <a data-sensitive=\"email\" class=\"text-brand-secondary hover:underline\" href=\"#\"></a> para qualquer questão legal, comercial ou de privacidade.</p><p>Esta informação é prestada em cumprimento do artigo 10.º da Lei 34/2002, de 11 de julho, de Serviços da Sociedade da Informação e de Comércio Eletrónico (LSSI-CE).</p>"
         },
         {
           "heading": "2. Transparência em Comunicações Comerciais",
-          "body": "<p>No getoptim.app trabalhamos com um modelo de geração de leads e comparativas de poupança. No futuro poderemos incluir <strong>links de afiliação</strong> para seguradoras, companhias de suministros ou outros provedores.</p><p>Quando assim for, fá-lo-emos com transparência: qualquer link que possa reportar-nos uma comissão será identificado como tal, e as ofertas que lhe mostrarmos serão apresentadas de forma clara e diferenciada. O nosso objetivo é que saiba sempre quem lhe fala e com que fim.</p>"
+          "body": "<p>No <span data-sensitive=\"domain\"></span> trabalhamos com um modelo de geração de leads e comparativas de poupança. No futuro poderemos incluir <strong>links de afiliação</strong> para seguradoras, companhias de suministros ou outros provedores.</p><p>Quando assim for, fá-lo-emos com transparência: qualquer link que possa reportar-nos uma comissão será identificado como tal, e as ofertas que lhe mostrarmos serão apresentadas de forma clara e diferenciada. O nosso objetivo é que saiba sempre quem lhe fala e com que fim.</p>"
         }
       ]
     },
@@ -337,7 +341,7 @@
       "sections": [
         {
           "heading": "1. Quem trata os seus dados?",
-          "body": "<p>O responsável pelo tratamento é <strong>José Miguel Vilata Martínez</strong> (NIF: 52649100F). Pode contactar-nos em <a href=\"mailto:privacidad@getoptim.app\" class=\"text-brand-secondary hover:underline\">privacidad@getoptim.app</a>.</p>"
+          "body": "<p>O responsável pelo tratamento é <strong><span data-sensitive=\"owner\"></span></strong> (NIF: <span data-sensitive=\"nif\"></span>). Pode contactar-nos em <a data-sensitive=\"email\" class=\"text-brand-secondary hover:underline\" href=\"#\"></a>.</p>"
         },
         {
           "heading": "2. Que dados recolhemos e porquê?",
@@ -353,7 +357,7 @@
         },
         {
           "heading": "5. Os seus direitos",
-          "body": "<p>Você tem controlo total. Pode aceder, corrigir ou apagar os seus dados, bem como retirar o seu consentimento para ofertas comerciais a qualquer momento nas definições do app ou escrevendo-nos para <a href=\"mailto:privacidad@getoptim.app\" class=\"text-brand-secondary hover:underline\">privacidad@getoptim.app</a>. Responderemos no prazo máximo de um mês.</p><p>Se considerar que o tratamento dos seus dados viola a regulamentação, pode reclamar junto da <strong>Agência Espanhola de Proteção de Dados (AEPD)</strong> em <a href=\"https://www.aepd.es\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-brand-secondary hover:underline\">www.aepd.es</a>.</p>"
+          "body": "<p>Você tem controlo total. Pode aceder, corrigir ou apagar os seus dados, bem como retirar o seu consentimento para ofertas comerciais a qualquer momento nas definições do app ou escrevendo-nos para <a data-sensitive=\"email\" class=\"text-brand-secondary hover:underline\" href=\"#\"></a>. Responderemos no prazo máximo de um mês.</p><p>Se considerar que o tratamento dos seus dados viola a regulamentação, pode reclamar junto da <strong>Agência Espanhola de Proteção de Dados (AEPD)</strong> em <a href=\"https://www.aepd.es\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-brand-secondary hover:underline\">www.aepd.es</a>.</p>"
         },
         {
           "heading": "6. Conservação",
@@ -367,7 +371,7 @@
       "sections": [
         {
           "heading": "1. Bem-vindo ao Optim",
-          "body": "<p>O Optim é uma ferramenta concebida para o ajudar a organizar os seus seguros e gastos recorrentes (luz, subscrições, etc.). Ao utilizar a nossa app ou o site <a href=\"https://getoptim.app\" class=\"text-brand-secondary hover:underline\">getoptim.app</a>, aceita estas condições.</p>"
+          "body": "<p>O Optim é uma ferramenta concebida para o ajudar a organizar os seus seguros e gastos recorrentes (luz, subscrições, etc.). Ao utilizar a nossa app ou o site <a data-sensitive=\"domain-link\" class=\"text-brand-secondary hover:underline\" href=\"#\"></a>, aceita estas condições.</p>"
         },
         {
           "heading": "2. O que fazemos por si?",

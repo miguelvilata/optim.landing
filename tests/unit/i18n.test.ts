@@ -4,13 +4,14 @@ import es from '../../src/i18n/es.json';
 
 // All top-level keys that must exist in every language
 const REQUIRED_TOP_KEYS = [
-  'meta', 'nav', 'hero', 'features', 'howItWorks', 'screenshots',
+  'meta', 'anchors', 'nav', 'hero', 'features', 'howItWorks', 'screenshots',
   'serviceCategories', 'cta', 'footer', 'contact', 'waitlist',
   'waitlistPage', 'legal',
 ];
 
 // Keys that must exist within each section
 const REQUIRED_SECTION_KEYS: Record<string, string[]> = {
+  anchors: ['features', 'howItWorks'],
   footer: ['legalNotice', 'privacy', 'terms', 'contact', 'cookieNotice', 'language', 'copyright', 'tagline'],
   waitlist: [
     'title', 'subtitle', 'submit', 'submitting', 'successTitle', 'successDetail',
@@ -115,4 +116,73 @@ describe('i18n — no empty strings in es', () => {
     const empty = findEmptyStrings(es);
     expect(empty, `Empty strings at: ${empty.join(', ')}`).toHaveLength(0);
   });
+});
+
+// Datos que no deben aparecer en texto plano (ofuscados para bots)
+const SENSITIVE_PLAIN = {
+  ownerName: 'José Miguel Vilata Martínez',
+  nif: '52649100F',
+  email: 'privacidad@getoptim.app',
+} as const;
+
+// Marcadores que deben estar presentes para inyección por JS (visible para humanos)
+const OBFUSCATION_MARKERS = [
+  'data-sensitive="owner"',
+  'data-sensitive="nif"',
+  'data-sensitive="email"',
+] as const;
+
+function getLegalAndPrivacyStrings(tr: Record<string, unknown>): string[] {
+  const out: string[] = [];
+  const legal = tr.legal as Record<string, { sections?: Array<{ body?: string }> }> | undefined;
+  if (legal?.legalNotice?.sections) {
+    legal.legalNotice.sections.forEach((s) => { if (s.body) out.push(s.body); });
+  }
+  if (legal?.privacy?.sections) {
+    legal.privacy.sections.forEach((s) => { if (s.body) out.push(s.body); });
+  }
+  if (legal?.terms?.sections) {
+    legal.terms.sections.forEach((s) => { if (s.body) out.push(s.body); });
+  }
+  const contact = tr.contact as Record<string, string> | undefined;
+  if (contact?.privacyInfoWaitlist) out.push(contact.privacyInfoWaitlist);
+  if (contact?.privacyInfoContact) out.push(contact.privacyInfoContact);
+  const waitlist = tr.waitlist as Record<string, string> | undefined;
+  if (waitlist?.privacyInfoWaitlist) out.push(waitlist.privacyInfoWaitlist);
+  if (waitlist?.privacyInfoContact) out.push(waitlist.privacyInfoContact);
+  return out;
+}
+
+describe('i18n — datos sensibles ofuscados para bots', () => {
+  for (const lang of supportedLangs) {
+    describe(`[${lang}]`, () => {
+      const tr = t(lang) as Record<string, unknown>;
+      const strings = getLegalAndPrivacyStrings(tr);
+
+      it('no contiene nombre del titular en texto plano', () => {
+        for (const s of strings) {
+          expect(s, `No debe aparecer el nombre en texto plano`).not.toContain(SENSITIVE_PLAIN.ownerName);
+        }
+      });
+
+      it('no contiene NIF en texto plano', () => {
+        for (const s of strings) {
+          expect(s, `No debe aparecer el NIF en texto plano`).not.toContain(SENSITIVE_PLAIN.nif);
+        }
+      });
+
+      it('no contiene email de contacto en texto plano', () => {
+        for (const s of strings) {
+          expect(s, `No debe aparecer el email en texto plano`).not.toContain(SENSITIVE_PLAIN.email);
+        }
+      });
+
+      it('usa placeholders data-sensitive para inyección (visible para humanos)', () => {
+        const concatenated = strings.join(' ');
+        for (const marker of OBFUSCATION_MARKERS) {
+          expect(concatenated, `Debe contener ${marker} para inyección por JS`).toContain(marker);
+        }
+      });
+    });
+  }
 });

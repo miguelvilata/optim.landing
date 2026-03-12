@@ -127,9 +127,9 @@ const anonKey = SUPABASE_ANON_KEY;
 
           <!-- Privacy info layer -->
           <div class="text-left rounded-xl bg-brand-surface border border-gray-200 px-4 py-3">
-            <p class="text-xs text-brand-muted leading-relaxed">
+            <p class="text-xs text-brand-muted leading-relaxed [&_a]:text-brand-secondary [&_a:hover]:underline">
               <span class="font-semibold text-brand-primary">{c.privacyInfoTitle}:</span>
-              {c.privacyInfoContact}
+              <span set:html={c.privacyInfoContact} />
               <a href={privacyUrl} class="text-brand-secondary hover:underline ml-1">{c.privacyInfoLink} →</a>
             </p>
           </div>

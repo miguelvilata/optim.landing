@@ -1,4 +1,4 @@
-.PHONY: help install dev start stop build preview serve deploy deploy-preview deploy-branch clean clean-all test test-unit test-e2e
+.PHONY: help install install-e2e dev start stop build preview serve deploy deploy-preview deploy-branch clean clean-all test test-unit test-e2e
 
 # Ports
 PORT_DEV     := 4321
@@ -16,6 +16,10 @@ help:
 ## install     Instala las dependencias (npm install)
 install:
 	npm install
+
+## install-e2e Instala los navegadores de Playwright (necesario una vez antes de make test)
+install-e2e:
+	npx playwright install
 
 ## dev         Arranca el servidor de desarrollo en primer plano (Ctrl+C para parar)
 dev:
@@ -58,7 +62,7 @@ preview: build
 serve:
 	npx serve dist -p 3000
 
-## test        Ejecuta todos los tests (unit + e2e)
+## test        Ejecuta todos los tests (unit + e2e). La primera vez: make install-e2e
 test:
 	npm run test:unit && npm run test:e2e
 
@@ -66,7 +70,7 @@ test:
 test-unit:
 	npm run test:unit
 
-## test-e2e    Ejecuta solo los tests end-to-end (requiere dev server)
+## test-e2e    Ejecuta solo los tests end-to-end (requiere make install-e2e una vez)
 test-e2e:
 	npm run test:e2e
 

@@ -9,5 +9,8 @@ export default defineConfig({
   output: 'static',
   outDir: 'dist',
   trailingSlash: 'never',
+  build: {
+    format: 'file'
+  },
   integrations: [tailwind()],
 });

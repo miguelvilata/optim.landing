@@ -2,6 +2,9 @@
 import type { Lang } from '../i18n/index.ts';
 import { getAlternateUrls, pathWithoutTrailingSlash } from '../i18n/index.ts';
 import { SITE_URL, ANALYTICS_DOMAIN } from '../config.ts';
+import { getEncodedLegal } from '../config-sensitive.ts';
+
+const encodedLegal = getEncodedLegal();
 
 interface Props {
   lang: Lang;
@@ -87,5 +90,33 @@ const alternates = customAlternates ?? getAlternateUrls(canonicalPath, SITE_URL)
   </head>
   <body class="bg-white text-gray-900 font-sans antialiased">
     <slot />
+    <!-- Inyección de datos sensibles (visible para usuarios, no en HTML plano para bots) -->
+    <script define:vars={{ base64Owner: encodedLegal.owner, base64Nif: encodedLegal.nif }}>
+      (function () {
+        function decodeUtf8B64(s) {
+          try {
+            return decodeURIComponent(escape(atob(s)));
+          } catch (_) {
+            return '';
+          }
+        }
+        var owner = decodeUtf8B64(base64Owner);
+        var nif = decodeUtf8B64(base64Nif);
+        var emailUser = 'privacidad', emailDomain = 'getoptim' + '.' + 'app';
+        var email = emailUser + '@' + emailDomain;
+        var domain = 'getoptim' + '.' + 'app';
+        document.querySelectorAll('[data-sensitive="owner"]').forEach(function (el) { el.textContent = owner; });
+        document.querySelectorAll('[data-sensitive="nif"]').forEach(function (el) { el.textContent = nif; });
+        document.querySelectorAll('[data-sensitive="domain"]').forEach(function (el) { el.textContent = domain; });
+        document.querySelectorAll('[data-sensitive="email"]').forEach(function (el) {
+          el.href = 'mailto:' + email;
+          el.textContent = email;
+        });
+        document.querySelectorAll('[data-sensitive="domain-link"]').forEach(function (el) {
+          el.href = 'https://' + domain;
+          el.textContent = domain;
+        });
+      })();
+    </script>
   </body>
 </html>

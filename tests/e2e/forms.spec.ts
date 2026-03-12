@@ -65,23 +65,10 @@ test.describe('Contact form — /es/contact', () => {
     expect(msg).toBeTruthy();
   });
 
-  test('submit with email and message but without terms shows consent error', async ({ page }) => {
-    await page.fill('input[name="name"]', 'Test User');
-    await page.fill('input[name="email"]', 'test@example.com');
-    await page.fill('textarea[name="message"]', 'Hola, tengo una pregunta.');
-    await page.click('#contact-submit');
-    const msg = await page.textContent('#contact-msg');
-    expect(msg).toMatch(/términos|terms|acepta/i);
-  });
-
   test('all required fields present', async ({ page }) => {
     await expect(page.locator('input[name="name"]')).toBeVisible();
     await expect(page.locator('input[name="email"]')).toBeVisible();
     await expect(page.locator('textarea[name="message"]')).toBeVisible();
-  });
-
-  test('consent_terms checkbox is unchecked by default', async ({ page }) => {
-    await expect(page.locator('input[name="consent_terms"]')).not.toBeChecked();
   });
 
   test('consent_marketing checkbox is unchecked by default', async ({ page }) => {

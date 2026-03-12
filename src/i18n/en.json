@@ -5,6 +5,10 @@
     "ogTitle": "Optim: Smart management for your insurance and bills",
     "ogDescription": "The app that centralizes your policies, bills and recurring expenses. Never miss a renewal. Free, secure and with guaranteed export."
   },
+  "anchors": {
+    "features": "features",
+    "howItWorks": "how-it-works"
+  },
   "nav": {
     "features": "Features",
     "howItWorks": "How it works",
@@ -273,8 +277,8 @@
     "errorConsent": "You must accept the Terms and Privacy Policy to continue.",
     "required": "* Required field",
     "privacyInfoTitle": "Basic privacy information",
-    "privacyInfoWaitlist": "At Optim we use your email to manage your place on the waitlist and contract alerts. If you tick 'communications', we will use your data to send you news and personalised savings offers from partner third parties. You have full control to unsubscribe or delete your data at any time by writing to privacidad@getoptim.app.",
-    "privacyInfoContact": "At Optim we use your email to handle your enquiry. If you tick 'communications', we will use your data to send you news and personalised savings offers from partner third parties. You have full control to unsubscribe or delete your data at any time by writing to privacidad@getoptim.app.",
+    "privacyInfoWaitlist": "At Optim we use your email to manage your place on the waitlist and contract alerts. If you tick 'communications', we will use your data to send you news and personalised savings offers from partner third parties. You have full control to unsubscribe or delete your data at any time by writing to <a data-sensitive=\"email\" class=\"text-brand-secondary hover:underline\" href=\"#\"></a>.",
+    "privacyInfoContact": "At Optim we use your email to handle your enquiry. If you tick 'communications', we will use your data to send you news and personalised savings offers from partner third parties. You have full control to unsubscribe or delete your data at any time by writing to <a data-sensitive=\"email\" class=\"text-brand-secondary hover:underline\" href=\"#\"></a>.",
     "privacyInfoLink": "Read our full Privacy Policy"
   },
   "waitlist": {
@@ -299,7 +303,7 @@
     "consentMarketing": "I agree to receive news and communications from Optim",
     "errorConsent": "You must accept the Terms and Privacy Policy to continue.",
     "privacyInfoTitle": "Basic privacy information",
-    "privacyInfoWaitlist": "At Optim we use your email to manage your place on the waitlist and contract alerts. If you tick 'communications', we will use your data to send you news and personalised savings offers from partner third parties. You have full control to unsubscribe or delete your data at any time by writing to privacidad@getoptim.app.",
+    "privacyInfoWaitlist": "At Optim we use your email to manage your place on the waitlist and contract alerts. If you tick 'communications', we will use your data to send you news and personalised savings offers from partner third parties. You have full control to unsubscribe or delete your data at any time by writing to <a data-sensitive=\"email\" class=\"text-brand-secondary hover:underline\" href=\"#\"></a>.",
     "privacyInfoLink": "Read our full Privacy Policy",
     "legalSummary": "Optim does not show third-party ads. If you enable communications, you may receive personalised savings offers. Your data is protected and you can export or delete it at any time."
   },
@@ -323,11 +327,11 @@
       "sections": [
         {
           "heading": "1. General Information (Art. 10 LSSI-CE)",
-          "body": "<p>This site is operated by <strong>José Miguel Vilata Martínez</strong> (NIF: 52649100F), owner of the domain getoptim.app and of the services offered through the website and the Optim application.</p><p>You can contact us at <a href=\"mailto:privacidad@getoptim.app\" class=\"text-brand-secondary hover:underline\">privacidad@getoptim.app</a> for any legal, commercial or privacy matter.</p><p>This information is provided in compliance with Article 10 of Spanish Law 34/2002, of 11 July, on Information Society Services and Electronic Commerce (LSSI-CE).</p>"
+          "body": "<p>This site is operated by <strong><span data-sensitive=\"owner\"></span></strong> (NIF: <span data-sensitive=\"nif\"></span>), owner of the domain <span data-sensitive=\"domain\"></span> and of the services offered through the website and the Optim application.</p><p>You can contact us at <a data-sensitive=\"email\" class=\"text-brand-secondary hover:underline\" href=\"#\"></a> for any legal, commercial or privacy matter.</p><p>This information is provided in compliance with Article 10 of Spanish Law 34/2002, of 11 July, on Information Society Services and Electronic Commerce (LSSI-CE).</p>"
         },
         {
           "heading": "2. Transparency in Commercial Communications",
-          "body": "<p>At getoptim.app we work with a lead generation and savings comparison model. In the future we may include <strong>affiliate links</strong> to insurers, utility companies or other providers.</p><p>When we do, we will do so transparently: any link that may earn us a commission will be clearly identified as such, and the offers we show you will be presented in a clear and distinct way. Our aim is that you always know who is addressing you and for what purpose.</p>"
+          "body": "<p>At <span data-sensitive=\"domain\"></span> we work with a lead generation and savings comparison model. In the future we may include <strong>affiliate links</strong> to insurers, utility companies or other providers.</p><p>When we do, we will do so transparently: any link that may earn us a commission will be clearly identified as such, and the offers we show you will be presented in a clear and distinct way. Our aim is that you always know who is addressing you and for what purpose.</p>"
         }
       ]
     },
@@ -337,7 +341,7 @@
       "sections": [
         {
           "heading": "1. Who is responsible for your data?",
-          "body": "<p>The data controller is <strong>José Miguel Vilata Martínez</strong> (NIF: 52649100F). You can contact us at <a href=\"mailto:privacidad@getoptim.app\" class=\"text-brand-secondary hover:underline\">privacidad@getoptim.app</a>.</p>"
+          "body": "<p>The data controller is <strong><span data-sensitive=\"owner\"></span></strong> (NIF: <span data-sensitive=\"nif\"></span>). You can contact us at <a data-sensitive=\"email\" class=\"text-brand-secondary hover:underline\" href=\"#\"></a>.</p>"
         },
         {
           "heading": "2. What data do we collect and why?",
@@ -353,7 +357,7 @@
         },
         {
           "heading": "5. Your rights",
-          "body": "<p>You have full control. You can access, correct or delete your data, as well as withdraw your consent for commercial offers at any time from the app settings or by writing to us at <a href=\"mailto:privacidad@getoptim.app\" class=\"text-brand-secondary hover:underline\">privacidad@getoptim.app</a>. We will respond within one month at the latest.</p><p>If you believe that the processing of your data breaches the regulations, you may lodge a complaint with the <strong>Spanish Data Protection Authority (AEPD)</strong> at <a href=\"https://www.aepd.es\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-brand-secondary hover:underline\">www.aepd.es</a>.</p>"
+          "body": "<p>You have full control. You can access, correct or delete your data, as well as withdraw your consent for commercial offers at any time from the app settings or by writing to us at <a data-sensitive=\"email\" class=\"text-brand-secondary hover:underline\" href=\"#\"></a>. We will respond within one month at the latest.</p><p>If you believe that the processing of your data breaches the regulations, you may lodge a complaint with the <strong>Spanish Data Protection Authority (AEPD)</strong> at <a href=\"https://www.aepd.es\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-brand-secondary hover:underline\">www.aepd.es</a>.</p>"
         },
         {
           "heading": "6. Retention",
@@ -367,7 +371,7 @@
       "sections": [
         {
           "heading": "1. Welcome to Optim",
-          "body": "<p>Optim is a tool designed to help you organise your insurance and recurring expenses (utilities, subscriptions, etc.). By using our app or the website <a href=\"https://getoptim.app\" class=\"text-brand-secondary hover:underline\">getoptim.app</a>, you accept these terms.</p>"
+          "body": "<p>Optim is a tool designed to help you organise your insurance and recurring expenses (utilities, subscriptions, etc.). By using our app or the website <a data-sensitive=\"domain-link\" class=\"text-brand-secondary hover:underline\" href=\"#\"></a>, you accept these terms.</p>"
         },
         {
           "heading": "2. What we do for you",
