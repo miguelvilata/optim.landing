@@ -117,20 +117,6 @@ const anonKey = SUPABASE_ANON_KEY;
             <label class="flex items-start gap-2.5 cursor-pointer">
               <input
                 type="checkbox"
-                name="consent_terms"
-                id="consent-terms"
-                class="mt-0.5 w-4 h-4 flex-shrink-0 accent-brand-secondary cursor-pointer"
-              />
-              <span class="text-sm text-brand-muted">
-                {c.consentTermsPrefix}
-                <a href={termsUrl} target="_blank" class="text-brand-secondary hover:underline">{tr.footer.terms}</a>
-                {c.consentTermsAnd}
-                <a href={privacyUrl} target="_blank" class="text-brand-secondary hover:underline">{tr.footer.privacy}</a>*
-              </span>
-            </label>
-            <label class="flex items-start gap-2.5 cursor-pointer">
-              <input
-                type="checkbox"
                 name="consent_marketing"
                 id="consent-marketing"
                 class="mt-0.5 w-4 h-4 flex-shrink-0 accent-brand-secondary cursor-pointer"
@@ -211,7 +197,6 @@ const anonKey = SUPABASE_ANON_KEY;
     const email = form.elements['email'].value.trim();
     const subject = form.elements['subject'].value.trim();
     const message = form.elements['message'].value.trim();
-    const consentTerms = form.elements['consent_terms'].checked;
     const consentMarketing = form.elements['consent_marketing'].checked;
 
     if (!name || !email || !message) {
@@ -219,8 +204,8 @@ const anonKey = SUPABASE_ANON_KEY;
       return;
     }
 
-    if (!consentTerms) {
-      showStatus(c.errorConsent, null, true);
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+      showStatus(c.errorEmail, null, true);
       return;
     }
 
@@ -240,7 +225,6 @@ const anonKey = SUPABASE_ANON_KEY;
           subject: subject || undefined,
           message,
           lang,
-          consent_terms: true,
           consent_marketing: consentMarketing,
         }),
       });

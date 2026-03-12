@@ -158,6 +158,7 @@
     "successTitle": "Message sent",
     "successDetail": "We'll get back to you as soon as possible.",
     "errorValidation": "Please fill in all required fields.",
+    "errorEmail": "The email is not valid. Please check it and try again.",
     "errorRateLimit": "Too many attempts. Please try again in an hour.",
     "errorServer": "Something went wrong. Please try again.",
     "consentTermsPrefix": "I have read and accept the",

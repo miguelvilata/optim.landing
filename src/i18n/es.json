@@ -158,6 +158,7 @@
     "successTitle": "Mensaje enviado",
     "successDetail": "Te responderemos en el menor tiempo posible.",
     "errorValidation": "Por favor, rellena todos los campos obligatorios.",
+    "errorEmail": "El email no es válido. Revísalo e inténtalo de nuevo.",
     "errorRateLimit": "Demasiados intentos. Prueba de nuevo en una hora.",
     "errorServer": "Ha ocurrido un error. Inténtalo de nuevo.",
     "consentTermsPrefix": "He leído y acepto los",
