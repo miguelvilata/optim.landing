@@ -196,7 +196,12 @@
     "googlePlay": "Baixar no Google Play",
     "appStore": "Em breve na App Store",
     "waitlist": "Entrar na lista",
-    "note": "Lancamento em breve · Cadastro aberto"
+    "note": "Lancamento em breve · Cadastro aberto",
+    "qrTitle": "Escaneie para baixar",
+    "qrAndroid": "Android",
+    "qrIos": "iOS",
+    "qrAriaGooglePlay": "Codigo QR para baixar no Google Play",
+    "qrAriaAppStore": "Codigo QR para baixar na App Store"
   },
   "footer": {
     "tagline": "Gerencie seus seguros e despesas com inteligência.",

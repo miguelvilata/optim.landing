@@ -196,7 +196,12 @@
     "googlePlay": "Download on Google Play",
     "appStore": "Coming soon on App Store",
     "waitlist": "Join the waitlist",
-    "note": "Launching soon · Registration open"
+    "note": "Launching soon · Registration open",
+    "qrTitle": "Scan to download",
+    "qrAndroid": "Android",
+    "qrIos": "iOS",
+    "qrAriaGooglePlay": "QR code to download on Google Play",
+    "qrAriaAppStore": "QR code to download on App Store"
   },
   "footer": {
     "tagline": "Manage your insurance and expenses with intelligence.",

@@ -162,6 +162,8 @@ SUPABASE_ANON_KEY=eyJ...                              # Anon key (inyectada en b
 - `PUBLIC_*` → disponible en cliente via `import.meta.env.PUBLIC_*`
 - Sin prefijo → solo disponible en frontmatter/build; se pasa al cliente mediante `<script define:vars={{}}>` cuando es necesario (ver `confirm.astro` y `Waitlist.astro`)
 
+**Enlaces de descarga y deep linking**: Los botones y QR usan `GOOGLE_PLAY_URL` y `APP_STORE_URL` (enlaces directos a la tienda). Cuando la app tenga Android App Links e iOS Universal Links configurados, se puede usar una URL de dominio (ej. `SITE_URL/open`) en esos mismos enlaces para que, en movil con la app instalada, se abra la app en lugar de la tienda.
+
 ---
 
 ## Comandos Makefile

@@ -7,10 +7,11 @@ export const SITE_URL = import.meta.env.SITE || 'https://getoptim.app';
 // Example: PUBLIC_ANALYTICS_DOMAIN=yourdomain.com
 export const ANALYTICS_DOMAIN = import.meta.env.PUBLIC_ANALYTICS_DOMAIN || '';
 
-// Google Play store link
+// Google Play store link (botones y QR apuntan aquí; universal para la ficha en la tienda)
 export const GOOGLE_PLAY_URL = import.meta.env.PUBLIC_GOOGLE_PLAY_URL || '#';
 
-// App Store link (iOS - coming soon)
+// App Store link (iOS - coming soon). Cuando la app tenga Android App Links / iOS Universal Links,
+// se puede usar una URL de dominio (ej. SITE_URL/open) en botones y QR para abrir la app si está instalada.
 export const APP_STORE_URL = import.meta.env.PUBLIC_APP_STORE_URL || '#';
 
 // Supabase project URL (for Edge Functions)
