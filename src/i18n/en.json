@@ -104,6 +104,69 @@
       }
     ]
   },
+  "testimonials": {
+    "badge": "Testimonials",
+    "title": "What users are saying",
+    "subtitle": "People who manage their insurance and expenses with Optim.",
+    "items": [
+      {
+        "quote": "I finally know exactly how much I pay per year on insurance and utilities. Seeing the estimated annual spend in one panel has helped me organize my monthly budget much better.",
+        "author": "Carlos R.",
+        "location": "Madrid",
+        "focus": "Total financial control",
+        "avatar": "/testimonials/avatar-1.svg"
+      },
+      {
+        "quote": "I always missed the deadline to notify my car insurance and ended up renewing out of habit. With Optim's smart alerts, this time I was able to compare before it was too late.",
+        "author": "Lucía M.",
+        "location": "Barcelona",
+        "focus": "Avoid automatic renewals",
+        "avatar": "/testimonials/avatar-2.svg"
+      },
+      {
+        "quote": "I followed one of the app's energy-saving suggestions and now I pay €15 less per month. The app pays for itself with what it helps you save.",
+        "author": "Jorge V.",
+        "location": "Valencia",
+        "focus": "Real savings on bills",
+        "avatar": "/testimonials/avatar-3.svg"
+      },
+      {
+        "quote": "I've tried other finance apps but they were too complex. Optim is simple and straightforward: you add the contract, set the date, and forget about it. That easy.",
+        "author": "Marta S.",
+        "location": "Sevilla",
+        "focus": "Simplicity and ease of use",
+        "avatar": "/testimonials/avatar-4.svg"
+      },
+      {
+        "quote": "I was worried it wouldn't accept my policies from a small provider, but it works with any insurer. I've centralized everything from my bike insurance to my home broadband.",
+        "author": "Andrés T.",
+        "location": "Bilbao",
+        "focus": "Universal compatibility",
+        "avatar": "/testimonials/avatar-5.svg"
+      },
+      {
+        "quote": "Having all my digital policies stored in the cloud and encrypted gives me peace of mind. I no longer have to hunt through folders for paperwork in an emergency.",
+        "author": "Elena G.",
+        "location": "Zaragoza",
+        "focus": "Peace of mind and security",
+        "avatar": "/testimonials/avatar-6.svg"
+      },
+      {
+        "quote": "What I value most is that it's a clean tool with no ads. You can tell they care about privacy and that the focus is really on helping us manage our expenses.",
+        "author": "Ricardo F.",
+        "location": "Málaga",
+        "focus": "Privacy and ethics",
+        "avatar": "/testimonials/avatar-7.svg"
+      },
+      {
+        "quote": "I use it to keep track of all my streaming and software subscriptions. I realised I was paying for two services I barely used. Essential!",
+        "author": "Sara P.",
+        "location": "Salamanca",
+        "focus": "Subscription management",
+        "avatar": "/testimonials/avatar-8.svg"
+      }
+    ]
+  },
   "serviceCategories": {
     "title": "For all your recurring expenses",
     "subtitle": "Not just insurance. Optim centralizes everything you pay periodically in one single place.",

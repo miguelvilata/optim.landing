@@ -104,6 +104,69 @@
       }
     ]
   },
+  "testimonials": {
+    "badge": "Testimonios",
+    "title": "Lo que dicen quienes ya lo usan",
+    "subtitle": "Usuarios que gestionan sus seguros y gastos con Optim.",
+    "items": [
+      {
+        "quote": "Por fin sé exactamente cuánto pago al año en seguros y suministros. Ver el gasto anual estimado en un solo panel me ha ayudado a organizar mucho mejor mi presupuesto mensual.",
+        "author": "Carlos R.",
+        "location": "Madrid",
+        "focus": "Control Financiero Total",
+        "avatar": "/testimonials/avatar-1.svg"
+      },
+      {
+        "quote": "Siempre se me pasaba la fecha para avisar al seguro del coche y acababa renovando por inercia. Con las alertas inteligentes de Optim, esta vez he podido comparar antes de que fuera tarde.",
+        "author": "Lucía M.",
+        "location": "Barcelona",
+        "focus": "Evitar renovaciones automáticas",
+        "avatar": "/testimonials/avatar-2.svg"
+      },
+      {
+        "quote": "Seguí una de las propuestas de ahorro para la luz que me sugirió la app y ahora estoy pagando 15€ menos al mes. La app se paga sola con lo que te ayuda a ahorrar.",
+        "author": "Jorge V.",
+        "location": "Valencia",
+        "focus": "Ahorro real en facturas",
+        "avatar": "/testimonials/avatar-3.svg"
+      },
+      {
+        "quote": "He probado otras apps de finanzas pero eran demasiado complejas. Optim es sencilla y directa: añades el contrato, pones la fecha y te olvidas. Así de fácil.",
+        "author": "Marta S.",
+        "location": "Sevilla",
+        "focus": "Simplicidad y facilidad de uso",
+        "avatar": "/testimonials/avatar-4.svg"
+      },
+      {
+        "quote": "Me preocupaba que no aceptara mis pólizas por ser de una compañía pequeña, pero es compatible con cualquier proveedor. He centralizado desde el seguro de la moto hasta la fibra de casa.",
+        "author": "Andrés T.",
+        "location": "Bilbao",
+        "focus": "Compatibilidad universal",
+        "avatar": "/testimonials/avatar-5.svg"
+      },
+      {
+        "quote": "Tener todas mis pólizas digitales guardadas en la nube y cifradas me da una tranquilidad inmensa. Ya no tengo que buscar papeles en carpetas cuando tengo una urgencia.",
+        "author": "Elena G.",
+        "location": "Zaragoza",
+        "focus": "Tranquilidad y seguridad",
+        "avatar": "/testimonials/avatar-6.svg"
+      },
+      {
+        "quote": "Lo que más valoro es que es una herramienta limpia y sin anuncios. Se nota que cuidan la privacidad y que el foco es realmente ayudarnos a gestionar nuestros gastos.",
+        "author": "Ricardo F.",
+        "location": "Málaga",
+        "focus": "Privacidad y ética",
+        "avatar": "/testimonials/avatar-7.svg"
+      },
+      {
+        "quote": "La uso para controlar todas mis suscripciones de streaming y software. Me di cuenta de que estaba pagando por dos servicios que apenas usaba. ¡Imprescindible!",
+        "author": "Sara P.",
+        "location": "Salamanca",
+        "focus": "Gestión de suscripciones",
+        "avatar": "/testimonials/avatar-8.svg"
+      }
+    ]
+  },
   "serviceCategories": {
     "title": "Para todos tus gastos recurrentes",
     "subtitle": "No solo seguros. Optim centraliza todo lo que pagas de forma periódica en un único lugar.",

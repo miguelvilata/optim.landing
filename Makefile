@@ -1,4 +1,4 @@
-.PHONY: help install dev start stop build preview serve deploy clean clean-all test test-unit test-e2e
+.PHONY: help install dev start stop build preview serve deploy deploy-preview deploy-branch clean clean-all test test-unit test-e2e
 
 # Ports
 PORT_DEV     := 4321
@@ -78,7 +78,24 @@ clean:
 clean-all: clean
 	rm -rf node_modules .dev.log .dev.pid
 
-## deploy      Genera la build y despliega en Cloudflare Pages
+## deploy      Build y despliegue en produccion (rama main)
 deploy: build
 	@command -v npx >/dev/null 2>&1 || { echo "npx no encontrado"; exit 1; }
-	npx wrangler pages deploy dist --project-name=optim-landing
+	npx wrangler pages deploy dist \
+		--project-name=optim-landing \
+		--branch=main
+
+## deploy-preview   Build y despliegue preview (no afecta produccion)
+deploy-preview: build
+	@command -v npx >/dev/null 2>&1 || { echo "npx no encontrado"; exit 1; }
+	npx wrangler pages deploy dist \
+		--project-name=optim-landing \
+		--branch=preview
+
+## deploy-branch    Build y preview usando la rama git actual
+deploy-branch: build
+	@command -v npx >/dev/null 2>&1 || { echo "npx no encontrado"; exit 1; }
+	@BRANCH=$$(git rev-parse --abbrev-ref HEAD); \
+	npx wrangler pages deploy dist \
+		--project-name=optim-landing \
+		--branch=$$BRANCH

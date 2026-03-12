@@ -1,0 +1,215 @@
+---
+import type { Lang } from '../i18n/index';
+import { t } from '../i18n/index';
+
+interface Props {
+  lang: Lang;
+}
+const { lang } = Astro.props;
+const tr = t(lang);
+const block = tr.testimonials;
+---
+
+<section id="testimonials" class="py-16 sm:py-20 bg-white" aria-label={block.title}>
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center max-w-2xl mx-auto mb-10 sm:mb-12">
+      <span class="inline-block text-sm font-semibold text-brand-secondary tracking-wider uppercase mb-3">
+        {block.badge}
+      </span>
+      <h2 class="text-3xl sm:text-4xl font-extrabold text-brand-primary mb-4">
+        {block.title}
+      </h2>
+      <p class="text-lg text-brand-muted">
+        {block.subtitle}
+      </p>
+    </div>
+
+    <div class="relative" id="testimonials-carousel">
+      <!-- Viewport: muestra un testimonio + asomos de anterior/siguiente -->
+      <div class="overflow-hidden">
+        <div
+          class="testimonials-track flex gap-6 transition-transform duration-500 ease-out will-change-transform"
+          style="transform: translateX(0);"
+          role="list"
+          aria-label="Testimonios"
+        >
+          {block.items.map((item, i) => (
+            <article
+              class="testimonials-slide flex-shrink-0 w-[85%] min-w-0 sm:w-[75%] max-w-xl mx-auto rounded-2xl border border-brand-border bg-brand-surface p-6 sm:p-8 flex flex-col items-center text-center"
+              style={`--slide-index: ${i};`}
+              data-index={i}
+              role="listitem"
+            >
+              <!-- Avatar con más protagonismo -->
+              <div class="mb-4">
+                {item.avatar ? (
+                  <img
+                    src={item.avatar}
+                    alt=""
+                    width="96"
+                    height="96"
+                    class="w-20 h-20 sm:w-24 sm:h-24 rounded-full object-cover ring-2 ring-brand-secondary/20 ring-offset-2 ring-offset-brand-surface"
+                    loading={i <= 1 ? "eager" : "lazy"}
+                    aria-hidden="true"
+                  />
+                ) : (
+                  <span class="inline-flex w-20 h-20 sm:w-24 sm:h-24 rounded-full bg-brand-light text-brand-secondary text-xl sm:text-2xl font-semibold items-center justify-center ring-2 ring-brand-secondary/20 ring-offset-2 ring-offset-brand-surface" aria-hidden="true">
+                    {item.author.slice(0, 2).toUpperCase()}
+                  </span>
+                )}
+              </div>
+              {item.focus ? (
+                <span class="inline-block text-xs font-medium text-brand-secondary mb-2" aria-hidden="true">
+                  {item.focus}
+                </span>
+              ) : null}
+              <blockquote class="flex-1 flex flex-col">
+                <p class="text-brand-primary leading-relaxed mb-4 text-base sm:text-lg">
+                  "{item.quote}"
+                </p>
+                <footer class="mt-auto">
+                  <cite class="not-italic text-sm font-semibold text-brand-primary">
+                    {item.author}
+                  </cite>
+                  <span class="text-brand-muted text-sm"> · {item.location}</span>
+                </footer>
+              </blockquote>
+            </article>
+          ))}
+        </div>
+      </div>
+
+      <!-- Flechas -->
+      <button
+        type="button"
+        id="testimonials-prev"
+        class="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-2 sm:translate-x-0 z-10 w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-white border border-brand-border shadow-md flex items-center justify-center text-brand-primary hover:bg-brand-light hover:border-brand-secondary/30 transition-colors focus:outline-none focus:ring-2 focus:ring-brand-secondary focus:ring-offset-2"
+        aria-label="Testimonio anterior"
+      >
+        <svg class="w-5 h-5 sm:w-6 sm:h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7" />
+        </svg>
+      </button>
+      <button
+        type="button"
+        id="testimonials-next"
+        class="absolute right-0 top-1/2 -translate-y-1/2 translate-x-2 sm:translate-x-0 z-10 w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-white border border-brand-border shadow-md flex items-center justify-center text-brand-primary hover:bg-brand-light hover:border-brand-secondary/30 transition-colors focus:outline-none focus:ring-2 focus:ring-brand-secondary focus:ring-offset-2"
+        aria-label="Testimonio siguiente"
+      >
+        <svg class="w-5 h-5 sm:w-6 sm:h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+        </svg>
+      </button>
+    </div>
+
+    <!-- Indicadores (opcional, para saber en qué posición estamos) -->
+    <div class="flex justify-center gap-2 mt-6" role="tablist" aria-label="Navegación por testimonios">
+      {block.items.map((_, i) => (
+        <button
+          type="button"
+          class="testimonials-dot h-2 w-2 rounded-full transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-brand-secondary focus:ring-offset-2"
+          data-index={i}
+          role="tab"
+          aria-selected={i === 0 ? "true" : "false"}
+          aria-label={`Testimonio ${i + 1}`}
+          style={i === 0 ? "background: #3B82F6; transform: scale(1.25);" : "background: #CBD5E1;"}
+        ></button>
+      ))}
+    </div>
+  </div>
+</section>
+
+<script define:vars={{ totalSlides: block.items.length }}>
+  const track = document.querySelector('.testimonials-track');
+  const slides = document.querySelectorAll('.testimonials-slide');
+  const dots = document.querySelectorAll('.testimonials-dot');
+  const prevBtn = document.getElementById('testimonials-prev');
+  const nextBtn = document.getElementById('testimonials-next');
+  const carousel = document.getElementById('testimonials-carousel');
+
+  let current = 0;
+  let autoTimer = null;
+  const AUTOPLAY_MS = 5000;
+
+  function getTranslateX() {
+    if (!slides[0] || !track) return 0;
+    const container = track.parentElement;
+    if (!container) return 0;
+    const slideWidth = slides[0].offsetWidth;
+    const gap = 24;
+    const offset = (slideWidth + gap) * current;
+    const containerWidth = container.offsetWidth;
+    const centerOffset = containerWidth / 2 - slideWidth / 2;
+    return -offset + centerOffset;
+  }
+
+  function updateCarousel() {
+    const tx = getTranslateX();
+    if (track) {
+      track.style.transform = `translateX(${tx}px)`;
+    }
+    slides.forEach((slide, i) => {
+      const el = slide;
+      el.setAttribute('aria-hidden', i !== current ? 'true' : 'false');
+    });
+    dots.forEach((dot, i) => {
+      const btn = dot;
+      btn.setAttribute('aria-selected', i === current ? 'true' : 'false');
+      if (i === current) {
+        btn.style.background = '#3B82F6';
+        btn.style.transform = 'scale(1.25)';
+      } else {
+        btn.style.background = '#CBD5E1';
+        btn.style.transform = 'scale(1)';
+      }
+    });
+  }
+
+  function goTo(index) {
+    current = (index + totalSlides) % totalSlides;
+    updateCarousel();
+  }
+
+  function startAuto() {
+    if (autoTimer) clearInterval(autoTimer);
+    autoTimer = setInterval(() => goTo(current + 1), AUTOPLAY_MS);
+  }
+
+  function stopAuto() {
+    if (autoTimer) {
+      clearInterval(autoTimer);
+      autoTimer = null;
+    }
+  }
+
+  prevBtn?.addEventListener('click', () => {
+    stopAuto();
+    goTo(current - 1);
+    startAuto();
+  });
+  nextBtn?.addEventListener('click', () => {
+    stopAuto();
+    goTo(current + 1);
+    startAuto();
+  });
+
+  dots.forEach((dot) => {
+    dot.addEventListener('click', () => {
+      stopAuto();
+      goTo(Number(dot.dataset.index));
+      startAuto();
+    });
+  });
+
+  carousel?.addEventListener('mouseenter', stopAuto);
+  carousel?.addEventListener('mouseleave', startAuto);
+
+  window.addEventListener('resize', () => {
+    updateCarousel();
+  });
+
+  requestAnimationFrame(() => {
+    updateCarousel();
+  });
+  startAuto();
+</script>
