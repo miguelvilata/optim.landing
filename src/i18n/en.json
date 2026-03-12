@@ -165,7 +165,11 @@
     "consentTermsAnd": "and the",
     "consentMarketing": "I agree to receive news and communications from Optim",
     "errorConsent": "You must accept the Terms and Privacy Policy to continue.",
-    "required": "* Required field"
+    "required": "* Required field",
+    "privacyInfoTitle": "Basic privacy information",
+    "privacyInfoWaitlist": "At Optim we will only use your email to manage your place on the waiting list and send you contract renewal alerts. Only if you tick the 'communications' box will we use your data to send you Optim news. You have full control to unsubscribe or delete your data at any time by writing to privacidad@getoptim.app.",
+    "privacyInfoContact": "At Optim we will only use your email to handle your enquiry. Only if you tick the 'communications' box will we use your data to send you Optim news. You have full control to unsubscribe or delete your data at any time by writing to privacidad@getoptim.app.",
+    "privacyInfoLink": "Read our full Privacy Policy"
   },
   "waitlist": {
     "title": "Early access for testers",
@@ -212,44 +216,28 @@
       "lastUpdated": "March 2026",
       "sections": [
         {
-          "heading": "1. Data Controller",
-          "body": "<p>The controller responsible for processing your personal data is:</p><ul><li><strong>Name:</strong> José Miguel Vilata Martínez</li><li><strong>ID (NIF):</strong> 52649100F</li><li><strong>Contact:</strong> <a href=\"mailto:privacidad@getoptim.app\" class=\"text-brand-secondary hover:underline\">privacidad@getoptim.app</a></li></ul>"
+          "heading": "1. Who is responsible for your data?",
+          "body": "<p>The data controller is <strong>José Miguel Vilata Martínez</strong> (NIF: 52649100F). You can contact us at <a href=\"mailto:privacidad@getoptim.app\" class=\"text-brand-secondary hover:underline\">privacidad@getoptim.app</a>.</p>"
         },
         {
-          "heading": "2. Data we collect",
-          "body": "<p><strong>On the website (getoptim.app):</strong></p><ul><li>Email address and name (optional) when signing up for the waiting list or filling in the contact form.</li><li>Anonymised browsing data via Plausible Analytics (no cookies, no personal identifiers).</li></ul><p><strong>In the Optim mobile app:</strong></p><ul><li>Account data: email address and password (encrypted).</li><li>Policy and contract data: insurer or provider, contract type, expiry dates, amount, and any other information entered voluntarily.</li></ul>"
+          "heading": "2. What data do we collect and why?",
+          "body": "<p><strong>For the app to work:</strong> your email to create your account and your policy data (provider, date and price) so we can send you renewal alerts.</p><p><strong>To help you save:</strong> if you give your explicit consent, we will use your information to find you better offers. When you request an offer, we keep a record of your policy data at that time to ensure the validity of the commercial proposal and to protect both parties.</p><p><strong>On the website:</strong> we use <strong>Plausible Analytics</strong>, a tool that does not use cookies and fully respects your privacy.</p>"
         },
         {
-          "heading": "3. Purpose of processing",
-          "body": "<p><strong>a) Service delivery:</strong> registration and authentication, policy and contract management, renewal and expiry alerts, and user support.</p><p><strong>b) Marketing communications</strong> (only with explicit consent): sending news, product updates, and service-related communications.</p>"
+          "heading": "3. Legal basis",
+          "body": "<ul><li><strong>Service provision:</strong> performance of the contract accepted when you register (Art. 6.1.b GDPR).</li><li><strong>Offers and commercial communications:</strong> explicit consent (Art. 6.1.a GDPR), revocable at any time without affecting the basic service.</li></ul>"
         },
         {
-          "heading": "4. Legal basis",
-          "body": "<ul><li><strong>Service delivery:</strong> performance of the contract accepted upon registration (Art. 6.1.b GDPR).</li><li><strong>Marketing communications:</strong> explicit consent of the data subject (Art. 6.1.a GDPR), revocable at any time without affecting the provision of the service.</li></ul>"
+          "heading": "4. Security and recipients",
+          "body": "<p>Your data is stored securely on <strong>Supabase</strong>, with advanced isolation technology (Row Level Security) so that only you can see your information. We never sell your data to third parties. We only share it with savings providers when you specifically ask us to do so to manage a contract improvement.</p>"
         },
         {
-          "heading": "5. Data retention",
-          "body": "<p>Data will be retained for as long as the account remains active. After a deletion request, data will be erased within a maximum of 30 days, unless a longer retention period is required by law. Consent records will be retained for 3 years in accordance with applicable regulations.</p>"
+          "heading": "5. Your rights",
+          "body": "<p>You have full control. You can access, correct or delete your data, as well as withdraw your consent for commercial offers at any time from the app settings or by writing to us at <a href=\"mailto:privacidad@getoptim.app\" class=\"text-brand-secondary hover:underline\">privacidad@getoptim.app</a>. We will respond within one month at the latest.</p><p>If you believe that the processing of your data breaches the regulations, you may lodge a complaint with the <strong>Spanish Data Protection Authority (AEPD)</strong> at <a href=\"https://www.aepd.es\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-brand-secondary hover:underline\">www.aepd.es</a>.</p>"
         },
         {
-          "heading": "6. Recipients and international transfers",
-          "body": "<p>No data is shared with third parties for commercial purposes. The following processors are used to deliver the service:</p><ul><li><strong>Supabase Inc.</strong> — cloud storage and authentication, with adequate transfer safeguards in accordance with the GDPR.</li></ul><p>All processors have signed the corresponding data processing agreements in accordance with Article 28 of the GDPR.</p>"
-        },
-        {
-          "heading": "7. Your rights",
-          "body": "<p>You have the right to exercise the following rights over your personal data:</p><ul><li><strong>Access:</strong> obtain confirmation of whether your data is being processed and receive a copy.</li><li><strong>Rectification:</strong> correct inaccurate or incomplete data.</li><li><strong>Erasure:</strong> request the deletion of your data (\"right to be forgotten\").</li><li><strong>Restriction:</strong> request restriction of processing in certain circumstances.</li><li><strong>Portability:</strong> receive your data in a structured, commonly used format.</li><li><strong>Objection:</strong> object to processing for marketing communications at any time.</li></ul><p>To exercise these rights, send an email to <a href=\"mailto:privacidad@getoptim.app\" class=\"text-brand-secondary hover:underline\">privacidad@getoptim.app</a> stating the right you wish to exercise and attaching a copy of your identity document. We will respond within a maximum of one month.</p>"
-        },
-        {
-          "heading": "8. Cookies and tracking",
-          "body": "<p>This website uses <strong>Plausible Analytics</strong>, a privacy-friendly analytics solution that <strong>does not use cookies</strong> and does not collect personally identifiable data. No cookie consent is required for its use.</p><p>If in the future we incorporate technologies that use non-essential cookies, we will request your prior consent in accordance with applicable regulations.</p>"
-        },
-        {
-          "heading": "9. Changes to this policy",
-          "body": "<p>The data controller reserves the right to modify this policy, notifying the user at least 30 days in advance by email. Continued use of the service after the changes take effect constitutes acceptance.</p>"
-        },
-        {
-          "heading": "10. Supervisory authority",
-          "body": "<p>If you believe that the processing of your data violates applicable regulations, you have the right to lodge a complaint with the <strong>Spanish Data Protection Authority (AEPD)</strong> at <a href=\"https://www.aepd.es\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-brand-secondary hover:underline\">www.aepd.es</a>.</p>"
+          "heading": "6. Retention",
+          "body": "<p>We keep your data while you use the app. If you request deletion, we will remove it within 30 days at the latest. In the event of a permanent closure of the platform, we will give you 30 days to download your information before full deletion.</p>"
         }
       ]
     },
@@ -258,40 +246,28 @@
       "lastUpdated": "March 2026",
       "sections": [
         {
-          "heading": "1. Service description",
-          "body": "<p>Optim is a mobile application and web service for personal management of insurance policies and recurring expenses (utilities, subscriptions). It allows you to centralise contracts, receive expiry alerts, and visualise personal spending. The service is provided <strong>free of charge, with no advertising and no commercial intermediation</strong> with insurers or providers.</p>"
+          "heading": "1. Welcome to Optim",
+          "body": "<p>Optim is a tool designed to help you organise your insurance and recurring expenses (utilities, subscriptions, etc.). By using our app or the website <a href=\"https://getoptim.app\" class=\"text-brand-secondary hover:underline\">getoptim.app</a>, you accept these terms.</p>"
         },
         {
-          "heading": "2. Service provider",
-          "body": "<p>The service is provided by:</p><ul><li><strong>Name:</strong> José Miguel Vilata Martínez</li><li><strong>ID (NIF):</strong> 52649100F</li><li><strong>Contact:</strong> <a href=\"mailto:hola@getoptim.app\" class=\"text-brand-secondary hover:underline\">hola@getoptim.app</a></li></ul>"
+          "heading": "2. What we do for you",
+          "body": "<p>We allow you to register your policies, view your expenses and receive alerts so you never miss a renewal.</p><p><strong>Smart savings:</strong> To give you more value, Optim may present you with comparisons or better offers from partner third parties based on your data, whenever you give us your explicit permission.</p><p><strong>Service model:</strong> Currently, basic access is free. We reserve the right to introduce Premium features or advertising in the future, always notifying you in advance.</p>"
         },
         {
-          "heading": "3. Account registration",
-          "body": "<p>Use of the application requires creating an account with a valid email address and expressly accepting these Terms and the Privacy Policy. The user is responsible for maintaining the confidentiality of their credentials and all activities carried out under their account.</p>"
+          "heading": "3. Your responsibilities",
+          "body": "<p>You own your information. You agree to enter accurate data. Optim is an organisation assistant; the final decision to take out or renew with a third party is always yours.</p>"
         },
         {
-          "heading": "4. Acceptable use",
-          "body": "<p>The user agrees to use the service lawfully and not to enter false or malicious data or data that infringes third-party rights. The service is intended exclusively for personal management of the user's own contracts and insurance policies.</p>"
+          "heading": "4. Limitation of liability",
+          "body": "<p>We do our best to ensure alerts work correctly, but technical factors (such as your phone's notification settings) may fail. Optim is a supplement and does not replace your obligation to review your contracts directly with your providers.</p>"
         },
         {
-          "heading": "5. Data responsibility",
-          "body": "<p>Optim acts as a personal organisation tool. The user is solely responsible for the accuracy of the data entered. Optim does not verify or validate registered contracts and has no relationship with the user's insurers or providers.</p>"
+          "heading": "5. Our right to change or discontinue",
+          "body": "<p><strong>Changes:</strong> We may modify these terms by notifying you <strong>30 days in advance</strong> by email. Continued use of the service after that date implies acceptance of the new terms.</p><p><strong>Discontinuation of the service:</strong> If we decided to discontinue the application, we would inform you 30 days in advance. During that time, you may export all your data in CSV or JSON format so you do not lose anything.</p>"
         },
         {
-          "heading": "6. Limitation of liability",
-          "body": "<p>The service provider shall not be liable for financial losses arising from undetected expiries, errors in data entered by the user, or service interruptions. The service is provided \"as is\" and may be subject to interruptions for maintenance or reasons beyond the provider's control.</p>"
-        },
-        {
-          "heading": "7. Changes to these terms",
-          "body": "<p>The service provider reserves the right to modify these Terms, notifying the user at least <strong>30 days in advance</strong> by email. The user retains the non-waivable right to cancel their account before the changes take effect. Continued use of the service after that date constitutes acceptance of the new terms.</p>"
-        },
-        {
-          "heading": "8. Account deletion and data portability",
-          "body": "<p>The user may request account deletion at any time from within the application or by writing to <a href=\"mailto:privacidad@getoptim.app\" class=\"text-brand-secondary hover:underline\">privacidad@getoptim.app</a>. Before permanent deletion, the user may request an export of their data in CSV or JSON format. Data will be deleted within a maximum of 30 days from the deletion request.</p>"
-        },
-        {
-          "heading": "9. Governing law",
-          "body": "<p>These Terms are governed by Spanish law. For the resolution of any dispute, the parties submit to the courts of the user's place of residence, in accordance with consumer and user protection regulations.</p>"
+          "heading": "6. Governing law",
+          "body": "<p>These terms are governed by Spanish law. If any dispute arises, it shall be resolved in the courts of the user's place of residence, in accordance with consumer and user protection regulations.</p>"
         }
       ]
     }
