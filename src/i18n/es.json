@@ -1,9 +1,9 @@
 {
   "meta": {
-    "title": "Optim – Seguros y Gastos | Gestiona tus pólizas fácilmente",
-    "description": "Optim te ayuda a gestionar todas tus pólizas de seguro y gastos recurrentes en un solo lugar. Recibe alertas de vencimiento y optimiza tus coberturas.",
-    "ogTitle": "Optim – Gestiona tus Seguros y Gastos",
-    "ogDescription": "La app móvil que centraliza tus pólizas de seguro, gastos recurrentes y te alerta antes de los vencimientos. Disponible para Android."
+    "title": "Optim: Gestión inteligente de seguros y facturas en un solo lugar",
+    "description": "Gestiona tus seguros y facturas en un solo lugar. Alertas de vencimiento, control de gastos y exportación de datos. Gratis y seguro.",
+    "ogTitle": "Optim: Gestión inteligente de tus seguros y facturas",
+    "ogDescription": "La app que centraliza tus pólizas, facturas y gastos recurrentes. Nunca te pierdas un vencimiento. Gratis, segura y con exportación garantizada."
   },
   "nav": {
     "features": "Características",
@@ -15,9 +15,9 @@
   },
   "hero": {
     "badge": "Próximamente en Android e iOS",
-    "title": "Controla todos tus seguros y gastos",
+    "title": "Optim: Gestión inteligente de tus seguros y facturas",
     "titleHighlight": "en un solo lugar",
-    "subtitle": "Optim centraliza tus pólizas de seguro, suministros y gastos recurrentes. Nunca te pierdas un vencimiento y optimiza lo que pagas.",
+    "subtitle": "Tus pólizas, tus facturas y tus alertas en una sola app. Sin sorpresas, sin papeleo. Tú decides cuándo renovar y cuánto pagar.",
     "cta": "Apuntarme a la lista",
     "ctaSecondary": "Ver características",
     "trustedBy": "Gratis, sin suscripción, sin publicidad"
@@ -85,22 +85,22 @@
     "items": [
       {
         "src": "/screenshots/es/dashboard.png",
-        "alt": "Pantalla de inicio de Optim",
+        "alt": "Dashboard de Optim: resumen de contratos activos y próximos vencimientos en la app",
         "caption": "Tu resumen al instante. Controla cuántos contratos tienes activos y cuáles vencen pronto."
       },
       {
         "src": "/screenshots/es/contract_list.png",
-        "alt": "Lista de contratos en Optim",
+        "alt": "Lista de contratos en Optim ordenada por fecha de renovación",
         "caption": "Todos tus contratos en un vistazo. Ordenados por fecha de renovación, ninguno se te escapa."
       },
       {
         "src": "/screenshots/es/finance.png",
-        "alt": "Control financiero en Optim",
+        "alt": "Vista de gastos mensual y anual en Optim, control financiero de seguros y facturas",
         "caption": "Conoce tu gasto real. Mensual y anual estimado, para que tomes decisiones con datos."
       },
       {
         "src": "/screenshots/es/contract_renovation.png",
-        "alt": "Renovación de contrato en Optim",
+        "alt": "Pantalla de renovación de contrato en la app Optim",
         "caption": "Renueva o modifica con un toque. Sin papeleo, sin complicaciones, en segundos."
       }
     ]
@@ -190,6 +190,24 @@
         { "icon": "📶", "name": "Internet" }
       ]
     }
+  },
+  "faq": {
+    "title": "Preguntas frecuentes",
+    "subtitle": "Respuestas rápidas a lo que más nos preguntan.",
+    "items": [
+      {
+        "question": "¿Es gratis?",
+        "answer": "Sí. Optim es gratis para usar. Sin suscripción, sin publicidad. Queremos que tengas el control de tus seguros y facturas sin que te cueste un euro."
+      },
+      {
+        "question": "¿Es seguro?",
+        "answer": "Tus datos están seguros. Se almacenan cifrados en la nube y solo tú puedes acceder a ellos. No vendemos ni compartimos tu información con terceros para marketing. Si en algún momento quieres aprovechar ofertas o servicios adicionales, solo utilizaremos tus datos con tu consentimiento explícito para ese propósito."
+      },
+      {
+        "question": "¿Puedo exportar mis datos?",
+        "answer": "Sí. Puedes exportar tus contratos y gastos en CSV o Excel cuando quieras. Tus datos son tuyos: los llevas contigo si algún día dejas de usar la app."
+      }
+    ]
   },
   "cta": {
     "title": "Empieza a optimizar hoy",

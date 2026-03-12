@@ -1,9 +1,9 @@
 {
   "meta": {
-    "title": "Optim – Seguros e Despesas | Gerencie suas apolices facilmente",
-    "description": "O Optim ajuda voce a gerenciar todas as suas apolices de seguro e despesas recorrentes em um so lugar. Receba alertas de vencimento e otimize suas coberturas.",
-    "ogTitle": "Optim – Gerencie seus Seguros e Despesas",
-    "ogDescription": "O aplicativo movel que centraliza suas apolices de seguro, despesas recorrentes e te alerta antes dos vencimentos. Disponivel para Android."
+    "title": "Optim: Gestão inteligente de seguros e faturas num só lugar",
+    "description": "Gerencie seus seguros e faturas num só lugar. Alertas de vencimento, controlo de gastos e exportação de dados. Grátis e seguro.",
+    "ogTitle": "Optim: Gestão inteligente dos seus seguros e faturas",
+    "ogDescription": "A app que centraliza as suas apólices, faturas e despesas recorrentes. Nunca perca um vencimento. Grátis, segura e com exportação garantida."
   },
   "nav": {
     "features": "Recursos",
@@ -15,12 +15,12 @@
   },
   "hero": {
     "badge": "Em breve no Android e iOS",
-    "title": "Controle todos os seus seguros",
-    "titleHighlight": "e despesas em um lugar",
-    "subtitle": "O Optim centraliza suas apolices de seguro, assinaturas e despesas recorrentes. Nunca perca um vencimento e otimize o que voce paga.",
+    "title": "Optim: Gestão inteligente dos seus seguros e faturas",
+    "titleHighlight": "num só lugar",
+    "subtitle": "As suas apólices, as suas faturas e os seus alertas numa só app. Sem surpresas, sem burocracia. Tu decides quando renovar e quanto pagar.",
     "cta": "Entrar na lista",
     "ctaSecondary": "Ver recursos",
-    "trustedBy": "Milhares de usuarios ja otimizando suas despesas"
+    "trustedBy": "Grátis, sem assinatura, sem publicidade"
   },
   "features": {
     "title": "Tudo o que voce precisa",
@@ -85,22 +85,22 @@
     "items": [
       {
         "src": "/screenshots/pt/dashboard.png",
-        "alt": "Tela inicial do Optim",
+        "alt": "Dashboard do Optim: resumo de contratos ativos e próximos vencimentos na app",
         "caption": "Seu resumo na hora. Veja quantos contratos estao ativos e quais vencem em breve."
       },
       {
         "src": "/screenshots/pt/contract_list.png",
-        "alt": "Lista de contratos no Optim",
+        "alt": "Lista de contratos no Optim ordenada por data de renovação",
         "caption": "Todos os seus contratos em um so lugar. Ordenados por data de renovacao."
       },
       {
         "src": "/screenshots/pt/finance.png",
-        "alt": "Visao financeira no Optim",
+        "alt": "Vista de gastos mensal e anual no Optim, controlo financeiro de seguros e faturas",
         "caption": "Conheca seu gasto real. Mensal e anual estimado, para tomar decisoes com dados."
       },
       {
         "src": "/screenshots/pt/contract_renovation.png",
-        "alt": "Renovacao de contrato no Optim",
+        "alt": "Ecrã de renovação de contrato na app Optim",
         "caption": "Renove ou modifique com um toque. Sem burocracia, sem complicacoes."
       }
     ]
@@ -190,6 +190,24 @@
         { "icon": "📶", "name": "Internet" }
       ]
     }
+  },
+  "faq": {
+    "title": "Perguntas frequentes",
+    "subtitle": "Respostas rápidas ao que mais nos perguntam.",
+    "items": [
+      {
+        "question": "É grátis?",
+        "answer": "Sim. O Optim é grátis para usar. Sem assinatura, sem publicidade. Queremos que tenhas controlo dos teus seguros e faturas sem te custar um cêntimo."
+      },
+      {
+        "question": "É seguro?",
+        "answer": "Os teus dados estão seguros. São guardados encriptados na nuvem e só tu podes aceder a eles. Não vendemos nem partilhamos a tua informação com terceiros para marketing. Se em algum momento quiseres aproveitar ofertas ou serviços adicionais, só utilizaremos os teus dados com o teu consentimento explícito para esse propósito."
+      },
+      {
+        "question": "Posso exportar os meus dados?",
+        "answer": "Sim. Podes exportar os teus contratos e gastos em CSV ou Excel quando quiseres. Os teus dados são teus: leva-os contigo se um dia deixares de usar a app."
+      }
+    ]
   },
   "cta": {
     "title": "Comece a otimizar hoje",

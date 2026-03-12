@@ -1,9 +1,9 @@
 {
   "meta": {
-    "title": "Optim – Insurance & Expenses | Manage your policies easily",
-    "description": "Optim helps you manage all your insurance policies and recurring expenses in one place. Get renewal alerts and optimize your coverage.",
-    "ogTitle": "Optim – Manage your Insurance & Expenses",
-    "ogDescription": "The mobile app that centralizes your insurance policies, recurring expenses and alerts you before renewals. Available for Android."
+    "title": "Optim: Smart management for insurance and bills in one place",
+    "description": "Manage your insurance and bills in one place. Renewal alerts, expense control and data export. Free and secure.",
+    "ogTitle": "Optim: Smart management for your insurance and bills",
+    "ogDescription": "The app that centralizes your policies, bills and recurring expenses. Never miss a renewal. Free, secure and with guaranteed export."
   },
   "nav": {
     "features": "Features",
@@ -15,12 +15,12 @@
   },
   "hero": {
     "badge": "Coming soon on Android & iOS",
-    "title": "Take control of all your insurance",
-    "titleHighlight": "and expenses",
-    "subtitle": "Optim centralizes your insurance policies, subscriptions and recurring expenses. Never miss a renewal and optimize what you pay.",
+    "title": "Optim: Smart management for your insurance",
+    "titleHighlight": "and bills in one place",
+    "subtitle": "Your policies, your bills and your alerts in one app. No surprises, no paperwork. You decide when to renew and how much to pay.",
     "cta": "Join the waitlist",
     "ctaSecondary": "See features",
-    "trustedBy": "Thousands of users already optimizing their expenses"
+    "trustedBy": "Free, no subscription, no ads"
   },
   "features": {
     "title": "Everything you need",
@@ -85,22 +85,22 @@
     "items": [
       {
         "src": "/screenshots/en/dashboard.png",
-        "alt": "Optim home screen",
+        "alt": "Optim app dashboard: summary of active contracts and upcoming renewals",
         "caption": "Your summary at a glance. See how many contracts are active and which ones expire soon."
       },
       {
         "src": "/screenshots/en/contract_list.png",
-        "alt": "Contract list in Optim",
+        "alt": "Contract list in Optim sorted by renewal date",
         "caption": "All your contracts at a glance. Sorted by renewal date so nothing slips through."
       },
       {
         "src": "/screenshots/en/finance.png",
-        "alt": "Financial overview in Optim",
+        "alt": "Monthly and annual expense view in Optim, insurance and bill control",
         "caption": "Know your real spend. Monthly and estimated annual, so you can make informed decisions."
       },
       {
         "src": "/screenshots/en/contract_renovation.png",
-        "alt": "Contract renewal in Optim",
+        "alt": "Contract renewal screen in the Optim app",
         "caption": "Renew or modify with a tap. No paperwork, no hassle, done in seconds."
       }
     ]
@@ -190,6 +190,24 @@
         { "icon": "📶", "name": "Internet" }
       ]
     }
+  },
+  "faq": {
+    "title": "Frequently asked questions",
+    "subtitle": "Quick answers to what we're asked most.",
+    "items": [
+      {
+        "question": "Is it free?",
+        "answer": "Yes. Optim is free to use. No subscription, no ads. We want you to have control of your insurance and bills without it costing you a penny."
+      },
+      {
+        "question": "Is it secure?",
+        "answer": "Your data is safe. It's stored encrypted in the cloud and only you can access it. We don't sell or share your information with third parties for marketing. If at any time you want to take advantage of offers or additional services, we will only use your data with your explicit consent for that purpose."
+      },
+      {
+        "question": "Can I export my data?",
+        "answer": "Yes. You can export your contracts and expenses to CSV or Excel whenever you want. Your data is yours: take it with you if you ever stop using the app."
+      }
+    ]
   },
   "cta": {
     "title": "Start optimizing today",
