@@ -7,8 +7,9 @@ interface Props {
 }
 const { lang } = Astro.props;
 
-// Derive current path segment after /lang/
-const currentPath = Astro.url.pathname.replace(/^\/(es|en|pt)/, '') || '';
+// Derive current path segment after /lang/ (sin trailing slash)
+const raw = Astro.url.pathname.replace(/^\/(es|en|pt)/, '') || '';
+const currentPath = raw.replace(/\/$/, '');
 ---
 
 <div class="relative group">

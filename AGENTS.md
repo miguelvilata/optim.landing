@@ -195,6 +195,7 @@ make clean-all   # elimina dist/, node_modules, logs
 - **Sin frameworks JS de cliente**. JS vanilla dentro de `<script>` al final del componente si es necesario (ver carrusel en `Screenshots.astro`).
 - **Accesibilidad**: usar `aria-label`, `aria-hidden="true"` en decoraciones, `role` en elementos interactivos.
 - **Imagenes en `public/`**: las capturas de pantalla van en `public/screenshots/`. Se referencian como `/screenshots/nombre.png`.
+- **URLs sin barra final**: `astro.config.mjs` tiene `trailingSlash: 'never'`. Todos los `href` internos y las URLs generadas (canonical, hreflang, selector de idioma) deben ser sin `/` al final (ej. `/es/privacy`, no `/es/privacy/`). Usar `pathWithoutTrailingSlash()` en i18n cuando se construyan URLs a partir de `Astro.url.pathname`.
 
 ---
 

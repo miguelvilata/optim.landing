@@ -1,6 +1,6 @@
 ---
 import type { Lang } from '../i18n/index.ts';
-import { getAlternateUrls } from '../i18n/index.ts';
+import { getAlternateUrls, pathWithoutTrailingSlash } from '../i18n/index.ts';
 import { SITE_URL, ANALYTICS_DOMAIN } from '../config.ts';
 
 interface Props {
@@ -20,7 +20,7 @@ const {
   description,
   ogTitle,
   ogDescription,
-  canonicalPath = Astro.url.pathname,
+  canonicalPath = pathWithoutTrailingSlash(Astro.url.pathname),
   customAlternates,
 } = Astro.props;
 
@@ -46,7 +46,7 @@ const alternates = customAlternates ?? getAlternateUrls(canonicalPath, SITE_URL)
     {alternates.map(({ lang: l, url }) => (
       <link rel="alternate" hreflang={l} href={url} />
     ))}
-    <link rel="alternate" hreflang="x-default" href={`${SITE_URL}/es/`} />
+    <link rel="alternate" hreflang="x-default" href={`${SITE_URL}/es`} />
 
     <!-- OpenGraph -->
     <meta property="og:type" content="website" />

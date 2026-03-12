@@ -24,11 +24,18 @@ export const languages: Record<Lang, string> = {
 
 export const supportedLangs: Lang[] = ['es', 'en', 'pt'];
 
+/** Asegura que la path no termine en / (consistente con trailingSlash: 'never'). */
+export function pathWithoutTrailingSlash(path: string): string {
+  return path.replace(/\/$/, '') || '/';
+}
+
 export function getAlternateUrls(currentPath: string, siteUrl: string) {
-  const pathWithoutLang = currentPath.replace(/^\/(es|en|pt)/, '');
+  const normalized = pathWithoutTrailingSlash(currentPath);
+  const pathWithoutLang = normalized.replace(/^\/(es|en|pt)/, '') || '';
+  const suffix = pathWithoutLang ? `/${pathWithoutLang.replace(/^\//, '')}` : '';
   return supportedLangs.map((lang) => ({
     lang,
-    url: `${siteUrl}/${lang}${pathWithoutLang}`,
+    url: `${siteUrl}/${lang}${suffix}`,
   }));
 }
 

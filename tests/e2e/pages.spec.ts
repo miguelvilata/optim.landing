@@ -42,6 +42,20 @@ test.describe('URLs never end with trailing slash', () => {
       expect(page.url()).not.toMatch(/\/$/);
     });
   }
+
+  test('no internal link has href ending with / (except root "/")', async ({ page }) => {
+    const pagesToCheck = ['/es', '/es/privacy', '/es/terms', '/es/waitlist'];
+    for (const path of pagesToCheck) {
+      await page.goto(path);
+      const links = await page.locator('a[href^="/"]').evaluateAll((anchors) =>
+        anchors.map((a) => (a as HTMLAnchorElement).getAttribute('href'))
+      );
+      const withTrailingSlash = (links.filter(Boolean) as string[]).filter(
+        (href) => href.length > 1 && href.endsWith('/')
+      );
+      expect(withTrailingSlash, `Page ${path} has links with trailing slash: ${withTrailingSlash.join(', ')}`).toEqual([]);
+    }
+  });
 });
 
 test.describe('Page titles', () => {
