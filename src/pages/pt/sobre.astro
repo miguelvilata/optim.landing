@@ -1,0 +1,19 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import AboutPage from '../../components/AboutPage.astro';
+import { t, getAboutPageAlternates } from '../../i18n/index.ts';
+import { SITE_URL } from '../../config.ts';
+
+const lang = 'pt';
+const tr = t(lang);
+---
+
+<BaseLayout
+  lang={lang}
+  title={tr.about.metaTitle}
+  description={tr.about.metaDescription}
+  canonicalPath="/pt/sobre"
+  customAlternates={getAboutPageAlternates(SITE_URL)}
+>
+  <AboutPage lang={lang} />
+</BaseLayout>

@@ -1,0 +1,74 @@
+---
+import type { Lang } from '../i18n/index.ts';
+import { t } from '../i18n/index.ts';
+import Navbar from './Navbar.astro';
+import Footer from './Footer.astro';
+
+interface Props {
+  lang: Lang;
+}
+const { lang } = Astro.props;
+const tr = t(lang);
+const a = tr.about;
+---
+
+<Navbar lang={lang} />
+<main class="min-h-screen bg-white pt-24 pb-16">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+    <!-- Breadcrumb -->
+    <nav class="mb-8" aria-label="Breadcrumb">
+      <ol class="flex items-center gap-2 text-sm text-brand-muted">
+        <li>
+          <a href={`/${lang}/`} class="hover:text-brand-secondary transition-colors">Optim</a>
+        </li>
+        <li aria-hidden="true">
+          <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+          </svg>
+        </li>
+        <li class="text-brand-primary font-medium" aria-current="page">{a.title}</li>
+      </ol>
+    </nav>
+
+    <!-- Page header -->
+    <div class="max-w-3xl mb-12">
+      <h1 class="text-3xl sm:text-4xl font-extrabold text-brand-primary">
+        {a.title}
+      </h1>
+    </div>
+
+    <!-- Intro -->
+    <div class="max-w-3xl space-y-6 mb-16">
+      {a.intro.map((paragraph) => (
+        <p class="text-lg text-brand-muted leading-relaxed">
+          {paragraph}
+        </p>
+      ))}
+    </div>
+
+    <!-- Tecnología con valores -->
+    <div class="max-w-3xl mb-16">
+      <h2 class="text-xl font-bold text-brand-primary mb-4">
+        {a.valuesTitle}
+      </h2>
+      <div class="space-y-4">
+        {a.valuesBody.map((paragraph) => (
+          <p class="text-brand-muted leading-relaxed">
+            {paragraph}
+          </p>
+        ))}
+      </div>
+    </div>
+
+    <!-- Nuestro compromiso -->
+    <div class="max-w-3xl">
+      <h2 class="text-xl font-bold text-brand-primary mb-4">
+        {a.commitmentTitle}
+      </h2>
+      <p class="text-brand-muted leading-relaxed">
+        {a.commitmentBody}
+      </p>
+    </div>
+  </div>
+</main>
+<Footer lang={lang} />

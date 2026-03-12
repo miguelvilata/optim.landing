@@ -8,6 +8,7 @@
   "nav": {
     "features": "Características",
     "howItWorks": "Cómo funciona",
+    "about": "Nosotros",
     "waitlist": "Beta testers",
     "download": "Descargar",
     "logoAlt": "Optim – Seguros y Gastos"
@@ -207,10 +208,28 @@
     "tagline": "Gestiona tus seguros y gastos con inteligencia.",
     "privacy": "Política de Privacidad",
     "terms": "Términos y Condiciones",
+    "about": "Nosotros",
     "language": "Idioma",
     "copyright": "Optim. Todos los derechos reservados.",
     "cookieNotice": "Este sitio usa Plausible Analytics · sin cookies · sin datos personales identificables",
     "contact": "Contacto"
+  },
+  "about": {
+    "metaTitle": "Nosotros – Optim",
+    "metaDescription": "Por qué creamos Optim: tecnología con valores para que recuperes el control de tus seguros y gastos recurrentes.",
+    "title": "Nosotros",
+    "intro": [
+      "Cada año millones de personas pagan servicios que ya no utilizan simplemente porque olvidaron cancelarlos.",
+      "En Optim nos dimos cuenta de que esto no pasa por falta de interés, sino por falta de control. Facturas, seguros, suscripciones… todo se pierde entre correos, papeles y notificaciones que nadie lee.",
+      "Decidimos crear una herramienta que realmente funcione: que te dé una visión clara de tus contratos, te avise a tiempo y te permita tomar decisiones sin estrés ni sorpresas."
+    ],
+    "valuesTitle": "Tecnología con valores",
+    "valuesBody": [
+      "No somos solo un equipo de programadores. Somos profesionales de distintas disciplinas unidos por la misma idea: la tecnología debe servir para simplificar la vida, no para complicarla.",
+      "Cada detalle de Optim está pensado para ser útil, fiable y transparente. Queremos que confíes en que nada se te va a pasar por alto, y que cada contrato esté bajo control."
+    ],
+    "commitmentTitle": "Nuestro compromiso",
+    "commitmentBody": "Optim no es solo una aplicación; es nuestra forma de ayudarte a recuperar la tranquilidad sobre tus gastos. Una herramienta que trabaja para ti, sin ruido ni complicaciones."
   },
   "contact": {
     "metaTitle": "Contacto – Optim",

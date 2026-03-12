@@ -10,6 +10,8 @@ interface Props {
   ogTitle?: string;
   ogDescription?: string;
   canonicalPath?: string;
+  /** Si se define, se usan estas URLs para hreflang en lugar de derivarlas del canonicalPath. */
+  customAlternates?: Array<{ lang: Lang; url: string }>;
 }
 
 const {
@@ -19,11 +21,12 @@ const {
   ogTitle,
   ogDescription,
   canonicalPath = Astro.url.pathname,
+  customAlternates,
 } = Astro.props;
 
 const canonicalURL = `${SITE_URL}${canonicalPath}`;
 const ogImageURL = `${SITE_URL}/og-image.svg`;
-const alternates = getAlternateUrls(canonicalPath, SITE_URL);
+const alternates = customAlternates ?? getAlternateUrls(canonicalPath, SITE_URL);
 ---
 
 <!doctype html>

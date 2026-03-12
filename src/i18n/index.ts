@@ -31,3 +31,17 @@ export function getAlternateUrls(currentPath: string, siteUrl: string) {
     url: `${siteUrl}/${lang}${pathWithoutLang}`,
   }));
 }
+
+/** Slug de la página "Nosotros" por idioma (URL traducida). */
+export const aboutPageSlug: Record<Lang, string> = {
+  es: 'nosotros',
+  en: 'about',
+  pt: 'sobre',
+};
+
+export function getAboutPageAlternates(siteUrl: string) {
+  return supportedLangs.map((lang) => ({
+    lang,
+    url: `${siteUrl}/${lang}/${aboutPageSlug[lang]}`,
+  }));
+}

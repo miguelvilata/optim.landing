@@ -8,6 +8,7 @@
   "nav": {
     "features": "Features",
     "howItWorks": "How it works",
+    "about": "About us",
     "waitlist": "Beta testers",
     "download": "Download",
     "logoAlt": "Optim – Insurance & Expenses"
@@ -207,10 +208,28 @@
     "tagline": "Manage your insurance and expenses with intelligence.",
     "privacy": "Privacy Policy",
     "terms": "Terms & Conditions",
+    "about": "About us",
     "language": "Language",
     "copyright": "Optim. All rights reserved.",
     "cookieNotice": "This site uses Plausible Analytics · no cookies · no personal data collected",
     "contact": "Contact"
+  },
+  "about": {
+    "metaTitle": "About us – Optim",
+    "metaDescription": "Why we built Optim: technology with values so you can take back control of your insurance and recurring expenses.",
+    "title": "About us",
+    "intro": [
+      "Every year millions of people pay for services they no longer use simply because they forgot to cancel them.",
+      "At Optim we realised this doesn't happen for lack of interest, but for lack of control. Bills, insurance, subscriptions… everything gets lost among emails, paperwork and notifications nobody reads.",
+      "We decided to build a tool that actually works: one that gives you a clear view of your contracts, reminds you in time and lets you make decisions without stress or surprises."
+    ],
+    "valuesTitle": "Technology with values",
+    "valuesBody": [
+      "We're not just a team of developers. We're professionals from different fields united by the same idea: technology should simplify life, not complicate it.",
+      "Every detail of Optim is designed to be useful, reliable and transparent. We want you to trust that nothing will slip through the cracks, and that every contract is under control."
+    ],
+    "commitmentTitle": "Our commitment",
+    "commitmentBody": "Optim is not just an app; it's our way of helping you regain peace of mind about your expenses. A tool that works for you, without noise or hassle."
   },
   "contact": {
     "metaTitle": "Contact – Optim",

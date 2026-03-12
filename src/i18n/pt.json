@@ -8,6 +8,7 @@
   "nav": {
     "features": "Recursos",
     "howItWorks": "Como funciona",
+    "about": "Sobre nós",
     "waitlist": "Beta testers",
     "download": "Baixar",
     "logoAlt": "Optim – Seguros e Despesas"
@@ -207,10 +208,28 @@
     "tagline": "Gerencie seus seguros e despesas com inteligência.",
     "privacy": "Política de Privacidade",
     "terms": "Termos e Condições",
+    "about": "Sobre nós",
     "language": "Idioma",
     "copyright": "Optim. Todos os direitos reservados.",
     "cookieNotice": "Este site usa Plausible Analytics · sem cookies · sem dados pessoais identificáveis",
     "contact": "Contato"
+  },
+  "about": {
+    "metaTitle": "Sobre nós – Optim",
+    "metaDescription": "Por que criámos o Optim: tecnologia com valores para recuperares o controlo dos teus seguros e despesas recorrentes.",
+    "title": "Sobre nós",
+    "intro": [
+      "Todos os anos milhões de pessoas pagam por serviços que já não utilizam simplesmente porque se esqueceram de cancelá-los.",
+      "No Optim percebemos que isto não acontece por falta de interesse, mas por falta de controlo. Faturas, seguros, assinaturas… tudo se perde entre emails, papéis e notificações que ninguém lê.",
+      "Decidimos criar uma ferramenta que funcione de verdade: que te dê uma visão clara dos teus contratos, te avise a tempo e te permita tomar decisões sem stress nem surpresas."
+    ],
+    "valuesTitle": "Tecnologia com valores",
+    "valuesBody": [
+      "Não somos apenas uma equipa de programadores. Somos profissionais de diferentes áreas unidos pela mesma ideia: a tecnologia deve servir para simplificar a vida, não para complicá-la.",
+      "Cada detalhe do Optim foi pensado para ser útil, fiável e transparente. Queremos que confies em que nada te vai passar ao lado e que cada contrato está sob controlo."
+    ],
+    "commitmentTitle": "O nosso compromisso",
+    "commitmentBody": "O Optim não é só uma aplicação; é a nossa forma de te ajudar a recuperar a tranquilidade sobre as tuas despesas. Uma ferramenta que trabalha por ti, sem ruído nem complicações."
   },
   "contact": {
     "metaTitle": "Contato – Optim",

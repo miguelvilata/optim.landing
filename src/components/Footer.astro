@@ -1,6 +1,6 @@
 ---
 import type { Lang } from '../i18n/index.ts';
-import { t } from '../i18n/index.ts';
+import { t, aboutPageSlug } from '../i18n/index.ts';
 import AppLogo from './AppLogo.astro';
 import LanguageSelector from './LanguageSelector.astro';
 
@@ -46,6 +46,14 @@ const year = new Date().getFullYear();
                 class="text-white/50 hover:text-white text-sm transition-colors"
               >
                 {f.terms}
+              </a>
+            </li>
+            <li>
+              <a
+                href={`/${lang}/${aboutPageSlug[lang]}`}
+                class="text-white/50 hover:text-white text-sm transition-colors"
+              >
+                {f.about}
               </a>
             </li>
             <li>
