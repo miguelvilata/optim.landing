@@ -1,15 +1,12 @@
 ---
 import type { Lang } from '../i18n/index.ts';
-import { languages } from '../i18n/index.ts';
+import { languages, getAlternatePathForLang } from '../i18n/index.ts';
 
 interface Props {
   lang: Lang;
 }
 const { lang } = Astro.props;
-
-// Derive current path segment after /lang/ (sin trailing slash)
-const raw = Astro.url.pathname.replace(/^\/(es|en|pt)/, '') || '';
-const currentPath = raw.replace(/\/$/, '');
+const currentPathname = Astro.url.pathname;
 ---
 
 <div class="relative group">
@@ -36,7 +33,7 @@ const currentPath = raw.replace(/\/$/, '');
   >
     {Object.entries(languages).map(([code, label]) => (
       <a
-        href={`/${code}${currentPath}`}
+        href={getAlternatePathForLang(currentPathname, code as Lang)}
         class:list={[
           'flex items-center gap-2 px-4 py-2.5 text-sm transition-colors',
           code === lang

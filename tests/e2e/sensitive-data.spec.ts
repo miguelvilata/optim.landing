@@ -14,8 +14,8 @@ const VISIBLE_AFTER_LOAD = {
 };
 
 test.describe('Datos sensibles: ofuscados para bots, visibles para humanos', () => {
-  test('HTML de /es/privacy no contiene datos sensibles en texto plano', async ({ page }) => {
-    const response = await page.goto('/es/privacy');
+  test('HTML de /es/privacidad no contiene datos sensibles en texto plano', async ({ page }) => {
+    const response = await page.goto('/es/privacidad');
     expect(response?.status()).toBe(200);
     const rawHtml = (await response!.body()).toString('utf-8');
 
@@ -25,7 +25,7 @@ test.describe('Datos sensibles: ofuscados para bots, visibles para humanos', () 
   });
 
   test('HTML incluye script de inyección de datos sensibles', async ({ page }) => {
-    await page.goto('/es/privacy');
+    await page.goto('/es/privacidad');
     const html = await page.content();
 
     expect(html).toContain('data-sensitive');
@@ -33,7 +33,7 @@ test.describe('Datos sensibles: ofuscados para bots, visibles para humanos', () 
   });
 
   test('Tras cargar la página, el nombre del titular es visible en el DOM', async ({ page }) => {
-    await page.goto('/es/privacy');
+    await page.goto('/es/privacidad');
 
     const ownerEl = page.locator('[data-sensitive="owner"]').first();
     await expect(ownerEl).toBeVisible();
@@ -41,7 +41,7 @@ test.describe('Datos sensibles: ofuscados para bots, visibles para humanos', () 
   });
 
   test('Tras cargar la página, el email de contacto es visible y el enlace es correcto', async ({ page }) => {
-    await page.goto('/es/privacy');
+    await page.goto('/es/privacidad');
 
     const emailLink = page.locator('[data-sensitive="email"]').first();
     await expect(emailLink).toBeVisible();

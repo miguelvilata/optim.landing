@@ -1,9 +1,10 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import ContactPage from '../../components/ContactPage.astro';
-import { t } from '../../i18n/index.ts';
+import { t, getContactPageAlternates } from '../../i18n/index.ts';
+import { SITE_URL } from '../../config.ts';
 
-const lang = 'pt';
+const lang = 'es';
 const tr = t(lang);
 const c = tr.contact;
 ---
@@ -12,7 +13,8 @@ const c = tr.contact;
   lang={lang}
   title={c.metaTitle}
   description={c.metaDescription}
-  canonicalPath="/pt/contact"
+  canonicalPath="/es/contactar"
+  customAlternates={getContactPageAlternates(SITE_URL)}
 >
   <ContactPage lang={lang} />
 </BaseLayout>

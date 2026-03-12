@@ -1,15 +1,31 @@
 import { test, expect } from '@playwright/test';
 
 const LANGS = ['es', 'en', 'pt'] as const;
+// Slugs por idioma (duplicados de src/i18n/index.ts para evitar importar JSON en el runner)
+const privacyPageSlug: Record<(typeof LANGS)[number], string> = {
+  es: 'privacidad',
+  en: 'privacy',
+  pt: 'privacidade',
+};
+const termsPageSlug: Record<(typeof LANGS)[number], string> = {
+  es: 'terminos-y-condiciones',
+  en: 'terms',
+  pt: 'termos',
+};
+const contactPageSlug: Record<(typeof LANGS)[number], string> = {
+  es: 'contactar',
+  en: 'contact',
+  pt: 'contacto',
+};
 
 const PAGES = [
   { path: '/', redirect: '/es' },
-  ...LANGS.flatMap(lang => [
+  ...LANGS.flatMap((lang) => [
     { path: `/${lang}`, title: true },
-    { path: `/${lang}/privacy`, title: true },
-    { path: `/${lang}/terms`, title: true },
+    { path: `/${lang}/${privacyPageSlug[lang]}`, title: true },
+    { path: `/${lang}/${termsPageSlug[lang]}`, title: true },
     { path: `/${lang}/waitlist`, title: true },
-    { path: `/${lang}/contact`, title: true },
+    { path: `/${lang}/${contactPageSlug[lang]}`, title: true },
   ]),
 ];
 
@@ -28,12 +44,12 @@ test.describe('Page loads', () => {
 });
 
 test.describe('URLs never end with trailing slash', () => {
-  const paths = LANGS.flatMap(lang => [
+  const paths = LANGS.flatMap((lang) => [
     `/${lang}`,
-    `/${lang}/privacy`,
-    `/${lang}/terms`,
+    `/${lang}/${privacyPageSlug[lang]}`,
+    `/${lang}/${termsPageSlug[lang]}`,
     `/${lang}/waitlist`,
-    `/${lang}/contact`,
+    `/${lang}/${contactPageSlug[lang]}`,
   ]);
 
   for (const path of paths) {
@@ -44,7 +60,7 @@ test.describe('URLs never end with trailing slash', () => {
   }
 
   test('no internal link has href ending with / (except root "/")', async ({ page }) => {
-    const pagesToCheck = ['/es', '/es/privacy', '/es/terms', '/es/waitlist'];
+    const pagesToCheck = ['/es', '/es/privacidad', '/es/terminos-y-condiciones', '/es/waitlist'];
     for (const path of pagesToCheck) {
       await page.goto(path);
       const links = await page.locator('a[href^="/"]').evaluateAll((anchors) =>
@@ -64,18 +80,18 @@ test.describe('Page titles', () => {
     await expect(page).toHaveTitle(/Optim/);
   });
 
-  test('/es/privacy has privacy title', async ({ page }) => {
-    await page.goto('/es/privacy');
+  test('/es/privacidad has privacy title', async ({ page }) => {
+    await page.goto('/es/privacidad');
     await expect(page).toHaveTitle(/Privacidad|Privacy|Optim/i);
   });
 
-  test('/es/terms has terms title', async ({ page }) => {
-    await page.goto('/es/terms');
+  test('/es/terminos-y-condiciones has terms title', async ({ page }) => {
+    await page.goto('/es/terminos-y-condiciones');
     await expect(page).toHaveTitle(/Términos|Terms|Optim/i);
   });
 
-  test('/es/contact has contact title', async ({ page }) => {
-    await page.goto('/es/contact');
+  test('/es/contactar has contact title', async ({ page }) => {
+    await page.goto('/es/contactar');
     await expect(page).toHaveTitle(/Contacto|Contact|Optim/i);
   });
 });
@@ -83,22 +99,22 @@ test.describe('Page titles', () => {
 test.describe('Footer links work', () => {
   test('footer privacy link navigates correctly', async ({ page }) => {
     await page.goto('/es');
-    await page.click('footer a[href="/es/privacy"]');
-    expect(page.url()).toContain('/es/privacy');
+    await page.click('footer a[href="/es/privacidad"]');
+    expect(page.url()).toContain('/es/privacidad');
     expect(page.url()).not.toMatch(/\/$/);
   });
 
   test('footer terms link navigates correctly', async ({ page }) => {
     await page.goto('/es');
-    await page.click('footer a[href="/es/terms"]');
-    expect(page.url()).toContain('/es/terms');
+    await page.click('footer a[href="/es/terminos-y-condiciones"]');
+    expect(page.url()).toContain('/es/terminos-y-condiciones');
     expect(page.url()).not.toMatch(/\/$/);
   });
 
   test('footer contact link navigates correctly', async ({ page }) => {
     await page.goto('/es');
-    await page.click('footer a[href="/es/contact"]');
-    expect(page.url()).toContain('/es/contact');
+    await page.click('footer a[href="/es/contactar"]');
+    expect(page.url()).toContain('/es/contactar');
     expect(page.url()).not.toMatch(/\/$/);
   });
 });

@@ -40,8 +40,8 @@ test.describe('Language switching', () => {
     expect(page.url()).not.toMatch(/\/$/);
   });
 
-  test('language selector on /es/privacy links to /en/privacy', async ({ page }) => {
-    await page.goto('/es/privacy');
+  test('language selector on /es/privacidad links to /en/privacy', async ({ page }) => {
+    await page.goto('/es/privacidad');
     await expect(page.locator('a[href="/en/privacy"]').first()).toBeAttached();
   });
 

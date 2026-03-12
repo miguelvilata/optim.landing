@@ -36,7 +36,7 @@ test.describe('Waitlist form — /es/waitlist', () => {
   test('terms and privacy links open in new tab', async ({ page }) => {
     const termsLink = page.locator('input[name="consent_terms"] ~ span a').first();
     const href = await termsLink.getAttribute('href');
-    expect(href).toBe('/es/terms');
+    expect(href).toBe('/es/terminos-y-condiciones');
     const target = await termsLink.getAttribute('target');
     expect(target).toBe('_blank');
   });
@@ -49,9 +49,9 @@ test.describe('Waitlist form — /es/waitlist', () => {
   });
 });
 
-test.describe('Contact form — /es/contact', () => {
+test.describe('Contact form — /es/contactar', () => {
   test.beforeEach(async ({ page }) => {
-    await page.goto('/es/contact');
+    await page.goto('/es/contactar');
   });
 
   test('form is visible', async ({ page }) => {
@@ -84,24 +84,24 @@ test.describe('Contact form — /es/contact', () => {
 });
 
 test.describe('Legal pages render content', () => {
-  test('/es/privacy shows sections', async ({ page }) => {
-    await page.goto('/es/privacy');
+  test('/es/privacidad shows sections', async ({ page }) => {
+    await page.goto('/es/privacidad');
     const headings = page.locator('article h2');
     await expect(headings.first()).toBeVisible();
     const count = await headings.count();
     expect(count).toBeGreaterThanOrEqual(5);
   });
 
-  test('/es/terms shows sections', async ({ page }) => {
-    await page.goto('/es/terms');
+  test('/es/terminos-y-condiciones shows sections', async ({ page }) => {
+    await page.goto('/es/terminos-y-condiciones');
     const headings = page.locator('article h2');
     await expect(headings.first()).toBeVisible();
     const count = await headings.count();
     expect(count).toBeGreaterThanOrEqual(5);
   });
 
-  test('/es/privacy shows last updated date', async ({ page }) => {
-    await page.goto('/es/privacy');
+  test('/es/privacidad shows last updated date', async ({ page }) => {
+    await page.goto('/es/privacidad');
     const body = await page.textContent('main');
     expect(body).toMatch(/2026/);
   });

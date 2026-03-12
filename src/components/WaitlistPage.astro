@@ -1,6 +1,6 @@
 ---
 import type { Lang } from '../i18n/index.ts';
-import { t } from '../i18n/index.ts';
+import { t, termsPageSlug, privacyPageSlug } from '../i18n/index.ts';
 import { SUPABASE_URL, SUPABASE_ANON_KEY } from '../config.ts';
 import Navbar from './Navbar.astro';
 import Footer from './Footer.astro';
@@ -13,8 +13,8 @@ const { lang } = Astro.props;
 const tr = t(lang);
 const w = tr.waitlist;
 const p = tr.waitlistPage;
-const termsUrl = `/${lang}/terms`;
-const privacyUrl = `/${lang}/privacy`;
+const termsUrl = `/${lang}/${termsPageSlug[lang]}`;
+const privacyUrl = `/${lang}/${privacyPageSlug[lang]}`;
 const submitUrl = `${SUPABASE_URL}/functions/v1/submit-lead`;
 const anonKey = SUPABASE_ANON_KEY;
 ---

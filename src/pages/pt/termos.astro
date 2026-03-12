@@ -1,9 +1,10 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import LegalPage from '../../components/LegalPage.astro';
-import { t } from '../../i18n/index.ts';
+import { t, getTermsPageAlternates } from '../../i18n/index.ts';
+import { SITE_URL } from '../../config.ts';
 
-const lang = 'es';
+const lang = 'pt';
 const tr = t(lang);
 const { title, lastUpdated, sections } = tr.legal.terms;
 ---
@@ -12,7 +13,8 @@ const { title, lastUpdated, sections } = tr.legal.terms;
   lang={lang}
   title={`${title} | Optim`}
   description={tr.meta.description}
-  canonicalPath="/es/terms"
+  canonicalPath="/pt/termos"
+  customAlternates={getTermsPageAlternates(SITE_URL)}
 >
   <LegalPage lang={lang} title={title} lastUpdated={lastUpdated} sections={sections} />
 </BaseLayout>
