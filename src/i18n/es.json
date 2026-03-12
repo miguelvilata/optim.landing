@@ -272,8 +272,8 @@
     "errorConsent": "Debes aceptar los Términos y la Política de Privacidad para continuar.",
     "required": "* Campo obligatorio",
     "privacyInfoTitle": "Información básica de privacidad",
-    "privacyInfoWaitlist": "En Optim trataremos tu correo únicamente para gestionar tu alta en la lista de espera y enviarte las alertas de tus contratos. Solo si marcas la casilla de «comunicaciones», utilizaremos tus datos para enviarte novedades sobre Optim. Tienes el control total para darte de baja o borrar tus datos en cualquier momento escribiendo a privacidad@getoptim.app.",
-    "privacyInfoContact": "En Optim trataremos tu correo únicamente para gestionar tu consulta. Solo si marcas la casilla de «comunicaciones», utilizaremos tus datos para enviarte novedades sobre Optim. Tienes el control total para darte de baja o borrar tus datos en cualquier momento escribiendo a privacidad@getoptim.app.",
+    "privacyInfoWaitlist": "En Optim usamos tu correo para gestionar tu plaza en la lista de espera y las alertas de tus contratos. Si marcas «comunicaciones», utilizaremos tus datos para enviarte novedades y propuestas de ahorro personalizadas de terceros colaboradores. Tienes el control total para darte de baja o borrar tus datos en cualquier momento escribiendo a privacidad@getoptim.app.",
+    "privacyInfoContact": "En Optim usamos tu correo para gestionar tu consulta. Si marcas «comunicaciones», utilizaremos tus datos para enviarte novedades y propuestas de ahorro personalizadas de terceros colaboradores. Tienes el control total para darte de baja o borrar tus datos en cualquier momento escribiendo a privacidad@getoptim.app.",
     "privacyInfoLink": "Consulta nuestra Política de Privacidad completa"
   },
   "waitlist": {
@@ -298,8 +298,9 @@
     "consentMarketing": "Acepto recibir novedades y comunicaciones de Optim",
     "errorConsent": "Debes aceptar los Términos y la Política de Privacidad para continuar.",
     "privacyInfoTitle": "Información básica de privacidad",
-    "privacyInfoWaitlist": "En Optim trataremos tu correo únicamente para gestionar tu alta en la lista de espera y enviarte las alertas de tus contratos. Solo si marcas la casilla de «comunicaciones», utilizaremos tus datos para enviarte novedades sobre Optim. Tienes el control total para darte de baja o borrar tus datos en cualquier momento escribiendo a privacidad@getoptim.app.",
-    "privacyInfoLink": "Consulta nuestra Política de Privacidad completa"
+    "privacyInfoWaitlist": "En Optim usamos tu correo para gestionar tu plaza en la lista de espera y las alertas de tus contratos. Si marcas «comunicaciones», utilizaremos tus datos para enviarte novedades y propuestas de ahorro personalizadas de terceros colaboradores. Tienes el control total para darte de baja o borrar tus datos en cualquier momento escribiendo a privacidad@getoptim.app.",
+    "privacyInfoLink": "Consulta nuestra Política de Privacidad completa",
+    "legalSummary": "Optim no muestra publicidad de terceros. Si activas comunicaciones, podrás recibir propuestas de ahorro personalizadas. Tus datos están protegidos y puedes exportarlos o borrarlos cuando quieras."
   },
   "waitlistPage": {
     "badge": "Programa de beta testers",
@@ -310,7 +311,7 @@
       "Tu opinión ayuda a dar forma al producto",
       "Sin compromiso — te puedes dar de baja cuando quieras"
     ],
-    "privacyNote": "Solo usaremos tu correo para avisarte sobre el estado de la app. Sin spam, sin ceder datos a terceros.",
+    "privacyNote": "Optim usa tu correo solo para avisarte del acceso a la app y, si lo aceptas, para enviarte propuestas de ahorro personalizadas. Sin spam, sin ceder datos a terceros sin tu permiso.",
     "metaTitle": "Beta testers – Optim",
     "metaDescription": "Apúntate a la lista de espera de Optim y sé de los primeros en probar la app antes de su lanzamiento oficial."
   },
@@ -325,7 +326,7 @@
         },
         {
           "heading": "2. ¿Qué datos recogemos y por qué?",
-          "body": "<p><strong>Para que la app funcione:</strong> tu email para crear la cuenta y los datos de tus pólizas (proveedor, fecha y precio) para poder enviarte las alertas de renovación.</p><p><strong>Para ayudarte a ahorrar:</strong> si consientes expresamente, usaremos tu información para buscarte ofertas mejores. Al solicitar una oferta, guardamos un registro de los datos de tu póliza en ese momento para asegurar la validez de la propuesta comercial y protegernos mutuamente.</p><p><strong>En la web:</strong> usamos <strong>Plausible Analytics</strong>, una herramienta que no usa cookies y respeta tu privacidad al 100%.</p>"
+          "body": "<p><strong>Para que la app funcione:</strong> tu email para crear la cuenta y los datos de tus pólizas (proveedor, fecha y precio) para poder enviarte las alertas de renovación.</p><p><strong>Para ayudarte a ahorrar:</strong> si nos das tu consentimiento, utilizaremos tus datos para enviarte <strong>novedades y propuestas de ahorro personalizadas de terceros colaboradores</strong>. Cuando generas una solicitud de ahorro (lead), el sistema guarda una <strong>foto fija (snapshot) inmutable</strong> de los datos de tu póliza en ese instante. Ese snapshot sirve para garantizar la integridad de la oferta comercial y la trazabilidad del consentimiento, y no se modifica después.</p><p><strong>En la web:</strong> usamos <strong>Plausible Analytics</strong>, una herramienta que no usa cookies y respeta tu privacidad al 100%.</p>"
         },
         {
           "heading": "3. Base jurídica",
@@ -333,7 +334,7 @@
         },
         {
           "heading": "4. Seguridad y destinatarios",
-          "body": "<p>Tus datos están seguros en <strong>Supabase</strong>, con tecnología avanzada de aislamiento (Row Level Security) para que solo tú puedas ver tu información. Nunca vendemos tus datos a terceros. Solo los compartimos con proveedores de ahorro cuando tú nos lo pides específicamente para gestionar una mejora de contrato.</p>"
+          "body": "<p>Tus datos están almacenados en <strong>Supabase</strong> y aislados mediante <strong>Row Level Security (RLS)</strong>: a nivel de base de datos, cada usuario solo puede acceder a sus propios registros. Esta capa de seguridad técnica (ingeniería) asegura la privacidad incluso ante fallos o accesos indebidos.</p><p>Nunca vendemos tus datos a terceros. Solo los compartimos con colaboradores de ahorro cuando tú solicitas expresamente una oferta, para gestionar esa propuesta.</p>"
         },
         {
           "heading": "5. Tus derechos",
@@ -355,7 +356,7 @@
         },
         {
           "heading": "2. ¿Qué hacemos por ti?",
-          "body": "<p>Te permitimos registrar tus pólizas, visualizar tus gastos y recibir alertas para que no se te pase ninguna renovación.</p><p><strong>Ahorro inteligente:</strong> Para darte más valor, Optim podrá presentarte comparativas o mejores ofertas de terceros colaboradores basadas en tus datos, siempre que nos des tu permiso explícito.</p><p><strong>Modalidad del servicio:</strong> Actualmente, el acceso básico es gratuito. Nos reservamos el derecho de introducir funciones Premium o espacios publicitarios en el futuro, informándote siempre con antelación.</p>"
+          "body": "<p>Te permitimos registrar tus pólizas, visualizar tus gastos y recibir alertas para que no se te pase ninguna renovación.</p><p><strong>Ahorro inteligente:</strong> Para darte más valor, Optim podrá presentarte comparativas o mejores ofertas de terceros colaboradores basadas en tus datos, siempre que nos des tu permiso explícito.</p><p><strong>Cero publicidad vs. propuestas de ahorro:</strong> Optim no muestra publicidad intrusiva de terceros (banners, pop-ups ni spam). Las <strong>propuestas de ahorro personalizadas</strong> son una funcionalidad central del servicio de optimización: te ayudamos a encontrar mejores condiciones con colaboradores cuando tú lo solicitas. No se consideran publicidad dirigida sino parte del producto.</p><p><strong>Modalidad del servicio:</strong> Actualmente, el acceso básico es gratuito. Nos reservamos el derecho de introducir funciones Premium en el futuro, informándote siempre con antelación.</p>"
         },
         {
           "heading": "3. Tus responsabilidades",
@@ -363,11 +364,11 @@
         },
         {
           "heading": "4. Limitación de responsabilidad",
-          "body": "<p>Hacemos todo lo posible para que las alertas funcionen correctamente, pero factores técnicos (como la configuración de notificaciones de tu móvil) pueden fallar. Optim es un complemento y no sustituye tu obligación de revisar tus contratos directamente con tus proveedores.</p>"
+          "body": "<p>Las <strong>alertas de vencimiento</strong> son una herramienta de apoyo complementaria. Hacemos todo lo posible para que funcionen correctamente, pero <strong>no garantizamos al 100% la entrega de notificaciones</strong> por factores ajenos a nosotros: configuración del dispositivo (permisos, ahorro de batería), fallos de red o del sistema operativo.</p><p><strong>Tú eres el responsable legal final</strong> de tus contratos y de cumplir las fechas con tus proveedores. Optim te ayuda a no olvidarte; no sustituye tu obligación de revisar y renovar directamente con cada aseguradora o compañía.</p>"
         },
         {
           "heading": "5. Nuestro derecho a cambiar o cerrar",
-          "body": "<p><strong>Cambios:</strong> Podemos modificar estas condiciones avisándote con <strong>30 días de antelación</strong> por email. El uso continuado del servicio tras esa fecha implica la aceptación de las nuevas condiciones.</p><p><strong>Cese del servicio:</strong> Si decidiéramos dar de baja la aplicación, te informaremos con 30 días de antelación. Durante ese tiempo, podrás exportar todos tus datos en formato CSV o JSON para que no pierdas nada.</p>"
+          "body": "<p><strong>Cambios:</strong> Podemos modificar estas condiciones avisándote con <strong>30 días de antelación</strong> por email. El uso continuado del servicio tras esa fecha implica la aceptación de las nuevas condiciones.</p><p><strong>Cese definitivo del servicio:</strong> El titular del servicio puede dar de baja la aplicación en cualquier momento, avisando con <strong>30 días de antelación</strong> por email a los usuarios. Durante ese periodo se garantiza a cada usuario la <strong>portabilidad de sus datos</strong> mediante exportación en formato <strong>CSV o JSON</strong>, para que no pierdas nada antes del cierre.</p>"
         },
         {
           "heading": "6. Ley aplicable",

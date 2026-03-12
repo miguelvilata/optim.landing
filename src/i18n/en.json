@@ -272,8 +272,8 @@
     "errorConsent": "You must accept the Terms and Privacy Policy to continue.",
     "required": "* Required field",
     "privacyInfoTitle": "Basic privacy information",
-    "privacyInfoWaitlist": "At Optim we will only use your email to manage your place on the waiting list and send you contract renewal alerts. Only if you tick the 'communications' box will we use your data to send you Optim news. You have full control to unsubscribe or delete your data at any time by writing to privacidad@getoptim.app.",
-    "privacyInfoContact": "At Optim we will only use your email to handle your enquiry. Only if you tick the 'communications' box will we use your data to send you Optim news. You have full control to unsubscribe or delete your data at any time by writing to privacidad@getoptim.app.",
+    "privacyInfoWaitlist": "At Optim we use your email to manage your place on the waitlist and contract alerts. If you tick 'communications', we will use your data to send you news and personalised savings offers from partner third parties. You have full control to unsubscribe or delete your data at any time by writing to privacidad@getoptim.app.",
+    "privacyInfoContact": "At Optim we use your email to handle your enquiry. If you tick 'communications', we will use your data to send you news and personalised savings offers from partner third parties. You have full control to unsubscribe or delete your data at any time by writing to privacidad@getoptim.app.",
     "privacyInfoLink": "Read our full Privacy Policy"
   },
   "waitlist": {
@@ -298,9 +298,9 @@
     "consentMarketing": "I agree to receive news and communications from Optim",
     "errorConsent": "You must accept the Terms and Privacy Policy to continue.",
     "privacyInfoTitle": "Basic privacy information",
-    "privacyInfoWaitlist": "At Optim we will only use your email to manage your place on the waiting list and send you contract renewal alerts. Only if you tick the 'communications' box will we use your data to send you Optim news. You have full control to unsubscribe or delete your data at any time by writing to privacidad@getoptim.app.",
-    "privacyInfoContact": "At Optim we will only use your email to handle your enquiry. Only if you tick the 'communications' box will we use your data to send you Optim news. You have full control to unsubscribe or delete your data at any time by writing to privacidad@getoptim.app.",
-    "privacyInfoLink": "Read our full Privacy Policy"
+    "privacyInfoWaitlist": "At Optim we use your email to manage your place on the waitlist and contract alerts. If you tick 'communications', we will use your data to send you news and personalised savings offers from partner third parties. You have full control to unsubscribe or delete your data at any time by writing to privacidad@getoptim.app.",
+    "privacyInfoLink": "Read our full Privacy Policy",
+    "legalSummary": "Optim does not show third-party ads. If you enable communications, you may receive personalised savings offers. Your data is protected and you can export or delete it at any time."
   },
   "waitlistPage": {
     "badge": "Beta tester program",
@@ -311,7 +311,7 @@
       "Your feedback helps shape the product",
       "No commitment — unsubscribe whenever you want"
     ],
-    "privacyNote": "We'll only use your email to notify you about the app. No spam, no third-party sharing.",
+    "privacyNote": "Optim uses your email only to notify you about app access and, if you opt in, to send you personalised savings offers. No spam, no sharing with third parties without your permission.",
     "metaTitle": "Beta testers – Optim",
     "metaDescription": "Join the Optim waitlist and be among the first to try the app before its official launch."
   },
@@ -326,7 +326,7 @@
         },
         {
           "heading": "2. What data do we collect and why?",
-          "body": "<p><strong>For the app to work:</strong> your email to create your account and your policy data (provider, date and price) so we can send you renewal alerts.</p><p><strong>To help you save:</strong> if you give your explicit consent, we will use your information to find you better offers. When you request an offer, we keep a record of your policy data at that time to ensure the validity of the commercial proposal and to protect both parties.</p><p><strong>On the website:</strong> we use <strong>Plausible Analytics</strong>, a tool that does not use cookies and fully respects your privacy.</p>"
+          "body": "<p><strong>For the app to work:</strong> your email to create your account and your policy data (provider, date and price) so we can send you renewal alerts.</p><p><strong>To help you save:</strong> if you give your consent, we will use your data to send you <strong>news and personalised savings offers from partner third parties</strong>. When you generate a savings request (lead), the system stores an <strong>immutable snapshot</strong> of your policy data at that moment. That snapshot ensures the integrity of the commercial offer and consent traceability, and is not modified afterwards.</p><p><strong>On the website:</strong> we use <strong>Plausible Analytics</strong>, a tool that does not use cookies and fully respects your privacy.</p>"
         },
         {
           "heading": "3. Legal basis",
@@ -334,7 +334,7 @@
         },
         {
           "heading": "4. Security and recipients",
-          "body": "<p>Your data is stored securely on <strong>Supabase</strong>, with advanced isolation technology (Row Level Security) so that only you can see your information. We never sell your data to third parties. We only share it with savings providers when you specifically ask us to do so to manage a contract improvement.</p>"
+          "body": "<p>Your data is stored on <strong>Supabase</strong> and isolated by <strong>Row Level Security (RLS)</strong>: at database level, each user can only access their own records. This technical security layer ensures privacy even in the event of failures or unauthorised access.</p><p>We never sell your data to third parties. We only share it with savings partners when you expressly request an offer, to manage that proposal.</p>"
         },
         {
           "heading": "5. Your rights",
@@ -356,7 +356,7 @@
         },
         {
           "heading": "2. What we do for you",
-          "body": "<p>We allow you to register your policies, view your expenses and receive alerts so you never miss a renewal.</p><p><strong>Smart savings:</strong> To give you more value, Optim may present you with comparisons or better offers from partner third parties based on your data, whenever you give us your explicit permission.</p><p><strong>Service model:</strong> Currently, basic access is free. We reserve the right to introduce Premium features or advertising in the future, always notifying you in advance.</p>"
+          "body": "<p>We allow you to register your policies, view your expenses and receive alerts so you never miss a renewal.</p><p><strong>Smart savings:</strong> To give you more value, Optim may present you with comparisons or better offers from partner third parties based on your data, whenever you give us your explicit permission.</p><p><strong>Zero advertising vs. savings offers:</strong> Optim does not show intrusive third-party advertising (banners, pop-ups or spam). <strong>Personalised savings offers</strong> are a core feature of the optimisation service: we help you find better deals with partners when you request them. They are not considered targeted advertising but part of the product.</p><p><strong>Service model:</strong> Currently, basic access is free. We reserve the right to introduce Premium features in the future, always notifying you in advance.</p>"
         },
         {
           "heading": "3. Your responsibilities",
@@ -364,11 +364,11 @@
         },
         {
           "heading": "4. Limitation of liability",
-          "body": "<p>We do our best to ensure alerts work correctly, but technical factors (such as your phone's notification settings) may fail. Optim is a supplement and does not replace your obligation to review your contracts directly with your providers.</p>"
+          "body": "<p><strong>Renewal alerts</strong> are a complementary support tool. We do our best to make them work, but <strong>we do not guarantee 100% delivery of notifications</strong> due to factors outside our control: device settings (permissions, battery saving), network or operating system failures.</p><p><strong>You are the final legal responsibility</strong> for your contracts and for meeting deadlines with your providers. Optim helps you not forget; it does not replace your obligation to review and renew directly with each insurer or company.</p>"
         },
         {
           "heading": "5. Our right to change or discontinue",
-          "body": "<p><strong>Changes:</strong> We may modify these terms by notifying you <strong>30 days in advance</strong> by email. Continued use of the service after that date implies acceptance of the new terms.</p><p><strong>Discontinuation of the service:</strong> If we decided to discontinue the application, we would inform you 30 days in advance. During that time, you may export all your data in CSV or JSON format so you do not lose anything.</p>"
+          "body": "<p><strong>Changes:</strong> We may modify these terms by notifying you <strong>30 days in advance</strong> by email. Continued use of the service after that date implies acceptance of the new terms.</p><p><strong>Permanent discontinuation:</strong> The service owner may discontinue the application at any time by giving users <strong>30 days' notice</strong> by email. During that period, each user is guaranteed <strong>data portability</strong> by export in <strong>CSV or JSON</strong> format, so you lose nothing before closure.</p>"
         },
         {
           "heading": "6. Governing law",
