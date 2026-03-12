@@ -1,0 +1,18 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import LegalPage from '../../components/LegalPage.astro';
+import { t } from '../../i18n/index.ts';
+
+const lang = 'pt';
+const tr = t(lang);
+const { title, lastUpdated, sections } = tr.legal.legalNotice;
+---
+
+<BaseLayout
+  lang={lang}
+  title={`${title} | Optim`}
+  description={tr.meta.description}
+  canonicalPath="/pt/legal"
+>
+  <LegalPage lang={lang} title={title} lastUpdated={lastUpdated} sections={sections} />
+</BaseLayout>

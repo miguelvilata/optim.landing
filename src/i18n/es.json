@@ -20,7 +20,7 @@
     "subtitle": "Tus pólizas, tus facturas y tus alertas en una sola app. Sin sorpresas, sin papeleo. Tú decides cuándo renovar y cuánto pagar.",
     "cta": "Apuntarme a la lista",
     "ctaSecondary": "Ver características",
-    "trustedBy": "Gratis, sin suscripción, sin publicidad"
+    "trustedBy": "Gratis, sin suscripción, libre de anuncios intrusivos"
   },
   "features": {
     "title": "Todo lo que necesitas",
@@ -224,6 +224,7 @@
   },
   "footer": {
     "tagline": "Gestiona tus seguros y gastos con inteligencia.",
+    "legalNotice": "Aviso Legal",
     "privacy": "Política de Privacidad",
     "terms": "Términos y Condiciones",
     "about": "Nosotros",
@@ -316,6 +317,20 @@
     "metaDescription": "Apúntate a la lista de espera de Optim y sé de los primeros en probar la app antes de su lanzamiento oficial."
   },
   "legal": {
+    "legalNotice": {
+      "title": "Aviso Legal",
+      "lastUpdated": "Marzo de 2026",
+      "sections": [
+        {
+          "heading": "1. Información General (Art. 10 LSSI-CE)",
+          "body": "<p>Este sitio es operado por <strong>José Miguel Vilata Martínez</strong> (NIF: 52649100F), titular del dominio getoptim.app y de los servicios ofrecidos a través de la web y la aplicación Optim.</p><p>Puedes contactarnos en <a href=\"mailto:privacidad@getoptim.app\" class=\"text-brand-secondary hover:underline\">privacidad@getoptim.app</a> para cualquier cuestión legal, comercial o de privacidad.</p><p>La presente información se ofrece en cumplimiento del artículo 10 de la Ley 34/2002, de 11 de julio, de Servicios de la Sociedad de la Información y de Comercio Electrónico (LSSI-CE).</p>"
+        },
+        {
+          "heading": "2. Transparencia en Comunicaciones Comerciales",
+          "body": "<p>En getoptim.app trabajamos con un modelo de generación de leads y comparativas de ahorro. En el futuro podremos incluir <strong>enlaces de afiliación</strong> a aseguradoras, compañías de suministros o otros proveedores.</p><p>Cuando así sea, lo haremos con transparencia: cualquier enlace que pueda reportarnos una comisión será identificado como tal, y las ofertas que te mostremos se presentarán de forma clara y diferenciada. Nuestro objetivo es que sepas siempre quién te habla y con qué fin.</p>"
+        }
+      ]
+    },
     "privacy": {
       "title": "Política de Privacidad",
       "lastUpdated": "Marzo de 2026",

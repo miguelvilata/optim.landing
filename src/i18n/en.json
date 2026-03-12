@@ -20,7 +20,7 @@
     "subtitle": "Your policies, your bills and your alerts in one app. No surprises, no paperwork. You decide when to renew and how much to pay.",
     "cta": "Join the waitlist",
     "ctaSecondary": "See features",
-    "trustedBy": "Free, no subscription, no ads"
+    "trustedBy": "Free, no subscription, free of intrusive ads"
   },
   "features": {
     "title": "Everything you need",
@@ -34,7 +34,7 @@
       {
         "icon": "bell",
         "title": "Renewal Alerts",
-        "description": "Receive smart notifications before your policies expire. Never be caught off guard by a renewal again."
+        "description": "Receive smart notifications before each renewal. Never be caught off guard by a renewal again."
       },
       {
         "icon": "chart",
@@ -86,7 +86,7 @@
       {
         "src": "/screenshots/en/dashboard.png",
         "alt": "Optim app dashboard: summary of active contracts and upcoming renewals",
-        "caption": "Your summary at a glance. See how many contracts are active and which ones expire soon."
+        "caption": "Your summary at a glance. See how many contracts are active and which have an upcoming renewal."
       },
       {
         "src": "/screenshots/en/contract_list.png",
@@ -224,6 +224,7 @@
   },
   "footer": {
     "tagline": "Manage your insurance and expenses with intelligence.",
+    "legalNotice": "Legal Notice",
     "privacy": "Privacy Policy",
     "terms": "Terms & Conditions",
     "about": "About us",
@@ -316,6 +317,20 @@
     "metaDescription": "Join the Optim waitlist and be among the first to try the app before its official launch."
   },
   "legal": {
+    "legalNotice": {
+      "title": "Legal Notice",
+      "lastUpdated": "March 2026",
+      "sections": [
+        {
+          "heading": "1. General Information (Art. 10 LSSI-CE)",
+          "body": "<p>This site is operated by <strong>José Miguel Vilata Martínez</strong> (NIF: 52649100F), owner of the domain getoptim.app and of the services offered through the website and the Optim application.</p><p>You can contact us at <a href=\"mailto:privacidad@getoptim.app\" class=\"text-brand-secondary hover:underline\">privacidad@getoptim.app</a> for any legal, commercial or privacy matter.</p><p>This information is provided in compliance with Article 10 of Spanish Law 34/2002, of 11 July, on Information Society Services and Electronic Commerce (LSSI-CE).</p>"
+        },
+        {
+          "heading": "2. Transparency in Commercial Communications",
+          "body": "<p>At getoptim.app we work with a lead generation and savings comparison model. In the future we may include <strong>affiliate links</strong> to insurers, utility companies or other providers.</p><p>When we do, we will do so transparently: any link that may earn us a commission will be clearly identified as such, and the offers we show you will be presented in a clear and distinct way. Our aim is that you always know who is addressing you and for what purpose.</p>"
+        }
+      ]
+    },
     "privacy": {
       "title": "Privacy Policy",
       "lastUpdated": "March 2026",

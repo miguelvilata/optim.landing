@@ -11,7 +11,7 @@ const REQUIRED_TOP_KEYS = [
 
 // Keys that must exist within each section
 const REQUIRED_SECTION_KEYS: Record<string, string[]> = {
-  footer: ['privacy', 'terms', 'contact', 'cookieNotice', 'language', 'copyright', 'tagline'],
+  footer: ['legalNotice', 'privacy', 'terms', 'contact', 'cookieNotice', 'language', 'copyright', 'tagline'],
   waitlist: [
     'title', 'subtitle', 'submit', 'submitting', 'successTitle', 'successDetail',
     'errorValidation', 'errorRateLimit', 'errorServer', 'errorConsent',
@@ -59,6 +59,13 @@ describe('i18n — key completeness', () => {
         expect(legal.terms.title).toBeTruthy();
         expect(legal.terms.lastUpdated).toBeTruthy();
         expect(legal.terms.sections.length).toBeGreaterThan(0);
+      });
+
+      it('legal.legalNotice has title, lastUpdated and non-empty sections', () => {
+        const legal = tr.legal as { legalNotice: { title: string; lastUpdated: string; sections: unknown[] } };
+        expect(legal.legalNotice.title).toBeTruthy();
+        expect(legal.legalNotice.lastUpdated).toBeTruthy();
+        expect(legal.legalNotice.sections.length).toBeGreaterThan(0);
       });
 
       it('features has 6 items', () => {

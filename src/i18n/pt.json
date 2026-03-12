@@ -1,9 +1,9 @@
 {
   "meta": {
     "title": "Optim: Gestão inteligente de seguros e faturas num só lugar",
-    "description": "Gerencie seus seguros e faturas num só lugar. Alertas de vencimento, controlo de gastos e exportação de dados. Grátis e seguro.",
+    "description": "Gerencie seus seguros e faturas num só lugar. Alertas de renovação, controlo de gastos e exportação de dados. Grátis e seguro.",
     "ogTitle": "Optim: Gestão inteligente dos seus seguros e faturas",
-    "ogDescription": "A app que centraliza as suas apólices, faturas e despesas recorrentes. Nunca perca um vencimento. Grátis, segura e com exportação garantida."
+    "ogDescription": "A app que centraliza as suas apólices, faturas e despesas recorrentes. Nunca perca uma renovação. Grátis, segura e com exportação garantida."
   },
   "nav": {
     "features": "Recursos",
@@ -20,7 +20,7 @@
     "subtitle": "As suas apólices, as suas faturas e os seus alertas numa só app. Sem surpresas, sem burocracia. Tu decides quando renovar e quanto pagar.",
     "cta": "Entrar na lista",
     "ctaSecondary": "Ver recursos",
-    "trustedBy": "Grátis, sem assinatura, sem publicidade"
+    "trustedBy": "Grátis, sem assinatura, livre de anúncios intrusivos"
   },
   "features": {
     "title": "Tudo o que voce precisa",
@@ -29,12 +29,12 @@
       {
         "icon": "shield",
         "title": "Gestao de Seguros",
-        "description": "Centralize todas as suas apolices em um unico painel. Casa, carro, vida, saude e mais, sempre a vista."
+        "description": "Centralize todas as suas apólices num único painel. Casa, carro, vida, saúde e mais, sempre à vista."
       },
       {
         "icon": "bell",
-        "title": "Alertas de Vencimento",
-        "description": "Receba notificacoes inteligentes antes que suas apolices vencam. Nunca mais seja pego de surpresa por uma renovacao."
+        "title": "Alertas de Renovação",
+        "description": "Receba notificações inteligentes antes de cada renovação. Nunca mais seja pego de surpresa por uma renovação."
       },
       {
         "icon": "chart",
@@ -44,7 +44,7 @@
       {
         "icon": "building",
         "title": "Multiplas Seguradoras",
-        "description": "Compativel com qualquer seguradora ou provedor. Adicione suas apolices independentemente de quem as emitiu."
+        "description": "Compatível com qualquer seguradora ou provedor. Adicione as suas apólices independentemente de quem as emitiu."
       },
       {
         "icon": "lock",
@@ -69,13 +69,13 @@
       },
       {
         "number": "02",
-        "title": "Adicione suas apolices",
-        "description": "Insira seus seguros e despesas recorrentes. Voce so precisa dos dados basicos de cada apolice."
+        "title": "Adicione as suas apólices",
+        "description": "Insira os seus seguros e despesas recorrentes. Só precisa dos dados básicos de cada apólice."
       },
       {
         "number": "03",
         "title": "Receba alertas e economize",
-        "description": "O Optim te notifica antes de cada vencimento e mostra onde voce pode otimizar seus gastos."
+        "description": "O Optim notifica-o antes de cada renovação e mostra onde pode otimizar os seus gastos."
       }
     ]
   },
@@ -85,8 +85,8 @@
     "items": [
       {
         "src": "/screenshots/pt/dashboard.png",
-        "alt": "Dashboard do Optim: resumo de contratos ativos e próximos vencimentos na app",
-        "caption": "Seu resumo na hora. Veja quantos contratos estao ativos e quais vencem em breve."
+        "alt": "Dashboard do Optim: resumo de contratos ativos e próximas renovações na app",
+        "caption": "O seu resumo ao instante. Veja quantos contratos estão ativos e quais têm renovação em breve."
       },
       {
         "src": "/screenshots/pt/contract_list.png",
@@ -224,6 +224,7 @@
   },
   "footer": {
     "tagline": "Gerencie seus seguros e despesas com inteligência.",
+    "legalNotice": "Aviso Legal",
     "privacy": "Política de Privacidade",
     "terms": "Termos e Condições",
     "about": "Sobre nós",
@@ -316,6 +317,20 @@
     "metaDescription": "Entre na lista de espera do Optim e seja um dos primeiros a experimentar o app antes do lancamento oficial."
   },
   "legal": {
+    "legalNotice": {
+      "title": "Aviso Legal",
+      "lastUpdated": "Março de 2026",
+      "sections": [
+        {
+          "heading": "1. Informação Geral (Art. 10 LSSI-CE)",
+          "body": "<p>Este site é operado por <strong>José Miguel Vilata Martínez</strong> (NIF: 52649100F), titular do domínio getoptim.app e dos serviços oferecidos através do site e da aplicação Optim.</p><p>Pode contactar-nos em <a href=\"mailto:privacidad@getoptim.app\" class=\"text-brand-secondary hover:underline\">privacidad@getoptim.app</a> para qualquer questão legal, comercial ou de privacidade.</p><p>Esta informação é prestada em cumprimento do artigo 10.º da Lei 34/2002, de 11 de julho, de Serviços da Sociedade da Informação e de Comércio Eletrónico (LSSI-CE).</p>"
+        },
+        {
+          "heading": "2. Transparência em Comunicações Comerciais",
+          "body": "<p>No getoptim.app trabalhamos com um modelo de geração de leads e comparativas de poupança. No futuro poderemos incluir <strong>links de afiliação</strong> para seguradoras, companhias de suministros ou outros provedores.</p><p>Quando assim for, fá-lo-emos com transparência: qualquer link que possa reportar-nos uma comissão será identificado como tal, e as ofertas que lhe mostrarmos serão apresentadas de forma clara e diferenciada. O nosso objetivo é que saiba sempre quem lhe fala e com que fim.</p>"
+        }
+      ]
+    },
     "privacy": {
       "title": "Política de Privacidade",
       "lastUpdated": "Março de 2026",
@@ -364,7 +379,7 @@
         },
         {
           "heading": "4. Limitação de responsabilidade",
-          "body": "<p>As <strong>alertas de vencimento</strong> são uma ferramenta de apoio complementar. Fazemos o possível para que funcionem, mas <strong>não garantimos 100% a entrega de notificações</strong> por fatores alheios a nós: configuração do dispositivo (permissões, poupança de bateria), falhas de rede ou do sistema operativo.</p><p><strong>É o responsável legal final</strong> pelos seus contratos e pelo cumprimento das datas com os seus provedores. O Optim ajuda-o a não esquecer; não substitui a sua obrigação de rever e renovar diretamente com cada seguradora ou empresa.</p>"
+          "body": "<p>As <strong>alertas de renovação</strong> são uma ferramenta de apoio complementar. Fazemos o possível para que funcionem, mas <strong>não garantimos 100% a entrega de notificações</strong> por fatores alheios a nós: configuração do dispositivo (permissões, poupança de bateria), falhas de rede ou do sistema operativo.</p><p><strong>É o responsável legal final</strong> pelos seus contratos e pelo cumprimento das datas com os seus provedores. O Optim ajuda-o a não esquecer; não substitui a sua obrigação de rever e renovar diretamente com cada seguradora ou empresa.</p>"
         },
         {
           "heading": "5. O nosso direito a alterar ou encerrar",
