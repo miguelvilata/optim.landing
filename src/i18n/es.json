@@ -345,22 +345,30 @@
         },
         {
           "heading": "2. ¿Qué datos recogemos y por qué?",
-          "body": "<p><strong>Para que la app funcione:</strong> tu email para crear la cuenta y los datos de tus pólizas (proveedor, fecha y precio) para poder enviarte las alertas de renovación.</p><p><strong>Para ayudarte a ahorrar:</strong> si nos das tu consentimiento, utilizaremos tus datos para enviarte <strong>novedades y propuestas de ahorro personalizadas de terceros colaboradores</strong>. Cuando generas una solicitud de ahorro (lead), el sistema guarda una <strong>foto fija (snapshot) inmutable</strong> de los datos de tu póliza en ese instante. Ese snapshot sirve para garantizar la integridad de la oferta comercial y la trazabilidad del consentimiento, y no se modifica después.</p><p><strong>En la web:</strong> usamos <strong>Plausible Analytics</strong>, una herramienta que no usa cookies y respeta tu privacidad al 100%.</p>"
+          "body": "<p><strong>Para que la app funcione:</strong> tu email para crear la cuenta y los datos de tus pólizas (proveedor, fecha y precio) para enviarte las alertas de renovación.</p><p><strong>Para ayudarte a ahorrar:</strong> si nos das tu consentimiento, utilizaremos tus datos para enviarte novedades y propuestas de ahorro personalizadas de terceros colaboradores. Cuando generas una solicitud de ahorro (lead), el sistema guarda una foto fija (snapshot) inmutable de los datos de tu póliza en ese instante para garantizar la integridad de la oferta y la trazabilidad del consentimiento.</p><p><strong>En la web:</strong> usamos Plausible Analytics, una herramienta que no usa cookies y respeta tu privacidad.</p>"
         },
         {
-          "heading": "3. Base jurídica",
+          "heading": "3. Intercambio de datos: solo cuando tú lo pides",
+          "body": "<p>El intercambio de datos con proveedores externos (aseguradoras, compañías de suministros, etc.) <strong>solo ocurre cuando tú lo solicitas de forma activa</strong>. Por ejemplo, al usar la función «Ver Ofertas» para recibir una propuesta de ahorro. En ese momento te explicamos qué datos se envían y a quién. Sin tu acción explícita, no compartimos tu información con esos terceros.</p>"
+        },
+        {
+          "heading": "4. Uso técnico interno: fallos y diagnósticos",
+          "body": "<p>Los registros de fallos y diagnósticos (logs) se utilizan exclusivamente para uso técnico interno: mejorar la estabilidad de la app y corregir errores. <strong>No se comparten con terceros</strong> ni se usan para publicidad o perfilado. Tu privacidad se mantiene intacta.</p>"
+        },
+        {
+          "heading": "5. Base jurídica",
           "body": "<ul><li><strong>Prestación del servicio:</strong> ejecución del contrato aceptado al registrarte (art. 6.1.b RGPD).</li><li><strong>Ofertas y comunicaciones comerciales:</strong> consentimiento explícito (art. 6.1.a RGPD), revocable en cualquier momento sin que ello afecte al servicio básico.</li></ul>"
         },
         {
-          "heading": "4. Seguridad y destinatarios",
-          "body": "<p>Tus datos están almacenados en <strong>Supabase</strong> y aislados mediante <strong>Row Level Security (RLS)</strong>: a nivel de base de datos, cada usuario solo puede acceder a sus propios registros. Esta capa de seguridad técnica (ingeniería) asegura la privacidad incluso ante fallos o accesos indebidos.</p><p>Nunca vendemos tus datos a terceros. Solo los compartimos con colaboradores de ahorro cuando tú solicitas expresamente una oferta, para gestionar esa propuesta.</p>"
+          "heading": "6. Seguridad y destinatarios",
+          "body": "<p>Tus datos están almacenados en <strong>Supabase</strong> y aislados mediante <strong>Row Level Security (RLS)</strong>: a nivel de base de datos, cada usuario solo puede acceder a sus propios registros. Nunca vendemos tus datos. Solo los compartimos con colaboradores cuando tú solicitas expresamente una oferta (por ejemplo con «Ver Ofertas»), para gestionar esa propuesta.</p>"
         },
         {
-          "heading": "5. Tus derechos",
-          "body": "<p>Tú tienes el control total. Puedes acceder, corregir o borrar tus datos, así como retirar tu consentimiento para ofertas comerciales en cualquier momento desde los ajustes de la app o escribiéndonos a <a data-sensitive=\"email\" class=\"text-brand-secondary hover:underline\" href=\"#\"></a>. Responderemos en el plazo máximo de un mes.</p><p>Si consideras que el tratamiento de tus datos vulnera la normativa, puedes reclamar ante la <strong>Agencia Española de Protección de Datos</strong> en <a href=\"https://www.aepd.es\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-brand-secondary hover:underline\">www.aepd.es</a>.</p>"
+          "heading": "7. Tus derechos",
+          "body": "<p>Tienes el control total. Puedes acceder, corregir o borrar tus datos, y retirar tu consentimiento para ofertas comerciales en cualquier momento desde los ajustes de la app o escribiéndonos a <a data-sensitive=\"email\" class=\"text-brand-secondary hover:underline\" href=\"#\"></a>. Responderemos en el plazo máximo de un mes.</p><p>Si consideras que el tratamiento de tus datos vulnera la normativa, puedes reclamar ante la <strong>Agencia Española de Protección de Datos</strong> en <a href=\"https://www.aepd.es\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-brand-secondary hover:underline\">www.aepd.es</a>.</p>"
         },
         {
-          "heading": "6. Conservación",
+          "heading": "8. Conservación",
           "body": "<p>Guardamos tus datos mientras uses la app. Si solicitas la baja, los eliminaremos en un máximo de 30 días. En caso de cierre definitivo de la plataforma, te daremos 30 días de margen para descargar tu información antes del borrado total.</p>"
         }
       ]
@@ -371,27 +379,39 @@
       "sections": [
         {
           "heading": "1. Bienvenido a Optim",
-          "body": "<p>Optim es una herramienta diseñada para ayudarte a organizar tus seguros y gastos recurrentes (luz, suscripciones, etc.). Al usar nuestra app o el sitio web <a data-sensitive=\"domain-link\" class=\"text-brand-secondary hover:underline\" href=\"#\"></a>, aceptas estas condiciones.</p>"
+          "body": "<p>Optim es una herramienta para organizar tus seguros y gastos recurrentes (luz, suscripciones, etc.). Al usar nuestra app o el sitio <a data-sensitive=\"domain-link\" class=\"text-brand-secondary hover:underline\" href=\"#\"></a>, aceptas estas condiciones.</p>"
         },
         {
-          "heading": "2. ¿Qué hacemos por ti?",
-          "body": "<p>Te permitimos registrar tus pólizas, visualizar tus gastos y recibir alertas para que no se te pase ninguna renovación.</p><p><strong>Ahorro inteligente:</strong> Para darte más valor, Optim podrá presentarte comparativas o mejores ofertas de terceros colaboradores basadas en tus datos, siempre que nos des tu permiso explícito.</p><p><strong>Cero publicidad vs. propuestas de ahorro:</strong> Optim no muestra publicidad intrusiva de terceros (banners, pop-ups ni spam). Las <strong>propuestas de ahorro personalizadas</strong> son una funcionalidad central del servicio de optimización: te ayudamos a encontrar mejores condiciones con colaboradores cuando tú lo solicitas. No se consideran publicidad dirigida sino parte del producto.</p><p><strong>Modalidad del servicio:</strong> Actualmente, el acceso básico es gratuito. Nos reservamos el derecho de introducir funciones Premium en el futuro, informándote siempre con antelación.</p>"
+          "heading": "2. Modelo de servicio: transparente y adaptable",
+          "body": "<p>Optim puede ofrecer <strong>distintas modalidades de servicio</strong> según la región, el idioma o la versión de la app: por ejemplo, acceso gratuito con publicidad, financiado por generación de leads o mediante suscripción Premium. Los detalles de coste, publicidad y límites se muestran siempre <strong>de forma clara en la interfaz antes de que se activen</strong>. No hay sorpresas: tú ves qué aplica a tu cuenta antes de comprometerte.</p>"
         },
         {
-          "heading": "3. Tus responsabilidades",
+          "heading": "3. Limitaciones de la versión gratuita",
+          "body": "<p>La versión gratuita puede estar sujeta a <strong>límites de registro de contratos</strong> definidos por la plataforma (por ejemplo, un número máximo de pólizas o suministros). Esos límites pueden ampliarse mediante la modalidad Premium. Te informaremos del límite que te corresponde en la propia app.</p>"
+        },
+        {
+          "heading": "4. ¿Qué hacemos por ti?",
+          "body": "<p>Te permitimos registrar tus pólizas, ver tus gastos y recibir alertas para que no se te pase ninguna renovación. Las <strong>propuestas de ahorro</strong> (por ejemplo con «Ver Ofertas») son una funcionalidad opcional: solo las activas tú cuando lo solicitas, y solo entonces se comparten datos con colaboradores para gestionar la oferta.</p>"
+        },
+        {
+          "heading": "5. Datos de terceros: tu responsabilidad",
+          "body": "<p>Si registras en la app datos personales de otras personas (familiares, conocidos), como nombre, DNI o datos de pólizas, <strong>te haces responsable de contar con su consentimiento expreso</strong> antes de introducirlos. Optim no comprueba ese consentimiento; es tu obligación obtenerlo y conservarlo si la ley lo exige.</p>"
+        },
+        {
+          "heading": "6. Tus responsabilidades",
           "body": "<p>Eres el dueño de tu información. Te comprometes a introducir datos veraces. Optim es un asistente de organización; la decisión final de contratar o renovar con un tercero es siempre tuya.</p>"
         },
         {
-          "heading": "4. Limitación de responsabilidad",
-          "body": "<p>Las <strong>alertas de vencimiento</strong> son una herramienta de apoyo complementaria. Hacemos todo lo posible para que funcionen correctamente, pero <strong>no garantizamos al 100% la entrega de notificaciones</strong> por factores ajenos a nosotros: configuración del dispositivo (permisos, ahorro de batería), fallos de red o del sistema operativo.</p><p><strong>Tú eres el responsable legal final</strong> de tus contratos y de cumplir las fechas con tus proveedores. Optim te ayuda a no olvidarte; no sustituye tu obligación de revisar y renovar directamente con cada aseguradora o compañía.</p>"
+          "heading": "7. Limitación de responsabilidad",
+          "body": "<p>Las alertas de vencimiento son una herramienta de apoyo. Hacemos todo lo posible para que funcionen, pero no garantizamos al 100% la entrega de notificaciones por factores ajenos a nosotros (configuración del dispositivo, red, sistema operativo). Tú eres el responsable legal de tus contratos y de cumplir las fechas con tus proveedores. Optim te ayuda a no olvidarte; no sustituye tu obligación de revisar y renovar con cada aseguradora o compañía.</p>"
         },
         {
-          "heading": "5. Nuestro derecho a cambiar o cerrar",
-          "body": "<p><strong>Cambios:</strong> Podemos modificar estas condiciones avisándote con <strong>30 días de antelación</strong> por email. El uso continuado del servicio tras esa fecha implica la aceptación de las nuevas condiciones.</p><p><strong>Cese definitivo del servicio:</strong> El titular del servicio puede dar de baja la aplicación en cualquier momento, avisando con <strong>30 días de antelación</strong> por email a los usuarios. Durante ese periodo se garantiza a cada usuario la <strong>portabilidad de sus datos</strong> mediante exportación en formato <strong>CSV o JSON</strong>, para que no pierdas nada antes del cierre.</p>"
+          "heading": "8. Cambios y cese del servicio",
+          "body": "<p><strong>Cambios:</strong> Podemos modificar estas condiciones avisándote con 30 días de antelación por email. El uso continuado tras esa fecha implica la aceptación de las nuevas condiciones.</p><p><strong>Cese del servicio:</strong> El titular puede dar de baja la aplicación en cualquier momento, avisando con 30 días de antelación por email. Durante ese periodo tendrás la opción de exportar tus datos en formato CSV o JSON para no perder nada.</p>"
         },
         {
-          "heading": "6. Ley aplicable",
-          "body": "<p>Estas condiciones se rigen por la ley española. Si surge algún problema, lo resolveremos en los juzgados del domicilio del usuario, de conformidad con la normativa de protección de consumidores y usuarios.</p>"
+          "heading": "9. Ley aplicable",
+          "body": "<p>Estas condiciones se rigen por la ley española. Cualquier conflicto se resolverá en los juzgados del domicilio del usuario, de conformidad con la normativa de protección de consumidores y usuarios.</p>"
         }
       ]
     }

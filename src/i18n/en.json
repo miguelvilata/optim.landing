@@ -344,23 +344,31 @@
           "body": "<p>The data controller is <strong><span data-sensitive=\"owner\"></span></strong> (NIF: <span data-sensitive=\"nif\"></span>). You can contact us at <a data-sensitive=\"email\" class=\"text-brand-secondary hover:underline\" href=\"#\"></a>.</p>"
         },
         {
-          "heading": "2. What data do we collect and why?",
-          "body": "<p><strong>For the app to work:</strong> your email to create your account and your policy data (provider, date and price) so we can send you renewal alerts.</p><p><strong>To help you save:</strong> if you give your consent, we will use your data to send you <strong>news and personalised savings offers from partner third parties</strong>. When you generate a savings request (lead), the system stores an <strong>immutable snapshot</strong> of your policy data at that moment. That snapshot ensures the integrity of the commercial offer and consent traceability, and is not modified afterwards.</p><p><strong>On the website:</strong> we use <strong>Plausible Analytics</strong>, a tool that does not use cookies and fully respects your privacy.</p>"
+          "heading": "2. What data we collect and why",
+          "body": "<p><strong>For the app to work:</strong> your email to create your account and your policy data (provider, date and price) to send you renewal alerts.</p><p><strong>To help you save:</strong> if you give your consent, we use your data to send you news and personalised savings offers from partner third parties. When you generate a savings request (lead), the system stores an immutable snapshot of your policy data at that moment to ensure the integrity of the offer and consent traceability.</p><p><strong>On the website:</strong> we use Plausible Analytics, a tool that does not use cookies and respects your privacy.</p>"
         },
         {
-          "heading": "3. Legal basis",
+          "heading": "3. Data sharing: only when you ask for it",
+          "body": "<p>We only share data with external providers (insurers, utility companies, etc.) <strong>when you actively request it</strong>. For example, when you use the «View Offers» feature to get a savings proposal. We then explain what data is sent and to whom. Without your explicit action, we do not share your information with those third parties.</p>"
+        },
+        {
+          "heading": "4. Internal technical use: crashes and diagnostics",
+          "body": "<p>Crash and diagnostic logs are used solely for internal technical purposes: to improve app stability and fix errors. <strong>They are not shared with third parties</strong> and are not used for advertising or profiling. Your privacy remains intact.</p>"
+        },
+        {
+          "heading": "5. Legal basis",
           "body": "<ul><li><strong>Service provision:</strong> performance of the contract accepted when you register (Art. 6.1.b GDPR).</li><li><strong>Offers and commercial communications:</strong> explicit consent (Art. 6.1.a GDPR), revocable at any time without affecting the basic service.</li></ul>"
         },
         {
-          "heading": "4. Security and recipients",
-          "body": "<p>Your data is stored on <strong>Supabase</strong> and isolated by <strong>Row Level Security (RLS)</strong>: at database level, each user can only access their own records. This technical security layer ensures privacy even in the event of failures or unauthorised access.</p><p>We never sell your data to third parties. We only share it with savings partners when you expressly request an offer, to manage that proposal.</p>"
+          "heading": "6. Security and recipients",
+          "body": "<p>Your data is stored on <strong>Supabase</strong> and isolated by <strong>Row Level Security (RLS)</strong>: at database level, each user can only access their own records. We never sell your data. We only share it with partners when you expressly request an offer (e.g. via «View Offers») to manage that proposal.</p>"
         },
         {
-          "heading": "5. Your rights",
-          "body": "<p>You have full control. You can access, correct or delete your data, as well as withdraw your consent for commercial offers at any time from the app settings or by writing to us at <a data-sensitive=\"email\" class=\"text-brand-secondary hover:underline\" href=\"#\"></a>. We will respond within one month at the latest.</p><p>If you believe that the processing of your data breaches the regulations, you may lodge a complaint with the <strong>Spanish Data Protection Authority (AEPD)</strong> at <a href=\"https://www.aepd.es\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-brand-secondary hover:underline\">www.aepd.es</a>.</p>"
+          "heading": "7. Your rights",
+          "body": "<p>You have full control. You can access, correct or delete your data, and withdraw your consent for commercial offers at any time from the app settings or by writing to us at <a data-sensitive=\"email\" class=\"text-brand-secondary hover:underline\" href=\"#\"></a>. We will respond within one month at the latest.</p><p>If you believe that the processing of your data breaches the regulations, you may lodge a complaint with the <strong>Spanish Data Protection Authority (AEPD)</strong> at <a href=\"https://www.aepd.es\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-brand-secondary hover:underline\">www.aepd.es</a>.</p>"
         },
         {
-          "heading": "6. Retention",
+          "heading": "8. Retention",
           "body": "<p>We keep your data while you use the app. If you request deletion, we will remove it within 30 days at the latest. In the event of a permanent closure of the platform, we will give you 30 days to download your information before full deletion.</p>"
         }
       ]
@@ -371,27 +379,39 @@
       "sections": [
         {
           "heading": "1. Welcome to Optim",
-          "body": "<p>Optim is a tool designed to help you organise your insurance and recurring expenses (utilities, subscriptions, etc.). By using our app or the website <a data-sensitive=\"domain-link\" class=\"text-brand-secondary hover:underline\" href=\"#\"></a>, you accept these terms.</p>"
+          "body": "<p>Optim is a tool to organise your insurance and recurring expenses (utilities, subscriptions, etc.). By using our app or the site <a data-sensitive=\"domain-link\" class=\"text-brand-secondary hover:underline\" href=\"#\"></a>, you accept these terms.</p>"
         },
         {
-          "heading": "2. What we do for you",
-          "body": "<p>We allow you to register your policies, view your expenses and receive alerts so you never miss a renewal.</p><p><strong>Smart savings:</strong> To give you more value, Optim may present you with comparisons or better offers from partner third parties based on your data, whenever you give us your explicit permission.</p><p><strong>Zero advertising vs. savings offers:</strong> Optim does not show intrusive third-party advertising (banners, pop-ups or spam). <strong>Personalised savings offers</strong> are a core feature of the optimisation service: we help you find better deals with partners when you request them. They are not considered targeted advertising but part of the product.</p><p><strong>Service model:</strong> Currently, basic access is free. We reserve the right to introduce Premium features in the future, always notifying you in advance.</p>"
+          "heading": "2. Service model: transparent and flexible",
+          "body": "<p>Optim may offer <strong>different service modalities</strong> depending on region, language or app version: for example, free access with advertising, lead-based funding or a Premium subscription. Cost, advertising and limit details are always <strong>shown clearly in the interface before they apply</strong>. No surprises: you see what applies to your account before you commit.</p>"
         },
         {
-          "heading": "3. Your responsibilities",
+          "heading": "3. Free version limits",
+          "body": "<p>The free version may be subject to <strong>contract registration limits</strong> set by the platform (e.g. a maximum number of policies or utilities). Those limits can be extended via the Premium tier. We will inform you of the limit that applies to you in the app itself.</p>"
+        },
+        {
+          "heading": "4. What we do for you",
+          "body": "<p>We let you register your policies, view your expenses and receive alerts so you never miss a renewal. <strong>Savings offers</strong> (e.g. via «View Offers») are an optional feature: you only activate them when you request them, and only then do we share data with partners to manage the offer.</p>"
+        },
+        {
+          "heading": "5. Third-party data: your responsibility",
+          "body": "<p>If you register other people’s personal data (family, acquaintances) in the app, such as name, ID or policy details, <strong>you are responsible for having their express consent</strong> before entering it. Optim does not verify that consent; it is your obligation to obtain and retain it where required by law.</p>"
+        },
+        {
+          "heading": "6. Your responsibilities",
           "body": "<p>You own your information. You agree to enter accurate data. Optim is an organisation assistant; the final decision to take out or renew with a third party is always yours.</p>"
         },
         {
-          "heading": "4. Limitation of liability",
-          "body": "<p><strong>Renewal alerts</strong> are a complementary support tool. We do our best to make them work, but <strong>we do not guarantee 100% delivery of notifications</strong> due to factors outside our control: device settings (permissions, battery saving), network or operating system failures.</p><p><strong>You are the final legal responsibility</strong> for your contracts and for meeting deadlines with your providers. Optim helps you not forget; it does not replace your obligation to review and renew directly with each insurer or company.</p>"
+          "heading": "7. Limitation of liability",
+          "body": "<p>Renewal alerts are a support tool. We do our best to make them work, but we do not guarantee 100% delivery of notifications due to factors outside our control (device settings, network, operating system). You are legally responsible for your contracts and for meeting deadlines with your providers. Optim helps you not forget; it does not replace your obligation to review and renew with each insurer or company.</p>"
         },
         {
-          "heading": "5. Our right to change or discontinue",
-          "body": "<p><strong>Changes:</strong> We may modify these terms by notifying you <strong>30 days in advance</strong> by email. Continued use of the service after that date implies acceptance of the new terms.</p><p><strong>Permanent discontinuation:</strong> The service owner may discontinue the application at any time by giving users <strong>30 days' notice</strong> by email. During that period, each user is guaranteed <strong>data portability</strong> by export in <strong>CSV or JSON</strong> format, so you lose nothing before closure.</p>"
+          "heading": "8. Changes and discontinuation",
+          "body": "<p><strong>Changes:</strong> We may modify these terms by giving you 30 days’ notice by email. Continued use after that date implies acceptance of the new terms.</p><p><strong>Discontinuation:</strong> The service owner may discontinue the application at any time by giving users 30 days’ notice by email. During that period you will be able to export your data in CSV or JSON format so you lose nothing.</p>"
         },
         {
-          "heading": "6. Governing law",
-          "body": "<p>These terms are governed by Spanish law. If any dispute arises, it shall be resolved in the courts of the user's place of residence, in accordance with consumer and user protection regulations.</p>"
+          "heading": "9. Governing law",
+          "body": "<p>These terms are governed by Spanish law. Any dispute shall be resolved in the courts of the user’s place of residence, in accordance with consumer and user protection regulations.</p>"
         }
       ]
     }
