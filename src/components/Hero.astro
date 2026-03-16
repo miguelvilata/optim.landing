@@ -1,6 +1,7 @@
 ---
 import type { Lang } from '../i18n/index.ts';
 import { t } from '../i18n/index.ts';
+import AppLogo from './AppLogo.astro';
 
 interface Props {
   lang: Lang;
@@ -102,8 +103,12 @@ const h = tr.hero;
 
                 <!-- App header -->
                 <div class="bg-brand-primary px-5 py-4">
-                  <p class="text-white/60 text-xs">Bienvenido</p>
-                  <h2 class="text-white text-lg font-bold">Optim</h2>
+                  <p class="text-white/60 text-xs">{h.mockupWelcome}</p>
+                  <div class="flex items-center gap-2 mt-1">
+                    <AppLogo size={28} class="flex-shrink-0" />
+                    <h2 class="text-white text-lg font-bold">Optim</h2>
+                  </div>
+                  <p class="text-white/70 text-xs mt-1.5 leading-snug">{h.mockupTagline}</p>
                 </div>
 
                 <!-- Summary card -->

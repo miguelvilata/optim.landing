@@ -24,7 +24,9 @@
     "subtitle": "Your policies, your bills and your alerts in one app. No surprises, no paperwork. You decide when to renew and how much to pay.",
     "cta": "Join the waitlist",
     "ctaSecondary": "See features",
-    "trustedBy": "Free, no subscription, free of intrusive ads"
+    "trustedBy": "Free, no subscription, free of intrusive ads",
+    "mockupWelcome": "Welcome",
+    "mockupTagline": "Smart management for insurance and bills in one place"
   },
   "features": {
     "title": "Everything you need",
@@ -88,22 +90,18 @@
     "subtitle": "A clean, intuitive interface that gives you control without overwhelming you with unnecessary information.",
     "items": [
       {
-        "src": "/screenshots/en/dashboard.png",
         "alt": "Optim app dashboard: summary of active contracts and upcoming renewals",
         "caption": "Your summary at a glance. See how many contracts are active and which have an upcoming renewal."
       },
       {
-        "src": "/screenshots/en/contract_list.png",
         "alt": "Contract list in Optim sorted by renewal date",
         "caption": "All your contracts at a glance. Sorted by renewal date so nothing slips through."
       },
       {
-        "src": "/screenshots/en/finance.png",
         "alt": "Monthly and annual expense view in Optim, insurance and bill control",
         "caption": "Know your real spend. Monthly and estimated annual, so you can make informed decisions."
       },
       {
-        "src": "/screenshots/en/contract_renovation.png",
         "alt": "Contract renewal screen in the Optim app",
         "caption": "Renew or modify with a tap. No paperwork, no hassle, done in seconds."
       }

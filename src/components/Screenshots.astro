@@ -1,4 +1,6 @@
 ---
+import fs from 'node:fs';
+import path from 'node:path';
 import type { Lang } from '../i18n/index.ts';
 import { t } from '../i18n/index.ts';
 
@@ -8,6 +10,24 @@ interface Props {
 const { lang } = Astro.props;
 const tr = t(lang);
 const s = tr.screenshots;
+
+function getScreenshotFiles(langCode: string): string[] {
+  const dir = path.join(process.cwd(), 'public', 'screenshots', langCode);
+  try {
+    const files = fs.readdirSync(dir)
+      .filter(f => /\.(png|jpe?g|webp)$/i.test(f))
+      .sort();
+    if (files.length > 0) return files.map(f => `/screenshots/${langCode}/${f}`);
+  } catch {}
+  return [];
+}
+
+// Fall back to 'es' if the current lang has no screenshots
+const screenshotSrcs = getScreenshotFiles(lang).length
+  ? getScreenshotFiles(lang)
+  : getScreenshotFiles('es');
+
+const items = s.items.map((item, i) => ({ ...item, src: screenshotSrcs[i] ?? '' }));
 ---
 
 <section id="screenshots" class="py-24 bg-brand-primary overflow-hidden">
@@ -32,7 +52,7 @@ const s = tr.screenshots;
         <div class="bg-brand-dark rounded-[3rem] p-3 shadow-2xl shadow-black/60 border border-white/15">
           <div class="rounded-[2.5rem] overflow-hidden bg-black" style="height: 520px; position: relative;">
             <!-- Slides -->
-            {s.items.map((item, i) => (
+            {items.map((item, i) => (
               <div
                 class="carousel-slide absolute inset-0 transition-opacity duration-500"
                 data-index={i}
@@ -55,7 +75,7 @@ const s = tr.screenshots;
 
       <!-- Caption -->
       <div class="mt-8 text-center min-h-[3rem]" aria-live="polite">
-        {s.items.map((item, i) => (
+        {items.map((item, i) => (
           <p
             class="carousel-caption text-white/70 text-sm leading-relaxed px-4 transition-opacity duration-300"
             data-index={i}
@@ -68,7 +88,7 @@ const s = tr.screenshots;
 
       <!-- Dot indicators -->
       <div class="flex justify-center gap-2 mt-6" role="tablist" aria-label="Pantallas de la app">
-        {s.items.map((item, i) => (
+        {items.map((item, i) => (
           <button
             class="carousel-dot w-2.5 h-2.5 rounded-full transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-white/50"
             data-index={i}

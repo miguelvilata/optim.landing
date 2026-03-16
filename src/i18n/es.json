@@ -24,7 +24,9 @@
     "subtitle": "Tus pólizas, tus facturas y tus alertas en una sola app. Sin sorpresas, sin papeleo. Tú decides cuándo renovar y cuánto pagar.",
     "cta": "Apuntarme a la lista",
     "ctaSecondary": "Ver características",
-    "trustedBy": "Gratis, sin suscripción, libre de anuncios intrusivos"
+    "trustedBy": "Gratis, sin suscripción, libre de anuncios intrusivos",
+    "mockupWelcome": "Bienvenido",
+    "mockupTagline": "Gestión inteligente de seguros y facturas en un solo lugar"
   },
   "features": {
     "title": "Todo lo que necesitas",
@@ -88,22 +90,18 @@
     "subtitle": "Una interfaz limpia e intuitiva que te da el control sin abrumarte con información innecesaria.",
     "items": [
       {
-        "src": "/screenshots/es/dashboard.png",
         "alt": "Dashboard de Optim: resumen de contratos activos y próximos vencimientos en la app",
         "caption": "Tu resumen al instante. Controla cuántos contratos tienes activos y cuáles vencen pronto."
       },
       {
-        "src": "/screenshots/es/contract_list.png",
         "alt": "Lista de contratos en Optim ordenada por fecha de renovación",
         "caption": "Todos tus contratos en un vistazo. Ordenados por fecha de renovación, ninguno se te escapa."
       },
       {
-        "src": "/screenshots/es/finance.png",
         "alt": "Vista de gastos mensual y anual en Optim, control financiero de seguros y facturas",
         "caption": "Conoce tu gasto real. Mensual y anual estimado, para que tomes decisiones con datos."
       },
       {
-        "src": "/screenshots/es/contract_renovation.png",
         "alt": "Pantalla de renovación de contrato en la app Optim",
         "caption": "Renueva o modifica con un toque. Sin papeleo, sin complicaciones, en segundos."
       }
