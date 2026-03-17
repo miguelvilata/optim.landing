@@ -1,0 +1,38 @@
+{
+  "10_dashboard.png": {
+    "alt": "Optim app dashboard: summary of active contracts and upcoming renewals",
+    "caption": "Your summary at a glance. See how many contracts are active and which have an upcoming renewal."
+  },
+  "20_contract_list.png": {
+    "alt": "Contract list in Optim sorted by renewal date",
+    "caption": "All your contracts at a glance. Sorted by renewal date so nothing slips through."
+  },
+  "30_finance.png": {
+    "alt": "Monthly and annual expense view in Optim, insurance and bill control",
+    "caption": "Know your real spend. Monthly and estimated annual, so you can make informed decisions."
+  },
+  "40_contract_renovation.png": {
+    "alt": "Contract renewal screen in the Optim app",
+    "caption": "Renew or modify with a tap. No paperwork, no hassle, done in seconds."
+  },
+  "70_csv_export.png": {
+    "alt": "Contract export in Optim: compact and expanded CSV formats compatible with Excel",
+    "caption": "Export anytime. Excel-compatible CSV format, compact or expanded."
+  },
+  "100_holders_and_address.png": {
+    "alt": "My data screen in Optim: manage policy holders and addresses linked to contracts",
+    "caption": "Your data, always ready. Manage holders and addresses to assign them to each contract."
+  },
+  "110_contract_category_selection.png": {
+    "alt": "Contract type selector in Optim: Insurance or Services",
+    "caption": "Adding a contract is simple. Choose between Insurance or Services and it's registered in seconds."
+  },
+  "120_contract_category_insurante_type_selection.png": {
+    "alt": "Insurance type selection in Optim: car, home, health, life and motorcycle",
+    "caption": "All insurance types covered. Car, home, health, life and motorcycle in one place."
+  },
+  "130_contract_category_utilities_type_selection.png": {
+    "alt": "Utility type selection in Optim: electricity, water, gas and internet",
+    "caption": "And your utilities too. Electricity, water, gas and internet all under control."
+  }
+}

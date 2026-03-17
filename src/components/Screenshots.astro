@@ -11,23 +11,42 @@ const { lang } = Astro.props;
 const tr = t(lang);
 const s = tr.screenshots;
 
-function getScreenshotFiles(langCode: string): string[] {
+type CaptionEntry = { alt: string; caption: string };
+type CaptionsMap = Record<string, CaptionEntry>;
+
+function numericPrefix(filename: string): number {
+  const m = filename.match(/^(\d+)/);
+  return m ? parseInt(m[1], 10) : Infinity;
+}
+
+function loadLangData(langCode: string): { srcs: string[]; captions: CaptionsMap } {
   const dir = path.join(process.cwd(), 'public', 'screenshots', langCode);
   try {
     const files = fs.readdirSync(dir)
       .filter(f => /\.(png|jpe?g|webp)$/i.test(f))
-      .sort();
-    if (files.length > 0) return files.map(f => `/screenshots/${langCode}/${f}`);
-  } catch {}
-  return [];
+      .sort((a, b) => numericPrefix(a) - numericPrefix(b));
+
+    let captions: CaptionsMap = {};
+    const captionsPath = path.join(dir, 'captions.json');
+    if (fs.existsSync(captionsPath)) {
+      captions = JSON.parse(fs.readFileSync(captionsPath, 'utf-8'));
+    }
+
+    return { srcs: files.map(f => `/screenshots/${langCode}/${f}`), captions };
+  } catch {
+    return { srcs: [], captions: {} };
+  }
 }
 
 // Fall back to 'es' if the current lang has no screenshots
-const screenshotSrcs = getScreenshotFiles(lang).length
-  ? getScreenshotFiles(lang)
-  : getScreenshotFiles('es');
+let { srcs, captions } = loadLangData(lang);
+if (srcs.length === 0) ({ srcs, captions } = loadLangData('es'));
 
-const items = s.items.map((item, i) => ({ ...item, src: screenshotSrcs[i] ?? '' }));
+const items = srcs.map(src => {
+  const filename = src.split('/').pop()!;
+  const meta = captions[filename] ?? { alt: filename, caption: '' };
+  return { src, alt: meta.alt, caption: meta.caption };
+});
 ---
 
 <section id="screenshots" class="py-24 bg-brand-primary overflow-hidden">

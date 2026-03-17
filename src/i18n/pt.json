@@ -87,25 +87,7 @@
   },
   "screenshots": {
     "title": "Projetado para ser simples",
-    "subtitle": "Uma interface limpa e intuitiva que te da controle sem te sobrecarregar com informacoes desnecessarias.",
-    "items": [
-      {
-        "alt": "Dashboard do Optim: resumo de contratos ativos e próximas renovações na app",
-        "caption": "O seu resumo ao instante. Veja quantos contratos estão ativos e quais têm renovação em breve."
-      },
-      {
-        "alt": "Lista de contratos no Optim ordenada por data de renovação",
-        "caption": "Todos os seus contratos em um so lugar. Ordenados por data de renovacao."
-      },
-      {
-        "alt": "Vista de gastos mensal e anual no Optim, controlo financeiro de seguros e faturas",
-        "caption": "Conheca seu gasto real. Mensal e anual estimado, para tomar decisoes com dados."
-      },
-      {
-        "alt": "Ecrã de renovação de contrato na app Optim",
-        "caption": "Renove ou modifique com um toque. Sem burocracia, sem complicacoes."
-      }
-    ]
+    "subtitle": "Uma interface limpa e intuitiva que te da controle sem te sobrecarregar com informacoes desnecessarias."
   },
   "testimonials": {
     "badge": "Depoimentos",

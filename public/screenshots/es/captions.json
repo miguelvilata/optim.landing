@@ -1,0 +1,38 @@
+{
+  "10_dashboard.png": {
+    "alt": "Dashboard de Optim: resumen de contratos activos y próximos vencimientos en la app",
+    "caption": "Tu resumen al instante. Controla cuántos contratos tienes activos y cuáles vencen pronto."
+  },
+  "20_contract_list.png": {
+    "alt": "Lista de contratos en Optim ordenada por fecha de renovación",
+    "caption": "Todos tus contratos en un vistazo. Ordenados por fecha de renovación, ninguno se te escapa."
+  },
+  "30_finance.png": {
+    "alt": "Vista de gastos mensual y anual en Optim, control financiero de seguros y facturas",
+    "caption": "Conoce tu gasto real. Mensual y anual estimado, para que tomes decisiones con datos."
+  },
+  "40_contract_renovation.png": {
+    "alt": "Pantalla de renovación de contrato en la app Optim",
+    "caption": "Renueva o modifica con un toque. Sin papeleo, sin complicaciones, en segundos."
+  },
+  "70_csv_export.png": {
+    "alt": "Exportación de contratos en Optim: opciones CSV compacto y expandido compatible con Excel",
+    "caption": "Exporta cuando quieras. Formato CSV compatible con Excel, compacto o expandido."
+  },
+  "100_holders_and_address.png": {
+    "alt": "Pantalla Mis datos en Optim: gestión de titulares y direcciones asociadas a los contratos",
+    "caption": "Tus datos, siempre listos. Gestiona titulares y direcciones para asignarlos a cada contrato."
+  },
+  "110_contract_category_selection.png": {
+    "alt": "Selector de tipo de contrato en Optim: Seguros o Servicios",
+    "caption": "Añadir un contrato es sencillo. Elige entre Seguros o Servicios y en segundos está registrado."
+  },
+  "120_contract_category_insurante_type_selection.png": {
+    "alt": "Selección de tipo de seguro en Optim: coche, hogar, salud, vida y moto",
+    "caption": "Todos los seguros cubiertos. Coche, hogar, salud, vida y moto en un mismo lugar."
+  },
+  "130_contract_category_utilities_type_selection.png": {
+    "alt": "Selección de tipo de suministro en Optim: electricidad, agua, gas e internet",
+    "caption": "Y también tus suministros. Electricidad, agua, gas e internet bajo control."
+  }
+}

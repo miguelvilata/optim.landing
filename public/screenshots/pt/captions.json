@@ -1,0 +1,38 @@
+{
+  "10_dashboard.png": {
+    "alt": "Dashboard do Optim: resumo de contratos ativos e próximas renovações na app",
+    "caption": "O seu resumo ao instante. Veja quantos contratos estão ativos e quais têm renovação em breve."
+  },
+  "20_contract_list.png": {
+    "alt": "Lista de contratos no Optim ordenada por data de renovação",
+    "caption": "Todos os seus contratos em um só lugar. Ordenados por data de renovação."
+  },
+  "30_finance.png": {
+    "alt": "Vista de gastos mensal e anual no Optim, controlo financeiro de seguros e faturas",
+    "caption": "Conheça seu gasto real. Mensal e anual estimado, para tomar decisões com dados."
+  },
+  "40_contract_renovation.png": {
+    "alt": "Ecrã de renovação de contrato na app Optim",
+    "caption": "Renove ou modifique com um toque. Sem burocracia, sem complicações."
+  },
+  "70_csv_export.png": {
+    "alt": "Exportação de contratos no Optim: formatos CSV compacto e expandido compatíveis com Excel",
+    "caption": "Exporte quando quiser. Formato CSV compatível com Excel, compacto ou expandido."
+  },
+  "100_holders_and_address.png": {
+    "alt": "Ecrã Os meus dados no Optim: gestão de titulares e endereços associados aos contratos",
+    "caption": "Os seus dados, sempre prontos. Gira titulares e endereços para os associar a cada contrato."
+  },
+  "110_contract_category_selection.png": {
+    "alt": "Seletor de tipo de contrato no Optim: Seguros ou Serviços",
+    "caption": "Adicionar um contrato é simples. Escolha entre Seguros ou Serviços e fica registado em segundos."
+  },
+  "120_contract_category_insurante_type_selection.png": {
+    "alt": "Seleção de tipo de seguro no Optim: automóvel, habitação, saúde, vida e moto",
+    "caption": "Todos os seguros cobertos. Automóvel, habitação, saúde, vida e moto num só lugar."
+  },
+  "130_contract_category_utilities_type_selection.png": {
+    "alt": "Seleção de tipo de serviço no Optim: eletricidade, água, gás e internet",
+    "caption": "E também os seus serviços. Eletricidade, água, gás e internet sob controlo."
+  }
+}

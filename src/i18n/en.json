@@ -87,25 +87,7 @@
   },
   "screenshots": {
     "title": "Designed to be simple",
-    "subtitle": "A clean, intuitive interface that gives you control without overwhelming you with unnecessary information.",
-    "items": [
-      {
-        "alt": "Optim app dashboard: summary of active contracts and upcoming renewals",
-        "caption": "Your summary at a glance. See how many contracts are active and which have an upcoming renewal."
-      },
-      {
-        "alt": "Contract list in Optim sorted by renewal date",
-        "caption": "All your contracts at a glance. Sorted by renewal date so nothing slips through."
-      },
-      {
-        "alt": "Monthly and annual expense view in Optim, insurance and bill control",
-        "caption": "Know your real spend. Monthly and estimated annual, so you can make informed decisions."
-      },
-      {
-        "alt": "Contract renewal screen in the Optim app",
-        "caption": "Renew or modify with a tap. No paperwork, no hassle, done in seconds."
-      }
-    ]
+    "subtitle": "A clean, intuitive interface that gives you control without overwhelming you with unnecessary information."
   },
   "testimonials": {
     "badge": "Testimonials",
