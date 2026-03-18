@@ -188,6 +188,32 @@ make clean-all   # elimina dist/, node_modules, logs
 
 ---
 
+## Logo de la aplicacion
+
+El logo aprobado de Optim es un **SVG inline** definido en `src/components/AppLogo.astro`. Es un círculo con un arco azul (`#3B82F6`) sobre fondo oscuro (`#1A365D`).
+
+**IMPORTANTE — reglas estrictas:**
+
+- **Nunca reemplazar** el SVG de `AppLogo.astro` por una imagen PNG externa (ej. `optim_logo.png`). El PNG del launcher de Android es un logo de escudo descartado que no debe usarse en la web.
+- **Nunca referenciar** `optim_logo.png` en `BaseLayout.astro` ni en ningún otro componente.
+- El **favicon** debe apuntar a `/favicon.svg` (SVG, `type="image/svg+xml"`), nunca a `optim_logo.png`.
+- El archivo `public/optim_logo.png` puede existir en el repo por otros motivos pero **no se usa en la landing**.
+
+El SVG correcto del logo:
+
+```svg
+<svg width="40" height="40" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="64" height="64" rx="14" fill="#1A365D" />
+  <circle cx="32" cy="32" r="20" stroke="white" stroke-width="5" />
+  <circle cx="32" cy="32" r="11" fill="#1A365D" />
+  <path d="M32 12 A20 20 0 0 1 52 32" stroke="#3B82F6" stroke-width="5" stroke-linecap="round" />
+</svg>
+```
+
+> **Historial**: En el commit `6d23675` ("Improve demo data & minor improvements") se sustituyó erróneamente el SVG por `optim_logo.png`. Revertido en la rama `feat/screenshots-improvements`.
+
+---
+
 ## Convenciones de codigo
 
 - **Un componente = una seccion**. No crear componentes para elementos que se usan una sola vez.
