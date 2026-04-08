@@ -395,5 +395,17 @@
         }
       ]
     }
+  },
+  "blog": {
+    "metaTitle": "Blog — Optim",
+    "metaDescription": "Dicas, guias e novidades sobre gestão de seguros e gastos recorrentes.",
+    "title": "Blog",
+    "subtitle": "Dicas e guias para gerir melhor os seus seguros e gastos.",
+    "readMore": "Ler mais",
+    "publishedOn": "Publicado em",
+    "updatedOn": "Atualizado em",
+    "by": "Por",
+    "backToBlog": "Voltar ao blog",
+    "noPostsYet": "Em breve, artigos sobre gestão de seguros e gastos."
   }
 }

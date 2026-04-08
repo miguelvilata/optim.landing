@@ -395,5 +395,17 @@
         }
       ]
     }
+  },
+  "blog": {
+    "metaTitle": "Blog — Optim",
+    "metaDescription": "Tips, guides and news about insurance and recurring expense management.",
+    "title": "Blog",
+    "subtitle": "Tips and guides to better manage your insurance and expenses.",
+    "readMore": "Read more",
+    "publishedOn": "Published on",
+    "updatedOn": "Updated on",
+    "by": "By",
+    "backToBlog": "Back to blog",
+    "noPostsYet": "Articles about insurance and expense management coming soon."
   }
 }

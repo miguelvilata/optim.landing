@@ -1,0 +1,57 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import BlogPost from '../../../components/BlogPost.astro';
+import { t } from '../../../i18n/index.ts';
+import { SITE_URL } from '../../../config.ts';
+import type { Lang } from '../../../i18n/index.ts';
+
+export async function getStaticPaths() {
+  const now = new Date();
+  const posts = await getCollection('blog', (post) =>
+    post.data.lang === 'en' && !post.data.draft && post.data.pubDate <= now
+  );
+  return posts.map((post) => {
+    const urlSlug = post.slug.split('/').at(-1)!;
+    return {
+      params: { slug: urlSlug },
+      props: { post, urlSlug },
+    };
+  });
+}
+
+const { post, urlSlug } = Astro.props;
+const { Content } = await post.render();
+const lang = 'en' as Lang;
+const tr = t(lang);
+
+const esSlug = post.data.translations?.es;
+const ptSlug = post.data.translations?.pt;
+
+const customAlternates = [
+  { lang: 'es' as Lang, url: esSlug ? `${SITE_URL}/es/blog/${esSlug}` : `${SITE_URL}/es/blog` },
+  { lang: 'en' as Lang, url: `${SITE_URL}/en/blog/${urlSlug}` },
+  { lang: 'pt' as Lang, url: ptSlug ? `${SITE_URL}/pt/blog/${ptSlug}` : `${SITE_URL}/pt/blog` },
+];
+---
+
+<BaseLayout
+  lang={lang}
+  title={`${post.data.title} — ${tr.blog.title}`}
+  description={post.data.description}
+  canonicalPath={`/en/blog/${urlSlug}`}
+  customAlternates={customAlternates}
+>
+  <BlogPost
+    lang={lang}
+    title={post.data.title}
+    description={post.data.description}
+    pubDate={post.data.pubDate}
+    updatedDate={post.data.updatedDate}
+    author={post.data.author}
+    tags={post.data.tags}
+    image={post.data.image}
+  >
+    <Content />
+  </BlogPost>
+</BaseLayout>
