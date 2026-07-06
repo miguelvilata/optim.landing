@@ -8,7 +8,9 @@ export const SITE_URL = import.meta.env.SITE || 'https://getoptim.app';
 export const ANALYTICS_DOMAIN = import.meta.env.PUBLIC_ANALYTICS_DOMAIN || '';
 
 // Google Play store link (botones y QR apuntan aquí; universal para la ficha en la tienda)
-export const GOOGLE_PLAY_URL = import.meta.env.PUBLIC_GOOGLE_PLAY_URL || '#';
+export const GOOGLE_PLAY_URL =
+  import.meta.env.PUBLIC_GOOGLE_PLAY_URL ||
+  'https://play.google.com/store/apps/details?id=com.pepisoft.optim';
 
 // App Store link (iOS - coming soon). Cuando la app tenga Android App Links / iOS Universal Links,
 // se puede usar una URL de dominio (ej. SITE_URL/open) en botones y QR para abrir la app si está instalada.

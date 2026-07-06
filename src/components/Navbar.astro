@@ -41,11 +41,11 @@ const tr = t(lang);
           {tr.nav.about}
         </a>
         <a
-          href={`/${lang}/waitlist`}
+          href={`/${lang}#download`}
           class="text-sm text-brand-secondary hover:text-blue-400 font-semibold transition-colors flex items-center gap-1.5"
         >
-          <span class="w-1.5 h-1.5 rounded-full bg-brand-secondary animate-pulse"></span>
-          {tr.nav.waitlist}
+          <span class="w-1.5 h-1.5 rounded-full bg-green-400 animate-pulse"></span>
+          {tr.nav.download}
         </a>
         <LanguageSelector lang={lang} />
       </div>
@@ -53,11 +53,11 @@ const tr = t(lang);
       <!-- Mobile: lang selector + CTA -->
       <div class="flex md:hidden items-center gap-3">
         <a
-          href={`/${lang}/waitlist`}
+          href={`/${lang}#download`}
           class="text-xs text-brand-secondary font-semibold flex items-center gap-1"
         >
-          <span class="w-1.5 h-1.5 rounded-full bg-brand-secondary animate-pulse"></span>
-          {tr.nav.waitlist}
+          <span class="w-1.5 h-1.5 rounded-full bg-green-400 animate-pulse"></span>
+          {tr.nav.download}
         </a>
         <LanguageSelector lang={lang} />
       </div>

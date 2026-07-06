@@ -18,12 +18,13 @@
     "logoAlt": "Optim – Seguros e Despesas"
   },
   "hero": {
-    "badge": "Em breve no Android e iOS",
+    "badge": "Já disponível no Android · iOS em breve",
     "title": "Optim: Gestão inteligente dos seus seguros e faturas",
     "titleHighlight": "num só lugar",
     "subtitle": "As suas apólices, as suas faturas e os seus alertas numa só app. Sem surpresas, sem burocracia. Tu decides quando renovar e quanto pagar.",
-    "cta": "Entrar na lista",
+    "cta": "Baixar no Google Play",
     "ctaSecondary": "Ver recursos",
+    "iosWaitlist": "Usa iPhone? Avise-me quando o iOS chegar",
     "trustedBy": "Grátis, sem assinatura, livre de anúncios intrusivos",
     "mockupWelcome": "Bem-vindo",
     "mockupTagline": "Gestão inteligente de seguros e faturas num só lugar"
@@ -199,7 +200,8 @@
     "googlePlay": "Baixar no Google Play",
     "appStore": "Em breve na App Store",
     "waitlist": "Entrar na lista",
-    "note": "Lancamento em breve · Cadastro aberto",
+    "iosWaitlist": "Avise-me quando estiver no iOS",
+    "note": "Grátis no Google Play · iOS a caminho",
     "qrTitle": "Escaneie para baixar",
     "qrAndroid": "Android",
     "qrIos": "iOS",
@@ -263,8 +265,8 @@
     "privacyInfoLink": "Consulte a nossa Política de Privacidade completa"
   },
   "waitlist": {
-    "title": "Acesso antecipado para testers",
-    "subtitle": "Estamos abrindo o acesso a um grupo reduzido. Cadastre-se e avisamos quando sua vaga estiver pronta.",
+    "title": "Optim no iOS em breve",
+    "subtitle": "A app já está no Google Play. Deixe o seu email e avisamos assim que estiver disponível na App Store.",
     "namePlaceholder": "Seu nome (opcional)",
     "emailPlaceholder": "voce@email.com",
     "submit": "Me avise",
@@ -289,17 +291,17 @@
     "legalSummary": "O Optim não mostra publicidade de terceiros. Se ativar as comunicações, poderá receber propostas de poupança personalizadas. Os seus dados estão protegidos e pode exportá-los ou apagá-los quando quiser."
   },
   "waitlistPage": {
-    "badge": "Programa de beta testers",
-    "title": "Seja o primeiro a experimentar o Optim",
-    "subtitle": "Ainda nao lancamos oficialmente. Estamos abrindo acesso antecipado a um grupo reduzido de testers que queiram nos ajudar a melhorar o app.",
+    "badge": "iOS em breve",
+    "title": "Avise-me quando o Optim chegar ao iOS",
+    "subtitle": "O Optim já está disponível no Android. Se usa iPhone ou iPad, cadastre-se e seja um dos primeiros a saber do lançamento na App Store.",
     "bullets": [
-      "Acesso ao app antes do lancamento oficial",
-      "Sua opiniao ajuda a moldar o produto",
-      "Sem compromisso — cancele quando quiser"
+      "Avisamos assim que estiver na App Store",
+      "Sem spam — apenas o aviso de lançamento",
+      "Pode cancelar quando quiser"
     ],
-    "privacyNote": "O Optim usa o seu email apenas para avisar sobre o acesso ao app e, se aceitar, para enviar propostas de poupança personalizadas. Sem spam, sem ceder dados a terceiros sem a sua permissão.",
-    "metaTitle": "Beta testers – Optim",
-    "metaDescription": "Entre na lista de espera do Optim e seja um dos primeiros a experimentar o app antes do lancamento oficial."
+    "privacyNote": "O Optim usa o seu email apenas para avisar sobre o lançamento no iOS e, se aceitar, para enviar propostas de poupança personalizadas. Sem ceder dados a terceiros sem a sua permissão.",
+    "metaTitle": "Lista de espera iOS – Optim",
+    "metaDescription": "O Optim já está no Google Play. Cadastre-se e avisamos quando a app estiver disponível na App Store."
   },
   "legal": {
     "legalNotice": {
